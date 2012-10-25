@@ -18,19 +18,21 @@ Design Principles
 -----------------
 
 1.  The web interface of your application must be [responsive](http://en.wikipedia.org/wiki/Responsive_web_design)
-2.  Your tic-tac-toe game's web interface must use Ajax, but also work for browsers without JavaScript enabled (i.e., [progressive enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement))
-3.  PEP-8
-4.  `>>> import this`
+2.  Your tic-tac-toe game's web interface should use Ajax, but must also work without JavaScript enabled (i.e., [progressive enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement))
+3.  Make your templates and JavaScript as dumb as possible, but no dumber (keep logic on the server)
+4.  PEP-8
+5.  `>>> import this`
 
 Rules
 -----
 
 1.  All templates in your application must inherit from the provided `base.html` template
 2.  The provided jQuery (1.8.2) is the only JavaScript library permitted
-3.  Any apps must reside in the `devtest/apps` directory
 
 Getting Started
 ---------------
+
+The application structure provided works as-is, so you'll just need to begin work on your app(s) in the
 
     mkvirtualenv devtest
     git clone [forked repo] devtest
@@ -43,4 +45,4 @@ Getting Started
 Upon Completion
 ---------------
 
-Send coxmediagroup a pull request - we won't accept your pull request, but our team will clone your fork and test out your application locally, as well as examine your code.
+Send coxmediagroup a pull request, just to let us know you're finished (we won't actually pull your code).
