@@ -11,7 +11,7 @@ Objective
 Deliver a simple web application which provides the following 3 features:
 
 1.  Simple user registration and sign in functionality
-2.  An unbeatable tic-tac-toe game that authenticated users can lose against the computer via the web interface
+2.  An unbeatable tic-tac-toe game that authenticated users can lose against the computer via a web interface
 3.  A simple game stats page for users to view their rank among fellow tic-tac-toe losers
 
 Design Principles
@@ -19,7 +19,7 @@ Design Principles
 
 1.  The web interface of your application must be [responsive](http://en.wikipedia.org/wiki/Responsive_web_design)
 2.  Your game interface should use Ajax, but must also work without JavaScript enabled (i.e., [progressive enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement))
-3.  Make your templates and JavaScript as dumb as possible, but no dumber (keep logic on the server)
+3.  Keep your template logic simple and keep complicated Tic-tac-toe logic on the server
 4.  PEP-8
 5.  `>>> import this`
 
