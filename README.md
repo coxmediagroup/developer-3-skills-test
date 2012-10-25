@@ -32,7 +32,7 @@ Rules
 Getting Started
 ---------------
 
-The application structure provided works as-is, so you'll just need to begin work on your app(s) in the
+The application structure provided works as-is, so you'll just need to begin work on your app(s) in the `devtest/apps` directory, templates in the `devtest/templates` and your JavaScript somewhere in `devtest/media`.
 
     mkvirtualenv devtest
     git clone [forked repo] devtest
