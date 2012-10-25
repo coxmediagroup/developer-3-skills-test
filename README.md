@@ -37,7 +37,7 @@ The application structure provided works as-is, so you'll just need to begin wor
     mkvirtualenv devtest
     git clone [forked repo] devtest
     cd devtest/src/
-    pip install -r requirements.txt
+    pip install -r ../requirements.txt
 
     python manage.py syncdb
     python manage.py runserver 8080
@@ -45,4 +45,4 @@ The application structure provided works as-is, so you'll just need to begin wor
 Upon Completion
 ---------------
 
-Send coxmediagroup a pull request, just to let us know you're finished (we won't actually pull your code).
+Send [coxmediagroup](https://github.com/coxmediagroup) a pull request, just to let us know you're finished (we won't actually pull your code).
