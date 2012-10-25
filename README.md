@@ -18,7 +18,7 @@ Design Principles
 -----------------
 
 1.  The web interface of your application must be [responsive](http://en.wikipedia.org/wiki/Responsive_web_design)
-2.  Your tic-tac-toe game's web interface should use Ajax, but must also work without JavaScript enabled (i.e., [progressive enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement))
+2.  Your game interface should use Ajax, but must also work without JavaScript enabled (i.e., [progressive enhancement](http://en.wikipedia.org/wiki/Progressive_enhancement))
 3.  Make your templates and JavaScript as dumb as possible, but no dumber (keep logic on the server)
 4.  PEP-8
 5.  `>>> import this`
