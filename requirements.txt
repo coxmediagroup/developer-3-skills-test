@@ -1,0 +1,6 @@
+# GitHub
+git+git://github.com/django/django.git
+git+git://github.com/fabric/fabric.git
+
+# Pypi
+pytz==2011n
