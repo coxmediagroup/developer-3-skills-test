@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="url-scrubber.js"></script>
+    <script>
+        console.log("Before scrubbing: " + window.location.href);
+        URLScrubber.scrubEmail();
+        console.log("After scrubbing: " + window.location.href);
+    </script>
+    <title>URL Scrubber Test (Email Removal)</title>
+</head>
+
+<body>
+    <h1>URL Scrubber Test (Email Removal)</h1>
+    <p>This page tests the email removal function by first appending a set of query parameters to the address, then applying the test function</p>
+    <p>View Console log to see before &amp; after URLs.</p>
+</body>
+</html>
