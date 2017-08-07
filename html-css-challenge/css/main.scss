@@ -28,21 +28,27 @@ body {
     background-color: $gray;
 }
 
+#primary-navigation {
+    margin-bottom: 0;
+}
+
 #secondary-ads article {
-    margin-bottom: $container-padding;
+    margin-top: $container-padding;
 }
 
 #latest-news section {
     border: $thin-border-ccc;
 }
 
-#latest-news section article {
+#latest-news article {
     /*margin-left: -($container-padding);
     margin-right: -($container-padding);*/
-    border-bottom: $thin-border-ccc;
+    border: $thin-border-ccc;
+    border-bottom: 0;
     padding: $container-padding;
+    background-color: $white;
 }
 
 #latest-news article:last-of-type {
-    border-bottom: 0;
+    border-bottom: $thin-border-ccc;
 }
