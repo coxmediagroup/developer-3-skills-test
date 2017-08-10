@@ -46,7 +46,7 @@ Here we remove any [text shadows](http://twitter.com/miketaylr/status/1222880530
 #### c013
 The base font size for this application is Arial 14px. We express ` font-weight ` with a number, as follows:
 + 400 Normal or Regular
-+ 700 Bold
++ 700 Bold  
 Sizes above and below ` $base ` are written with *rem* intentionally so that a change to  ` $base ` will also change any other sizes we use. The idea is to keep the size ratios between the fonts constant even if a change becomes necessary.
 
 #### c014
@@ -57,3 +57,6 @@ This is simply to mark a Twitter Bootstrap breakpoint.
 
 #### c016
 The file *zasu.scss* is the digital equivalent of scratch paper. We use this file to test styles that may or may not be ultimately implemented. It should be empty when we deploy.
+
+#### c017
+See c013, particularly the first sentence.

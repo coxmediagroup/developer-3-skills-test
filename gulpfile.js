@@ -1,11 +1,16 @@
-let gulp = require('gulp'),
+let clean = require('gulp-clean-css'),
+    gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     nodemon = require('gulp-nodemon'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass')
+    sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('sass', function () {
   return gulp.src('./src/css/style.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
+    .pipe(clean({compatibility: 'ie8'}))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./public'))
     .pipe(livereload());
 });
