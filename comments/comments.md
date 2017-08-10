@@ -60,3 +60,6 @@ The file *zasu.scss* is the digital equivalent of scratch paper. We use this fil
 
 #### c017
 See c013, particularly the first sentence.
+
+#### c015
+JavaScript and jQuery are used only in development to add the width and height of the viewport to the browser. This speeds things up as we write code that is responsive. 
