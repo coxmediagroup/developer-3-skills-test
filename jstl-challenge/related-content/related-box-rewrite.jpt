@@ -107,6 +107,10 @@
 
 <c:set var="relatedItemCount" value="0" scope="page" />
 
+<%--
+		DOTUN: checking if relatedItemsExist = true as was already done
+		should satisfy criterion to show the box only if related items exist.
+--%>
 <c:if test="${relatedItemsExist or relatedItemsQueryExist}">
 	<%-- Related Content: ${fn:length(relatedObjectList)} items --%>
 	<div class="related-content-container margin-bottom clearfix ${extraClasses}">
@@ -114,6 +118,10 @@
 		<ul class="related-headlines">
 
 
+			<%-- DOTUN: Using relatedBoxLimit as end
+				 in forEach ensures items are added up to
+				 but not over the limit.
+			--%>
 			<c:forEach items="${relatedObjectList}" var="relatedObject" varStatus="stat" end="relatedBoxLimit">
 
 				<p:object webObject="${relatedObject}" metadata="relatedMeta" content="relatedData" />
