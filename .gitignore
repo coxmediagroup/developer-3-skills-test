@@ -1,4 +1,11 @@
-node_modules
-bower_components
 *.log
+._*
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
 bin
+bower_components/
+ehthumbs.db
+node_modules/
+Thumbs.db
