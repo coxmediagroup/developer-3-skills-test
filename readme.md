@@ -1,4 +1,4 @@
-## Challenge Submissions for Cox Media Group
+## Cox Media Group Challenge Submissions
 This repository completes three different challenges for Cox Media Group (CMG).
 
 #### Comments
