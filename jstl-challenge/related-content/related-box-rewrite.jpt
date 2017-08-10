@@ -1,10 +1,17 @@
 <%@ include file="/WEB-INF/tags/eom/PortalConfig/np-free/taglibs.jpt" %>
 
 <%-- DOTUN: including functions library --%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 
 <p:currentObject content="data" metadata="meta" />
 <c:set var="extraClasses" value="${cacheScope.extraClasses}" />
+
+<%--
+		DOTUN: create boolean flag to check
+		if a related query has already been fetched.
+		When true, reject additional requests.
+--%>
+<c:set var="queryFetched" value="false" />
 
 <%-- Set indicator that determines if we have at least one related photo item.  --%>
 <c:set var="relatedItemsExist" value="false" />
@@ -14,6 +21,7 @@
 <c:set var="relatedBoxLimit" value="9" />
 
 <%-- 
+		------------------------------------------------------------------------------------
 		DOTUN: "Functions".
 		The idea is to wrap repeating code
 		in function constructs of some sort
@@ -58,7 +66,10 @@
 		</a>
 	</li>
 </fn:printRelatedObject>
-<%-- DOTUN: end "functions" --%>
+<%--
+		DOTUN: end "functions"
+		------------------------------------------------------------------------------------
+--%>
 
 <p:list var="relatedObjectList">
 	<x:forEach
@@ -71,7 +82,9 @@
 
 		<c:choose>
 			<c:when
-				test="${not empty relatedObject and webType ne 'image' and webType ne 'Sponsor' and webType ne ''}">
+				test="${false queryFetched and not empty relatedObject and webType ne 'image' and webType ne 'Sponsor' and webType ne ''}">
+				<%-- DOTUN: set queryFetched = true to reject subsequent requests --%>
+				<c:set queryFetched="true" />
 				<p:add value="${relatedObject}" />
 				<%-- We have at least one related item, so set indicator.  --%>
 				<c:set var="relatedItemsExist" value="true" />
@@ -155,7 +168,7 @@
 		<fn:makeRelatedObjectWrapper relatedObject=${relatedObject} />
 
 		<%-- DOTUN: using print related object "function" -->
-				<fn:printRelatedObject />
+		<fn:printRelatedObject />
 	</c:forEach>
 </c:if>
 </ul>
