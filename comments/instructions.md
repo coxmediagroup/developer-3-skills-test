@@ -13,6 +13,6 @@ Each comment type is followed by a three-digit number which simply indicates the
 This system for commenting allows developers to easily search for the details attached to code while having the freedom to be verbose, as well. It also keeps code from becoming too cluttered.
 
 ##### Who came up with this?
-Matthew Day
-[\@_samuraijane](https://twitter.com/_samuraijane/)
-[GitHub](https://github.com/samuraijane/)
+Matthew Day  
+on Twitter [\@_samuraijane](https://twitter.com/_samuraijane/)  
+on [GitHub](https://github.com/samuraijane/)  
