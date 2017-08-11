@@ -1,8 +1,9 @@
 .navs {
-  margin: 12px 0;
+  float: none;  //c020
+  margin: 12px auto;
   padding: 6px 0;
   position: relative;
-  // text-align: center;
+  width: 90%;
   &:after,
   &:before {
     border: 1px solid #ccc;
@@ -22,8 +23,9 @@
 li {
   .navs & {
     display: inline-block;
-    margin: 4px 16px;
+    margin: 6px 10px;
     position: relative;
+    text-transform: uppercase;
     &:before {
       background: #002771;
       border: 1px solid transparent;
@@ -54,5 +56,22 @@ li {
     &:nth-of-type(7):before {
       background: #1c70d0;
     }
+    &:nth-of-type(8):before,
+    &:nth-of-type(9):before  {
+      background: none;
+    }
+    &:nth-of-type(8),
+    &:nth-of-type(9)  {
+      background: #ea2f27;
+      color: white;
+      margin-left: 4px;
+      padding: 2px 8px;
+    }
+  }
+}
+
+div {
+  .modify & {
+    margin-top: 6px;
   }
 }

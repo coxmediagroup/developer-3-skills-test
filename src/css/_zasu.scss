@@ -1,8 +1,9 @@
 .bannerwide {
-  background: #aaa;
+  background: #ccc;
   padding: 26px;
   position: relative;
   &:before {
+    color: #777;
     content: 'Wide Banner Ad';
     left: 50%;
     position: absolute;

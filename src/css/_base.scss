@@ -37,9 +37,20 @@ footer {
 }
 
 header {
-  background: lavenderblush;
+  background: white;
+  padding-top: 12px;
 }
 
 main {
   background: aliceblue;
+}
+
+
+//----------------------------------------------------------------------------
+//  Span
+//----------------------------------------------------------------------------
+span {
+  h1 & {
+    font-weight: 400;
+  }
 }

@@ -68,3 +68,4 @@ JavaScript and jQuery are used only in development to add the width and height o
 We only load the parts of Bootstrap that we need.
 
 #### c020
+This marks code that overrides a default setting in Bootsrap.
