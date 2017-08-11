@@ -1,12 +1,12 @@
 .navs {
   float: none;  //c020
-  margin: 12px auto;
+  margin: 12px auto 0;
   padding: 6px 0;
   position: relative;
   width: 90%;
   &:after,
   &:before {
-    border: 1px solid #ccc;
+    border: 1px solid #eee;
     content: '';
     left: -50%;
     position: absolute;
@@ -71,7 +71,12 @@ li {
 }
 
 div {
-  .modify & {
+  .modifym & {
     margin-top: 6px;
   }
+}
+
+.modifyb {
+  background: #ecedee;
+  padding-top: 12px;
 }

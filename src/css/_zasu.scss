@@ -1,7 +1,9 @@
-.bannerwide {
-  background: #ccc;
-  padding: 26px;
+.advertsquare,
+.advertwide {
+  background: lavender;
+  padding: 30px;
   position: relative;
+  text-align: center;
   &:before {
     color: #777;
     content: 'Wide Banner Ad';
@@ -9,5 +11,13 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+.advertsquare {
+  height: 140px;
+  width: 160px;
+  &:before {
+    content: 'Square Banner Ad';
   }
 }
