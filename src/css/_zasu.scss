@@ -15,9 +15,16 @@
 }
 
 .advertsquare {
-  height: 140px;
-  width: 160px;
+  height: 170px;
   &:before {
     content: 'Square Banner Ad';
   }
+}
+
+.modifyp {  //c020
+  padding-left: 0;
+}
+
+.modifya {  //c020
+  text-align: center;
 }

@@ -80,3 +80,84 @@ div {
   background: #ecedee;
   padding-top: 12px;
 }
+
+.breaks {
+  background: #312f31;
+  color: white;
+  font-size: $small;
+  font-weight: 700;
+  padding: 18px 12px 12px;
+  text-transform: uppercase;
+}
+li {
+  .breaks & {
+    border-bottom: 2px solid #1c1a1c;
+    margin: 12px 0;
+    padding: 0 0 12px 30px;
+    position: relative;
+    @include transition($animate * 2);
+    &:hover {
+      margin-left: 2px;
+    }
+    &:nth-of-type(1) {
+      margin-top: 0;
+    }
+    &:nth-of-type(3) {
+      border-bottom: none;
+      bottom-top: 0;
+      padding-bottom: 0;
+    }
+    &:nth-of-type(1):before,
+    &:nth-of-type(2):before,
+    &:nth-of-type(3):before {
+      font-family: FontAwesome;
+      left: 10px;
+      position: absolute;
+    }
+    &:nth-of-type(1):before {
+      content: '\f02d';
+    }
+    &:nth-of-type(2):before {
+      content: '\f250';
+    }
+    &:nth-of-type(3):before {
+      content: '\f1b1';
+      left: 13px;
+    }
+  }
+}
+
+
+.votes {
+  border: 1px solid black;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+p {
+  .votes & {
+    display: inline-block;
+    font-size: $biggest;
+    font-weight: 700;
+    padding: 14px 0;
+    position: relative;
+    &:last-of-type:after {
+      bottom: 8px;
+      content: 'Austin American-Statesman';
+      font-size: $smallest;
+      letter-spacing: -1px;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+.fa-check {
+  p & {
+    background: #376a46;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    color: white;
+    padding: 6px;
+  }
+}

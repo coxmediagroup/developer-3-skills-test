@@ -15,6 +15,26 @@ h1 {
   font-size: $biggest;
 }
 
+h2 {
+  font-size: $bigger;
+}
+
+h3 {
+  background: #0466b6;
+  color: white;
+  font-size: $big;
+  padding: 8px 12px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h6 {
+  background: #376a46;
+  color: white;
+  padding: 8px 6px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
 
 //----------------------------------------------------------------------------
 //  HTML
@@ -50,7 +70,7 @@ main {
 //  Span
 //----------------------------------------------------------------------------
 span {
-  h1 & {
+  h2 & {
     font-weight: 400;
   }
 }
