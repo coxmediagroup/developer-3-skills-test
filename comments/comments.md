@@ -50,7 +50,7 @@ The base font size for this application is Arial 14px. We express ` font-weight 
 Sizes above and below ` $base ` are written with *rem* intentionally so that a change to  ` $base ` will also change any other sizes we use. The idea is to keep the size ratios between the fonts constant even if a change becomes necessary.
 
 #### c014
-Responsive breakpoints are provided but will likely be unnecessary if we Bootstrap.
+Responsive breakpoints are provided but will likely be unnecessary if we use Bootstrap.
 
 #### c015
 This is simply to mark a Twitter Bootstrap breakpoint.
@@ -61,5 +61,10 @@ The file *zasu.scss* is the digital equivalent of scratch paper. We use this fil
 #### c017
 See c013, particularly the first sentence.
 
-#### c015
-JavaScript and jQuery are used only in development to add the width and height of the viewport to the browser. This speeds things up as we write code that is responsive. 
+#### c018
+JavaScript and jQuery are used only in development to add the width and height of the viewport to the browser. This speeds things up as we write code that is responsive.
+
+#### c019
+We only load the parts of Bootstrap that we need.
+
+#### c020

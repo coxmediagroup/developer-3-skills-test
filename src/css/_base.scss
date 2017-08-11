@@ -2,6 +2,7 @@
 //  Body
 //----------------------------------------------------------------------------
 body {
+  background: $brown50;
   font-family: $font1;
 }
 
@@ -20,4 +21,24 @@ h1 {
 html {
   color: $black80;
   font-size: 14px;  //c017
+}
+
+
+//----------------------------------------------------------------------------
+//  Section Elements
+//----------------------------------------------------------------------------
+aside {
+  background: cornsilk;
+}
+
+footer {
+  background: lavender;
+}
+
+header {
+  background: lavenderblush;
+}
+
+main {
+  background: aliceblue;
 }
