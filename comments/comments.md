@@ -78,3 +78,6 @@ This is for the POC only. Upon deployment, we will need a better solution in cas
 
 #### c023
 This is for the POC only. A designer should weigh in on where these elements should be placed for mobile.
+
+#### c024
+This is for the POC only. Since comps were not provide for widths below 992px and we have columns in *New Right Row* wrapping, a designer should review.

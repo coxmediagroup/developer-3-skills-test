@@ -236,13 +236,18 @@ li {
 }
 
 .blatest {
+  background: white;
   border: 1px solid $gray50;
   padding-bottom: 50px;
   @include responsive(harding) {
+    background: none;
     border: none;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+  }
+  @include responsive(nixon) {
+    background: white;
   }
 }
 
@@ -265,6 +270,10 @@ li {
       &:nth-of-type(even) {
         margin-right: 0;
       }
+      &:nth-of-type(9),  //c022
+      &:nth-of-type(10) {
+        border-bottom: none;
+      }
     }
     @include responsive(kennedy) {
       margin-right: 1.5%;
@@ -276,15 +285,9 @@ li {
         margin-right: 0;
         width: 33%;
       }
-      &:nth-of-type(8),  //c022
-      &:nth-of-type(9) {
-        @include responsive(harding) {
-          border-bottom: none;
-        }
+      &:nth-of-type(8) {  //c022
+        border-bottom: none;
       }
-    }
-    &:last-of-type {
-      border: none;
     }
   }
 }
@@ -414,5 +417,33 @@ li {
     position: absolute;
     right: -10px;
     top: -8px;
+  }
+}
+
+.seemore {  //c024
+  cursor: pointer;
+  position: relative;
+  &:after {
+    background: #0765ba;
+    bottom: 16px;
+    color: white;
+    content: 'See More';
+    padding: 5px 22px 5px 8px;
+    position: absolute;
+    right: -6px;
+    text-transform: uppercase;
+  }
+  &:before {
+    bottom: 22px;
+    color: white;
+    content: '\f061';
+    font-family: FontAwesome;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    @include transition($animate * 2);
+  }
+  &:hover:before {
+    right: -2px;
   }
 }
