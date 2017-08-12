@@ -68,7 +68,7 @@ JavaScript and jQuery are used only in development to add the width and height o
 We only load the parts of Bootstrap that we need.
 
 #### c020
-This marks code that overrides or otherwise nullifies a default setting in Bootstrap.
+This marks code that overrides or otherwise nullifies a default setting in Bootstrap or FontAwesome.
 
 #### c021
 We disable this because this site has a few different colors applied to ` <a> ` depending on where it is located.
@@ -81,3 +81,6 @@ This is for the POC only. A designer should weigh in on where these elements sho
 
 #### c024
 This is for the POC only. Since comps were not provide for widths below 992px and we have columns in *New Right Row* wrapping, a designer should review.
+
+#### c025
+To speed up development, we have come up with our own classes to take care of little things like padding and margin overrides. Bootstrap has built-in classes to do the same thing but, in the spirit of transparency, we do not use Bootstrap a lot and implementing our our classes is faster right now.

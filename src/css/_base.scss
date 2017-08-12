@@ -107,6 +107,9 @@ header {
 main {
   border-top: 1px solid $gray50;
   padding-top: 30px;
+  @include responsive(nixon) {
+    border: none;
+  }
 }
 
 
