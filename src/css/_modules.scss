@@ -93,7 +93,7 @@ div {
   color: white;
   font-size: $small;
   font-weight: 700;
-  padding: 18px 12px 12px;
+  padding: 0px 20px 16px;
   text-transform: uppercase;
 }
 a {
@@ -104,8 +104,9 @@ a {
 li {
   .breaks & {
     border-bottom: 2px solid #1c1a1c;
-    margin: 12px 0;
-    padding: 0 0 12px 30px;
+    font-size: $big;
+    margin: 0px 0;
+    padding: 20px 0 16px 46px;
     position: relative;
     @include transition($animate * 2);
     &:hover {
@@ -117,14 +118,18 @@ li {
     &:nth-of-type(3) {
       border-bottom: none;
       bottom-top: 0;
+      margin-bottom: 0;
       padding-bottom: 0;
     }
     &:nth-of-type(1):before,
     &:nth-of-type(2):before,
     &:nth-of-type(3):before {
       font-family: FontAwesome;
+      font-size: $bigger;
       left: 10px;
       position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
     }
     &:nth-of-type(1):before {
       content: '\f02d';
@@ -134,7 +139,9 @@ li {
     }
     &:nth-of-type(3):before {
       content: '\f1b1';
+      font-size: 2.0rem;
       left: 13px;
+      transform: translateY(-30%);
     }
   }
 }
@@ -143,7 +150,7 @@ li {
 .votes {
   border: 1px solid black;
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 26px;
 }
 
 p {
