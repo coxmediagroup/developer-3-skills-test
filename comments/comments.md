@@ -72,3 +72,6 @@ This marks code that overrides or otherwise nullifies a default setting in Boots
 
 #### c021
 We disable this because this site has a few different colors applied to ` <a> ` depending on where it is located.
+
+#### c022
+This is for the POC only. Upon deployment, we will need a better solution in case the number of items in *New Right Now* changes.
