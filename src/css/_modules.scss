@@ -209,6 +209,11 @@ li {
 
 .blatest {
   border: 1px solid $gray50;
+  @include responsive(harding) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 }
 
 li {
@@ -216,6 +221,14 @@ li {
     background: white;
     border-bottom: 1px solid $gray50;
     padding: 16px;
+    vertical-align: top;
+    @include responsive(harding) {
+      margin-right: 1%;
+      width: calc(49.5% - 2px);
+      &:nth-of-type(even) {
+        margin-right: 0;
+      }
+    }
     &:last-of-type {
       border: none;
     }
