@@ -20,6 +20,9 @@
 }
 
 a {
+  &.modifyp2 {
+    padding: 2px 8px;
+  }
   .navs & {
     color: inherit;
   }
@@ -70,7 +73,6 @@ li {
       background: #ea2f27;
       color: white;
       margin-left: 4px;
-      padding: 2px 8px;
     }
   }
 }
@@ -180,7 +182,6 @@ p {
 
 li {
   .bsocials & {
-    cursor: pointer;
     display: inline-block;
     font-size: $bigger;
     margin: 6px 0 0 6px;
@@ -216,11 +217,18 @@ li {
   }
 }
 
+a {
+  li & {
+    .blatest & {
+      padding: 16px;
+    }
+  }
+}
+
 li {
   .blatest & {
     background: white;
     border-bottom: 1px solid $gray50;
-    padding: 16px;
     vertical-align: top;
     @include responsive(harding) {
       margin-right: 1%;
@@ -254,15 +262,17 @@ span {
 
 li {
   .afooters & {
-    display: inline-block;
+    // display: inline-block;
   }
 }
 
 li {
   .bfooternavs & {
-    float: left;
-    text-align: center;
-    width: 50%;
+    // float: left;
+    font-size: $big;
+    margin: 10px 0;
+    // text-align: center;
+    // width: auto;
   }
 }
 

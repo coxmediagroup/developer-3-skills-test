@@ -1,5 +1,4 @@
-.advertsquare,
-.advertwide {
+.advert {
   background: lavender;
   padding: 30px;
   position: relative;
@@ -12,16 +11,15 @@
     top: 50%;
     transform: translate(-50%, -50%);
   }
-}
-
-.advertsquare {
-  height: 170px;
-  &:before {
-    content: 'Square Banner Ad';
+  &.square {
+    height: 170px;
+    &:before {
+      content: 'Square Banner Ad';
+    }
   }
 }
 
-.modifyp {  //c020
+.modifyp1 {  //c020
   padding: 0 15px;
 }
 
