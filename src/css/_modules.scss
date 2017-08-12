@@ -289,6 +289,16 @@ li {
         border-bottom: none;
       }
     }
+    @include responsive(nixon) {
+      margin: 0;
+      width: 100%;
+      &:nth-of-type(even),
+      &:nth-of-type(odd) {
+        border-bottom: 1px solid $gray50;
+        margin: 0;
+        width: 100%;
+      }
+    }
   }
 }
 
