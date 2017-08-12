@@ -69,3 +69,6 @@ We only load the parts of Bootstrap that we need.
 
 #### c020
 This marks code that overrides or otherwise nullifies a default setting in Bootstrap.
+
+#### c021
+We disable this because this site has a few different colors applied to ` <a> ` depending on where it is located.
