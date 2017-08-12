@@ -29,13 +29,13 @@ body {
 //----------------------------------------------------------------------------
 h1 {
   font-size: $biggest;
-  &.modifym {
-    margin-bottom: 12px;
-  }
+  margin-bottom: 12px;
 }
 
 h2 {
   font-size: $bigger;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 h3 {
