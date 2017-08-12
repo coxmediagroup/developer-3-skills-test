@@ -237,6 +237,7 @@ li {
 
 .blatest {
   border: 1px solid $gray50;
+  padding-bottom: 50px;
   @include responsive(harding) {
     border: none;
     display: flex;
@@ -257,7 +258,6 @@ li {
   .blatest & {
     background: white;
     border-bottom: 1px solid $gray50;
-    // border-top: 1px solid $gray50;
     vertical-align: top;
     @include responsive(harding) {
       margin-right: 1%;
@@ -276,15 +276,15 @@ li {
         margin-right: 0;
         width: 33%;
       }
+      &:nth-of-type(8),  //c022
+      &:nth-of-type(9) {
+        @include responsive(harding) {
+          border-bottom: none;
+        }
+      }
     }
     &:last-of-type {
       border: none;
-    }
-    &:nth-of-type(8),  //c022
-    &:nth-of-type(9) {
-      @include responsive(harding) {
-        border-bottom: none;
-      }
     }
   }
 }
@@ -293,6 +293,10 @@ span {
   .blatest & {
     text-transform: uppercase;
   }
+}
+
+.afooters {
+  padding: 12px 0 24px;
 }
 
 li {
@@ -310,9 +314,26 @@ li {
 li {
   .bfooternavs & {
     // float: left;
+    font-size: $small;
+    font-weight: 700;
     margin: 8px 0;
+    position: relative;
+    text-transform: uppercase;
     // text-align: center;
     // width: auto;
+    @include responsive(truman) {
+      display: inline-block;
+      margin: 4px 8px;
+      &:after {
+        content: '|';
+        position: absolute;
+        right: -12px;
+        top: 0;
+      }
+      &:last-of-type:after {
+        content: '';
+      }
+    }
   }
 }
 
@@ -323,7 +344,7 @@ li {
 li {
   .bfootersocials & {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 14px;
     vertical-align: middle;
     &:nth-of-type(2),
     &:nth-of-type(3) {
@@ -335,14 +356,16 @@ li {
 .scrolltop {
   display: inline-block;
   margin-left: 14px;
+  font-weight: 700;
   position: relative;
+  text-transform: uppercase;
   &:before {
     border: 2px solid black;
     border-radius: 10px;
     content: '\f077';
     font-family: FontAwesome;
     font-size: $smaller;
-    left: -18px;
+    left: -22px;
     padding: 2px;
     position: absolute;
     top: 50%;

@@ -23,7 +23,10 @@
   }
   &.square {
     display: none;
-    height: 170px;
+    height: 210px;
+    @include responsive(truman) {
+      display: block;
+    }
     &:before {
       content: 'Square Banner Ad';
     }

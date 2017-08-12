@@ -91,12 +91,12 @@ p + p {
 //  Section Elements
 //----------------------------------------------------------------------------
 aside {
-  background: $gray30;
   padding: 20px 0 30px;
 }
 
 footer {
-  background: $gray30;
+  background: white;
+  border-top: 1px solid $gray50;
 }
 
 header {
@@ -105,7 +105,6 @@ header {
 }
 
 main {
-  background: $gray30;
   border-top: 1px solid $gray50;
   padding-top: 30px;
 }
