@@ -75,3 +75,6 @@ We disable this because this site has a few different colors applied to ` <a> ` 
 
 #### c022
 This is for the POC only. Upon deployment, we will need a better solution in case the number of items in *New Right Now* changes.
+
+#### c023
+This is for the POC only. A designer should weigh in on where these elements should be placed for mobile.

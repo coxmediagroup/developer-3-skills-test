@@ -1,8 +1,12 @@
 .navs {
   float: none;  //c020
-  margin: 12px 15px 0;
-  padding: 6px 0;
+  margin-top: 12px;
+  padding-bottom: 20px;
+  padding-top: 6px;
   position: relative;
+  // @include responsive(truman) {
+    text-align: center;
+  // }
   &:after,
   &:before {
     border: 1px solid $gray40;
@@ -35,7 +39,6 @@ li {
     position: relative;
     text-transform: uppercase;
     &:before {
-      background: #002771;
       border: 1px solid transparent;
       border-radius: 4px;
       content: '';
@@ -45,6 +48,13 @@ li {
       top: 50%;
       transform: translateY(-50%);
       width: 4px;
+    }
+    @include responsive(truman) {
+      font-size: $big;
+      margin: 8px 16px;
+    }
+    &:nth-of-type(1):before {
+      background: #002771;
     }
     &:nth-of-type(2):before {
       background: #ff6a35;
@@ -64,15 +74,25 @@ li {
     &:nth-of-type(7):before {
       background: #1c70d0;
     }
-    &:nth-of-type(8):before,
-    &:nth-of-type(9):before  {
-      background: none;
+    &.totalhack {  //c023
+      display: block;
+      margin-right: 1000px;
+      @include responsive(coolidge) {
+        display: none;
+        margin: 0;
+      }
     }
-    &:nth-of-type(8),
-    &:nth-of-type(9)  {
-      background: #ea2f27;
-      color: white;
-      margin-left: 4px;
+  }
+}
+
+a {
+  li & {
+    .navs & {
+      &.mobilebg {  //c023
+        background: #ea2f27;
+        color: white;
+        margin-left: -9px;
+      }
     }
   }
 }
@@ -359,5 +379,17 @@ li {
 .handy {
   display: inline-block;
   font-size: $big;
-  margin: 0 12px;
+  margin: 0 18px;
+}
+
+.weather {
+  position: relative;
+  &:after {
+    color: $gray60;
+    content: '\f0e7';
+    font-family: FontAwesome;
+    position: absolute;
+    right: -10px;
+    top: -8px;
+  }
 }
