@@ -320,16 +320,29 @@ li {
   &:after {
     background: #f60700;
     border: 1px solid transparent;
-    border-radius: 12px;
-    bottom: 8px;
+    border-radius: 16px;
+    bottom: 10px;
     color: white;
-    content: '9';
+    content: '';
+    height: 16px;
+    position: absolute;
+    right: -10px;
+    width: 16px;
+  }
+  &:before {
+    bottom: 12px;
+    color: white;
+    content: '20';
     font-size: $small;
     font-weight: 700;
-    height: 12px;
     position: absolute;
-    text-align: center;
-    right: -6px;
-    width: 12px;
+    right: -8px;
+    z-index: 10;
   }
+}
+
+.handy {
+  display: inline-block;
+  font-size: $big;
+  margin: 0 12px;
 }
