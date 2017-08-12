@@ -12,7 +12,14 @@
     transform: translate(-50%, -50%);
   }
   &.narrow {
+    background: cornsilk;
     display: none;
+    @include responsive(truman) {
+      display: block;
+    }
+    &:before {
+      content: 'Narrow Banner Ad';
+    }
   }
   &.square {
     display: none;
@@ -42,4 +49,9 @@
 
 .modifya2 {  //c020
   text-align: right;
+}
+
+.modifym2 {  //c020
+  margin-left: -30px;
+  margin-right: -30px;
 }
