@@ -314,3 +314,22 @@ li {
     transform: translateY(-45%);
   }
 }
+
+.traffic {
+  position: relative;
+  &:after {
+    background: #f60700;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    bottom: 8px;
+    color: white;
+    content: '9';
+    font-size: $small;
+    font-weight: 700;
+    height: 12px;
+    position: absolute;
+    text-align: center;
+    right: -6px;
+    width: 12px;
+  }
+}
