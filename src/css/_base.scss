@@ -19,8 +19,18 @@ a {
 //  Body
 //----------------------------------------------------------------------------
 body {
-  background: $brown50;
   font-family: $font1;
+  position: relative;
+  &:after {
+    background: $brown50;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -50;
+  }
 }
 
 
@@ -30,12 +40,21 @@ body {
 h1 {
   font-size: $biggest;
   margin-bottom: 12px;
+  @include responsive(nixon) {
+    font-size: 3.2rem;
+  }
 }
 
 h2 {
   font-size: $bigger;
   margin-bottom: 10px;
   text-transform: uppercase;
+  @include responsive(nixon) {
+    font-size: 1.6rem;
+  }
+  @include responsive(reagan) {
+    font-size: 2.0rem;
+  }
 }
 
 h3 {
@@ -47,6 +66,9 @@ h3 {
   padding: 8px 12px;
   text-align: center;
   text-transform: uppercase;
+  @include responsive(nixon) {
+    margin-top: 20px;
+  }
 }
 
 h6 {
@@ -100,13 +122,18 @@ footer {
 }
 
 header {
-  background: white;
+  overflow: hidden;
   padding-top: 12px;
+  position: relative;
 }
 
 main {
   border-top: 1px solid $gray50;
   padding-top: 30px;
+  @include responsive(nixon) {
+    border: none;
+    padding-top: 14px;
+  }
 }
 
 
