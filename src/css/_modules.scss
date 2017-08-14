@@ -537,13 +537,13 @@ div {
   }
 }
 
-.modifyc3 {
+.modifyc3 {  //c020
   @include responsive(nixon) {
     width: 29%;
   }
 }
 
-.modifyc9 {
+.modifyc9 {  //c020
   @include responsive(nixon) {
     width: 71%;
   }
@@ -569,25 +569,25 @@ div {
   }
 }
 
-.modifyp5 {
+.modifyp5 {  //c020
   @include responsive(nixon) {
     padding-left: 0;
   }
 }
 
-.modifyw {
+.modifyw {  //c020
   @include responsive(nixon) {
     width: auto;
   }
 }
 
-.modifyw2 {
+.modifyw2 {  //c020
   @include responsive(nixon) {
     width: 52.5%;
   }
 }
 
-.modifyw3 {
+.modifyw3 {  //c020
   @include responsive(nixon) {
     width: 22.5%;
   }

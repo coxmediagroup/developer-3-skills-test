@@ -1,7 +1,7 @@
 ## Comments for Cox Media Group Challenge Submissions
 
 ### c001
-The source for this reset has long since been lost but in its own comments, it cited inspiration from those listed below. We have since made own modifications to it but it is largely intact as it was when we first started implementing it.
+The source for this reset has long since been lost but in its own comments, it cites inspiration from those listed below. We have since made own modifications to it but it is largely intact as it was when we first started implementing it.
 + [Eric Meyer](http://meyerweb.com)
 + [HTML5 Doctor](http://html5doctor.com)
 + [HTML5 Boilerplate](http://html5boilerplate.com)
