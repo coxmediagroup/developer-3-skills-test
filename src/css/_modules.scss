@@ -63,6 +63,26 @@
 .seemore {  //c024
   cursor: pointer;
   position: relative;
+  @include responsive(nixon) {
+    &.modifyd {
+      &:after {
+        bottom: -16px;
+      }
+      &:before {
+        bottom: -9px;
+      }
+    }
+  }
+  @include responsive(reagan) {
+    &.modifyd {
+      &:after {
+        bottom: 16px;
+      }
+      &:before {
+        bottom: 22px;
+      }
+    }
+  }
   &:after {
     background: #0765ba;
     bottom: 16px;
@@ -242,6 +262,9 @@ li {
     }
     @include responsive(nixon) {
       font-size: $small;
+      margin: 8px 8px;
+    }
+    @include responsive(reagan) {
       margin: 8px 16px;
     }
     &:nth-of-type(1):before {
@@ -313,7 +336,7 @@ li {
         border-right: 1px solid $gray40;
         content: '';
         height: 200px;
-        right: -2px;
+        right: 0;
         position: absolute;
         top: -50px;
       }
@@ -522,6 +545,12 @@ div {
 
 .modifyp4 {  //c020
   padding-right: 0;
+}
+
+.modifyp5 {
+  @include responsive(nixon) {
+    padding-left: 0;
+  }
 }
 
 .modifyc3 {
