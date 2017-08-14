@@ -2,8 +2,18 @@
 //  WRAPS
 //----------------------------------------------------------------------------
 .y-wrap {
-  background: $gray30;
   margin: 0 auto;
   max-width: 1200px;
   overflow: hidden;
+  position: relative;
+  &:after {
+    background: $gray30;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -40;
+  }
 }

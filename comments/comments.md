@@ -84,3 +84,6 @@ This is for the POC only. Since comps were not provide for widths below 992px an
 
 #### c025
 To speed up development, we have come up with our own classes to take care of little things like padding and margin overrides. Bootstrap has built-in classes to do the same thing but, in the spirit of transparency, we do not use Bootstrap a lot and implementing our our classes is faster right now.
+
+#### c026
+This is for the POC only.

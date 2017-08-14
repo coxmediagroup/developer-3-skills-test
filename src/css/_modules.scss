@@ -43,6 +43,23 @@
 //----------------------------------------------------------------------------
 //  COMMON COMPONENTS
 //----------------------------------------------------------------------------
+.bgwhite {
+  &:after {
+    background: white;
+    content: '';
+    height: 400px;
+    left: 0;
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    z-index: -30;
+  }
+}
+
+.inlined {
+  display: inline-block;
+}
+
 .seemore {  //c024
   cursor: pointer;
   position: relative;
@@ -89,7 +106,7 @@ li {
     font-weight: 700;
     margin: 8px 0;
     position: relative;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     @include responsive(truman) {
       display: inline-block;
       margin: 4px 8px;
@@ -118,8 +135,20 @@ li {
   }
 }
 
+span {
+  .bfootersocials & {
+    display: none;
+    font-weight: 700;
+    margin-right: 8px;
+    @include responsive(nixon) {
+      display: inline-block;
+    }
+  }
+}
+
 .afooters {
   padding: 12px 0 24px;
+  text-transform: uppercase;
 }
 
 .bfooternavs {
@@ -128,6 +157,10 @@ li {
 
 .bfootersocials {
   margin-bottom: 20px;
+  @include responsive(nixon) {
+    margin-right: 22px;
+    text-align: right;
+  }
 }
 
 .scrolltop {
@@ -135,7 +168,10 @@ li {
   margin-left: 14px;
   font-weight: 700;
   position: relative;
-  text-transform: uppercase;
+  @include responsive(nixon) {
+    font-size: $big;
+    padding-top: 2px;
+  }
   &:before {
     border: 2px solid black;
     border-radius: 10px;
@@ -206,7 +242,7 @@ li {
     }
     @include responsive(nixon) {
       font-size: $small;
-      margin: 8px 8px;
+      margin: 8px 16px;
     }
     &:nth-of-type(1):before {
       background: #002771;
@@ -262,6 +298,16 @@ li {
         left: -2px;
         position: absolute;
         top: 0;
+      }
+      &:nth-of-type(1):before {
+        background: $gray20;
+        content: '';
+        height: 200px;
+        right: -2px;
+        position: absolute;
+        top: -50px;
+        width: 100%;
+        z-index: -1;
       }
       &:nth-of-type(1):after {
         border-right: 1px solid $gray40;
@@ -396,6 +442,7 @@ li {
     &:last-of-type:after {
       color: white;
       content: '3';
+      cursor: pointer;  //c026
       font-size: $smaller;
       font-weight: 700;
       left: 50%;
@@ -609,6 +656,7 @@ p {
   border: 1px solid black;
   display: inline-block;
   margin-top: 26px;
+  text-align: center;
 }
 
 //----------------------------------------------------------------------------
