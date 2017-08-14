@@ -3,7 +3,7 @@
 //----------------------------------------------------------------------------
 .advert {
   background: lavender;
-  padding: 40px;
+  padding: 36px;
   position: relative;
   text-align: center;
   &:before {
@@ -29,6 +29,9 @@
     height: 210px;
     @include responsive(truman) {
       display: block;
+    }
+    @include responsive(nixon) {
+      // width: 210px;
     }
     &:before {
       content: 'Square Banner Ad';
@@ -376,6 +379,18 @@ div {
   padding-right: 0;
 }
 
+.modifyc3 {
+  @include responsive(nixon) {
+    width: 30.5%;
+  }
+}
+
+.modifyc9 {
+  @include responsive(nixon) {
+    width: 69.5%;
+  }
+}
+
 
 //----------------------------------------------------------------------------
 //  SIDEBAR : LEFT "Take A Break"
@@ -426,6 +441,9 @@ li {
       font-size: 2.0rem;
       left: 13px;
       transform: translateY(-30%);
+    }
+    @include responsive(nixon) {
+
     }
   }
 }
