@@ -256,7 +256,7 @@ li {
         background: none;
       }
       &:before {
-        border-left: 3px solid $gray45;
+        border-left: 1px solid $gray40;
         content: '';
         height: 200px;
         left: -2px;
@@ -264,7 +264,7 @@ li {
         top: 0;
       }
       &:nth-of-type(1):after {
-        border-right: 3px solid $gray45;
+        border-right: 1px solid $gray40;
         content: '';
         height: 200px;
         right: -2px;
@@ -281,7 +281,7 @@ li {
         top: -5px;
       }
       &:nth-of-type(2):after {
-        border-right: 3px solid $gray45;
+        border-right: 1px solid $gray40;
         content: '';
         height: 200px;
         right: -2px;
@@ -317,13 +317,14 @@ span {
   }
   &:after,
   &:before {
-    border: 1px solid $gray45;
+    border: 1px solid $gray40;
     content: '';
     left: 0;
     position: absolute;
     width: 100%;
   }
   &:after {
+    border: 1px solid $gray45;
     bottom: 0;
   }
   &:before {
@@ -453,6 +454,9 @@ div {
 .modifyb {
   background: $gray30;
   padding-top: 12px;
+  @include responsive(nixon) {
+    padding-top: 20px;
+  }
 }
 
 .modifym2 {  //c020
@@ -475,13 +479,31 @@ div {
 
 .modifyc3 {
   @include responsive(nixon) {
-    width: 30.5%;
+    width: 29%;
   }
 }
 
 .modifyc9 {
   @include responsive(nixon) {
-    width: 69.5%;
+    width: 71%;
+  }
+}
+
+.modifyw {
+  @include responsive(nixon) {
+    width: auto;
+  }
+}
+
+.modifyw2 {
+  @include responsive(nixon) {
+    width: 52.5%;
+  }
+}
+
+.modifyw3 {
+  @include responsive(nixon) {
+    width: 22.5%;
   }
 }
 
