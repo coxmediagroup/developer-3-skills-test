@@ -170,6 +170,11 @@ a {
         background: #ea2f27;
         color: white;
         margin-left: -9px;
+        @include responsive(nixon) {
+          background: none;
+          color: $black80;
+          margin-left: 0;
+        }
       }
     }
   }
@@ -195,6 +200,10 @@ li {
     @include responsive(truman) {
       font-size: $big;
       margin: 8px 16px;
+    }
+    @include responsive(nixon) {
+      font-size: $small;
+      margin: 8px 10px;
     }
     &:nth-of-type(1):before {
       background: #002771;
@@ -228,22 +237,68 @@ li {
   }
 }
 
+li {
+  .logins & {
+    @include responsive(nixon) {
+      margin: 2px 0 8px;
+      padding: 0 10px;
+      position: relative;
+      vertical-align: middle;
+      &:nth-of-type(1):before,
+      &:nth-of-type(2):before {
+        background: none;
+      }
+      &:before {
+        border-left: 3px solid $gray45;
+        content: '';
+        height: 100px;
+        left: -2px;
+        position: absolute;
+        top: 0;
+      }
+      &:nth-of-type(2):before {
+        left: -4px;
+      }
+      &:nth-of-type(2):after {
+        border-right: 3px solid $gray45;
+        content: '';
+        height: 100px;
+        right: -2px;
+        position: absolute;
+        top: -50px;
+      }
+    }
+  }
+}
+
+span {
+  .logins & {
+    display: none;
+    @include responsive(nixon) {
+      display: block;
+    }
+  }
+}
+
 .navs {
-  float: none;  //c020
+  // float: none;  //c020
   margin-top: 12px;
+  overflow: hidden;
   padding-bottom: 20px;
   padding-top: 6px;
   position: relative;
-  // @include responsive(truman) {
-    text-align: center;
-  // }
+  text-align: center;
+  @include responsive(nixon) {
+    padding-bottom: 0;
+    text-align: left;
+  }
   &:after,
   &:before {
-    border: 1px solid $gray40;
+    border: 1px solid $gray45;
     content: '';
-    left: -50%;
+    left: 0;
     position: absolute;
-    width: 200%;
+    width: 100%;
   }
   &:after {
     bottom: 0;
@@ -350,10 +405,26 @@ div {
 
 .modifya1 {  //c020
   text-align: center;
+  @include responsive(nixon) {
+    text-align: left;
+  }
 }
 
 .modifya2 {  //c020
   text-align: right;
+}
+
+.modifya3 {  //c020
+  text-align: center;
+  @include responsive(nixon) {
+    text-align: right;
+  }
+}
+
+.modifya4 {
+  @include responsive(nixon) {
+    text-align: right;
+  }
 }
 
 .modifyb {
