@@ -176,6 +176,9 @@ a {
           margin-left: 0;
         }
       }
+      &.colorred {
+        color: #b2061e;
+      }
     }
   }
 }
@@ -203,7 +206,7 @@ li {
     }
     @include responsive(nixon) {
       font-size: $small;
-      margin: 8px 10px;
+      margin: 8px 8px;
     }
     &:nth-of-type(1):before {
       background: #002771;
@@ -244,6 +247,10 @@ li {
       padding: 0 10px;
       position: relative;
       vertical-align: middle;
+      &:nth-of-type(2) {
+        padding-left: 24px;
+        padding-right: 8px;
+      }
       &:nth-of-type(1):before,
       &:nth-of-type(2):before {
         background: none;
@@ -251,18 +258,32 @@ li {
       &:before {
         border-left: 3px solid $gray45;
         content: '';
-        height: 100px;
+        height: 200px;
         left: -2px;
         position: absolute;
         top: 0;
       }
+      &:nth-of-type(1):after {
+        border-right: 3px solid $gray45;
+        content: '';
+        height: 200px;
+        right: -2px;
+        position: absolute;
+        top: -50px;
+      }
       &:nth-of-type(2):before {
-        left: -4px;
+        border: none;
+        content: '\f007';
+        font-family: FontAwesome;
+        font-size: $bigger;
+        height: 0;
+        left: 6px;
+        top: -5px;
       }
       &:nth-of-type(2):after {
         border-right: 3px solid $gray45;
         content: '';
-        height: 100px;
+        height: 200px;
         right: -2px;
         position: absolute;
         top: -50px;
@@ -274,6 +295,8 @@ li {
 span {
   .logins & {
     display: none;
+    font-size: $smallest;
+    text-align: center;
     @include responsive(nixon) {
       display: block;
     }
