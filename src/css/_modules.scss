@@ -375,7 +375,6 @@ span {
 }
 
 .navs {
-  // float: none;  //c020
   margin-top: 12px;
   overflow: hidden;
   padding-bottom: 20px;
@@ -538,6 +537,18 @@ div {
   }
 }
 
+.modifyc3 {
+  @include responsive(nixon) {
+    width: 29%;
+  }
+}
+
+.modifyc9 {
+  @include responsive(nixon) {
+    width: 71%;
+  }
+}
+
 .modifym2 {  //c020
   margin-left: -30px;
   margin-right: -30px;
@@ -561,18 +572,6 @@ div {
 .modifyp5 {
   @include responsive(nixon) {
     padding-left: 0;
-  }
-}
-
-.modifyc3 {
-  @include responsive(nixon) {
-    width: 29%;
-  }
-}
-
-.modifyc9 {
-  @include responsive(nixon) {
-    width: 71%;
   }
 }
 
