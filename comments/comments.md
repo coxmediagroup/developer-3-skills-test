@@ -97,23 +97,23 @@ This is for the POC only.
 + The *we* you will see throughout the comments in the [royal we](https://en.wikipedia.org/wiki/Royal_we) and is used only to be consistent with conventions often found in code used to teach others. I am the sole author of this code.
 
 ### c028
-To begin our extraction of the email from a URL, we first need the index of the *@* sign.
+To begin our extraction of the email from a URL, we first need the index of the *@* sign.  
 Example: *38*
 
 ### c029
-Once we have the *@* sign (see c028), we get everything in front of it that pertains to an email address and store this in a variable. Because we know that the URL in question does not store the email as a parameter, we can use ` .split("/") ` and ` pop() ` to zero in on the index where the email begins.
+Once we have the *@* sign (see c028), we get everything in front of it that pertains to an email address and store this in a variable. Because we know that the URL in question does not store the email as a parameter, we can use ` .split("/") ` and ` pop() ` to zero in on the index where the email begins.  
 Example: *sally*
 
 ### c030
-Here we collect all of the text that follows the *@* sign, including text that does not pertain to the email address.
+Here we collect all of the text that follows the *@* sign, including text that does not pertain to the email address.  
 Example: *@myemail.com/dhlskjljhdf/something*
 
 ### c031
-With ` secondHalfPrep ` now storing the *@* sign and everything after it, we can now calculate the distance between the *@* sign and the end of the email by finding the index of the the dot in the email address. We then add 3 to ` count ` in order to get the complete domain name. One advantage of searching this way is we do not have to worry if the domain name ends in *.net*, *.com*, *edu*, etc. One very glaring disadvantage is that domain names with more than one period or ones with more than 3 letters after the dot will not be calculated properly.
+With ` secondHalfPrep ` now storing the *@* sign and everything after it, we can now calculate the distance between the *@* sign and the end of the email by finding the index of the the dot in the email address. We then add 3 to ` count ` in order to get the complete domain name. One advantage of searching this way is we do not have to worry if the domain name ends in *.net*, *.com*, *edu*, etc. One very glaring disadvantage is that domain names with more than one period or ones with more than 3 letters after the dot will not be calculated properly.  
 Example: *12*
 
 ### c032
-This stores only the characters that pertain to the email address after the *@* sign (and includes the *@* sign, as well).
+This stores only the characters that pertain to the email address after the *@* sign (and includes the *@* sign, as well).  
 Example: *sally@myemail.com*
 
 ### c033
@@ -123,6 +123,8 @@ This assumes that *email=* is written with lowercase letters.
 Providing an object is not necessary for this exercise.
 
 ### c035
-As per the [documentation](https://developer.mozilla.org/en-US/docs/Web/API/History_API) at MDN, this parameter is currently ignored by Firefox (and probably other browsers).
+As per the [documentation](https://developer.mozilla.org/en-US/docs/Web/API/History_API) at MDN, this parameter is currently ignored by Firefox (and probably other browsers, as well).
 
 ### c036
+#### Summary Commentary for *js-challenge*
+This type of functionality is new for me but I really enjoyed learning about it. I was not able to test it with an an email address contained within a live URL but I did test with ` console.log ` and it appears to work as expected. The functions that I have written do not take into account every possible scenario (see c031) but cover most use cases in the United States.
