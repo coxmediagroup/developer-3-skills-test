@@ -1,0 +1,176 @@
+<%@ include file="/WEB-INF/tags/eom/PortalConfig/np-free/taglibs.jpt" %>
+
+<p:currentObject content="data" metadata="meta" />
+<c:set var="extraClasses" value="${cacheScope.extraClasses}" />
+
+<%-- Set indicator that determines if we have at lease one related photo item.  --%>
+<c:set var="relatedItemsExist" value="false" />
+<c:set var="queryItemsExist" value="false" />
+
+<p:list var="relatedObjectList">
+	<x:forEach
+		select="$data/doc/story/story-links/descendant::node()/@href | $data/doc/story/story-links/descendant::node()/@fileref"
+		var="item" varStatus="stat">
+
+		<p:getObject xpath="$item" var="relatedObject" />
+		<p:object webObject="${relatedObject}" metadata="relatedMeta" />
+		<p:out xvalue="$relatedMeta//WebType" var="webType" />
+
+		<c:choose>
+			<c:when
+				test="${not empty relatedObject and webType ne 'image' and webType ne 'Sponsor' and webType ne ''}">
+				<p:add value="${relatedObject}" />
+				<%-- We have at lease one related item, so set indicator.  --%>
+				<c:set var="relatedItemsExist" value="true" />
+			</c:when>
+			<c:when
+				test="${not empty relatedObject and (relatedObject.eomType eq 'EOM::Query' or relatedObject.eomType eq 'EOM::AlertQuery')}">
+				<%-- We have at lease one related query, so set indicator.  --%>
+				<c:set var="relatedItemsQueryExist" value="true" />
+				<p:getCollection var="relatedQuery" webObject="${relatedObject}" />
+				<np-free:uniq var="relatedQuery" list="${relatedQuery}" forceVisible="true" />
+			</c:when>
+			<c:otherwise>
+				<%-- not displaying unsupported type: ${webType}  --%>
+
+			</c:otherwise>
+		</c:choose>
+	</x:forEach>
+</p:list>
+
+
+<c:set var="relatedItemCount" value="0" scope="page" />
+
+<c:if test="${relatedItemsExist or relatedItemsQueryExist}">
+	<%-- Related Content: ${fn:length(relatedObjectList)} items --%>
+	<div class="related-content-container margin-bottom clearfix ${extraClasses}">
+		<h5 class="section-heading uppercase">Related</h5>
+		<ul class="related-headlines">
+
+
+			<c:forEach items="${relatedObjectList}" var="relatedObject" varStatus="stat" end="5">
+
+				<p:object webObject="${relatedObject}" metadata="relatedMeta" content="relatedData" />
+				<p:out var="relatedObjectWebType" xvalue="$relatedMeta//WebType" />
+
+				<c:if test="${ relatedObjectWebType ne 'story' }" var="isStory">
+					<c:set var="queryItemsExist" value="true" />
+				</c:if>
+
+				<np-free:wrapper webObject="${relatedObject}"
+					headline="relatedHeadline" imgUrl="relatedImgUrl"
+					content="relatedContent" description="relatedDescription"
+					objUrl="relatedObjUrl" sectionTag="relatedSectionTag"
+					sectionTagUrl="relatedSectionTagUrl" imgObj="imgObj" />
+                
+                <%--
+                    Override for related image url: Sometimes the related gallery object also has related objects that
+                    generate a story-links/media-group xml. When this happens the related gallery shows the first related
+                    link image instead, since story-links appears above all media-group nodes. The overly generic xpath
+                    in wrapper.tag finds all media-groups. We need to override this to produce the correct image.
+                --%>
+                <p:object webObject="${relatedObject}" content="relatedData" />
+                <p:url var="relatedImgUrl" xvalue="$relatedData//media-group[not(ancestor::story-links)]/photo/@fileref" format="image_inline" onError="ignore" />
+
+				<c:if var="isDocument" test="${relatedObjectWebType eq 'Document'}">
+					<p:getObject var="relatedDocument" xpath="$relatedData/doc/story/story-links/*[1]/@href" />
+                    <p:url var="relatedObjUrl" webObject="${relatedDocument}" type="resource" />
+					<c:if test="${empty relatedImgUrl and (relatedDocument.eomType eq 'Word' or relatedDocument.eomType eq 'Excel' or relatedDocument.eomType eq 'Powerpoint' or relatedDocument.eomType eq 'PDF')}">
+						<p:url var="relatedImgUrl" value="/PortalConfig/np-free/assets/common/images/documents/${fn:toLowerCase(relatedDocument.eomType)}.png" />
+					</c:if>
+				</c:if>
+
+				<p:out var="objUrl" value="${relatedObjUrl}" />
+
+				<c:if var="isLink" test="${relatedObjectWebType eq 'Link'}">
+					<p:out var="objUrl" xvalue="$relatedMeta//ExternalLink" />
+					<p:out var="objTarget" xvalue="$relatedMeta//ExternalTarget" />
+				</c:if>
+
+				<p:out var="hasImage" value="${not empty relatedImgUrl}" />
+
+				<li data-index="${stat.index}" class="${(stat.last and !showMoreLink and queryItemsExist ) ? 'last-item' : ''} ${hasImage ? '' : ' no-image'}">
+                    <a href="${objUrl}" class="related-object-link" target="${isLink?objTarget:'_self'}">
+						<c:if test="${hasImage}">
+							<div class="tease-image">
+								<%-- <np-free:imgFluid fileref="${imgObj}" title="${headline}" /> --%>
+                                <np-free:img src="${relatedImgUrl}" ratio="16:9" title="${headline}" />
+							</div>
+						</c:if>
+    					<div class="tease-headline">${relatedHeadline}</div>
+				    </a>
+                </li>
+                <c:set var="relatedItemCount" value="${relatedItemCount + 1}" scope="page" />
+			</c:forEach>
+
+<c:set var="relatedItemsEnd" value="${5 - relatedItemCount}" />
+<c:set var="queryItemsEnd" value="${5 - relatedItemCount}" />
+
+<c:if test="${relatedItemsEnd < 0}">
+	<c:set var="relatedItemsEnd" value="0" />
+</c:if>
+
+<%--  Increase the count for related items by Query if some of them are not stories. Excluding images for example --%>
+<c:forEach items="${relatedQuery}" var="relatedObject"
+	end="${relatedItemsEnd}" varStatus="stat">
+	<p:object webObject="${relatedObject}" metadata="relatedMeta"
+		content="relatedData" />
+	<p:out var="relatedObjectWebType" xvalue="$relatedMeta//WebType" />
+	<c:if test="${ relatedObjectWebType eq 'image' }" var="isImage">
+		<c:set var="queryItemsEnd" value="${queryItemsEnd + 1}" />
+	</c:if>
+</c:forEach>
+
+
+<%--
+				Related Query
+				
+				A lot of this logic is duplicated from above, and might possibly be optimized, 
+				but Related Queries are supposed to be *after* the rest of the content, so this
+				might be the most efficient way.	
+ --%>
+<c:if test="${(relatedItemsQueryExist eq 'true' and queryItemsEnd > 0) or (queryItemsEnd == 5 and relatedItemsQueryExist eq 'true' )}">
+	<c:forEach items="${relatedQuery}" var="relatedObject" end="${queryItemsEnd }" varStatus="stat">
+
+		<p:object webObject="${relatedObject}" metadata="relatedMeta" content="relatedData" />
+		<p:out var="relatedObjectWebType" xvalue="$relatedMeta//WebType" />
+
+		<np-free:wrapper webObject="${relatedObject}"
+			headline="relatedHeadline" imgUrl="relatedImgUrl"
+			content="relatedContent" description="relatedDescription"
+			objUrl="relatedObjUrl" sectionTag="relatedSectionTag"
+			sectionTagUrl="relatedSectionTagUrl" imgObj="imgObj" />
+
+		<c:if var="isDocument" test="${relatedObjectWebType eq 'Document'}">
+			<p:getObject var="relatedDocument" xpath="$relatedData/doc/story/story-links/*[1]/@href" />
+            <p:url var="relatedObjUrl" webObject="${relatedDocument}" type="resource" />            
+			<c:if test="${empty relatedImgUrl and (relatedDocument.eomType eq 'Word' or relatedDocument.eomType eq 'Excel' or relatedDocument.eomType eq 'Powerpoint' or relatedDocument.eomType eq 'PDF')}">
+				<p:url var="relatedImgUrl" value="/PortalConfig/np-free/assets/common/images/documents/${fn:toLowerCase(relatedDocument.eomType)}.png" />
+			</c:if>
+		</c:if>
+
+		<p:out var="objUrl" value="${relatedObjUrl}" />
+
+		<c:if var="isLink" test="${relatedObjectWebType eq 'Link'}">
+			<p:out var="objUrl" xvalue="$relatedMeta//ExternalLink" />
+			<p:out var="objTarget" xvalue="$relatedMeta//ExternalTarget" />
+		</c:if>
+
+
+		<p:out var="hasImage" value="${not empty imgObj}" />
+        <li data-index="${stat.index}" class="${(stat.last and !showMoreLink  ) ? 'last-item' : ''} ${hasImage ? '' : ' no-image'}">
+	       <a href="${objUrl}" class="related-object-link" target="${isLink?objTarget:'_self'}">
+				<c:if test="${hasImage}">
+					<div class="tease-image">
+						<np-free:imgFluid webObject="${imgObj}" title="${headline}" />
+					</div>
+				</c:if>
+				<div class="tease-headline">${relatedHeadline}</div>
+            </a>
+        </li>
+	</c:forEach>
+</c:if>
+</ul>
+</div>
+
+</c:if>
