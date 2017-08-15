@@ -1,5 +1,15 @@
 function cleanParam(url) {
-  console.log('a');
+  let middle = url.indexOf('@');
+  let firstHalf = url.substring(0, middle).split("email=").pop();  //c033
+  let secondHalfPrep = url.substring(middle, url.length)
+  let count = secondHalfPrep.indexOf('.') + 4;
+  let secondHalf = url.substring(middle, middle + count);
+  let email = firstHalf + secondHalf
+  if(middle) {
+    console.log(`The email address ${email} has been scrubbed from the URL`);
+  } else {
+    console.log('There is no email address contained within the URL.')
+  }
 }
 
 function cleanEmail(url) {
@@ -9,7 +19,6 @@ function cleanEmail(url) {
   let count = secondHalfPrep.indexOf('.') + 4;  //c031
   let secondHalf = url.substring(middle, middle + count);  //c032
   let email = firstHalf + secondHalf
-
   if(middle) {
     console.log(`The email address ${email} has been scrubbed from the URL`);
   } else {
@@ -19,8 +28,8 @@ function cleanEmail(url) {
 
 function cleanUrl() {
 	//let dirty = window.location.href;
-  let dirty = 'http://www.google.com/heydaslyoi/sally@myemail.com/dhlskjljhdf/something';
-  // let dirty ='http://www.google.com/?email=joey@biteme.net';
+  // let dirty = 'http://www.google.com/heydaslyoi/sally@myemail.com/dhlskjljhdf/something';
+  let dirty ='http://www.google.com/?email=joey@opera.net';
   if(dirty.indexOf('?') >= 0) {
     return cleanParam(dirty);
   } else {

@@ -116,8 +116,8 @@ Example: *12*
 This stores only the characters that pertain to the email address after the *@* sign (and includes the *@* sign, as well).
 Example: *sally@myemail.com*
 
-### c030
-
+### c033
+This assumes that *email=* is written with lowercase letters.
 
 ### c031
 
