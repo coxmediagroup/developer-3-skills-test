@@ -1,29 +1,24 @@
 function cleanUrl() {
 	//let dirty = window.location.href;
-  let dirty ='http://www.google.com/heydaslyoi/joeyrethf@myemail.com/dhlskjljhdf/spomthing';
-  let middle;
-  if(dirty.indexOf('@') > 0) {
-  	//middle = dirty.indexOf('@') + 1;
-    let dirtyReverse = dirty.split("").reverse().join("");
-    middle = dirtyReverse.indexOf('@');
-    middle2 = dirty.indexOf('@');
-    //let begin = dirtyReverse.substring(middle, (dirtyReverse.split('/', 1).length));
-    let begin = dirty.substring(middle2, (dirtyReverse.split('/', 1).length));
-    let begin2 = begin.substring(begin.lastIndexOf('/') + 1, begin.length + 1);
-    console.log(dirtyReverse);
-    console.log(begin);
-    console.log(begin2);
+  // let dirty ='http://www.google.com/heydaslyoi/sally@myemail.com/dhlskjljhdf/something';
+  let dirty ='http://www.google.com/?email=joey@biteme.net';
+  let middle = dirty.indexOf('@');  // our starting point, the @ sign
+  let firstHalf = dirty.substring(0, middle).split("/").pop();  // everything before the @ sign
+  let reverse = dirty.substring(middle, dirty.length).split("").reverse().join("");  // we reverse everything after the @ so we can calculate the distance between the @ and the end of the email
+  let count = reverse.length - reverse.indexOf('.') + 3;  // we look for the period and then count + 3 to get the domain name
+  let secondHalf = dirty.substring(middle, middle + count);  // our final output
+  // console.log(firstHalf);
+  // console.log(middle);
+  // console.log(secondHalf);
+  // console.log(reverse);
+  // console.log(count);
+  let email = firstHalf + secondHalf
+
+  if(middle) {
+    console.log(email);
   } else {
-  	console.log('No email address is contained with the URL.')
+  	console.log('No email address is contained within the URL.')
   }
-  //let next = dirty.substring(dirty.lastIndexOf('/') + 1, dirty.lastIndexOf('/') + 2);
-  //let clean = dirty.substring(0, next);
-  //let stateObj = { do: "nothing"};
-  //let title = null;
-  //let url = '/';
-  //if(dirty.substring()
-  //console.log(next);
-  //window.history.pushState(stateObj, title, url);
 }
 
 cleanUrl();
