@@ -1,7 +1,7 @@
-function cleanUrl() {
-	//let dirty = window.location.href;
+function extractEmail() {
+	let dirty = window.location.href;
   // let dirty = 'http://www.google.com/heydaslyoi/sally@myemail.com/dhlskjljhdf/something';
-  let dirty ='http://www.google.com/?random=thoughts&email=joey@opera.net&someparam=Africa&anotherparam=28394';
+  // let dirty ='http://www.google.com/?random=thoughts&email=joey@opera.net&someparam=Africa&anotherparam=28394';
   let middle = dirty.indexOf('@');
   let firstHalf;
   if(dirty.indexOf('?') >= 0) {
@@ -17,11 +17,19 @@ function cleanUrl() {
   let secondHalf = dirty.substring(middle, middle + count);
   let email = firstHalf + secondHalf
   if(middle) {
-    console.log(`The email address ${email} has been scrubbed from the URL.`);
+    return cleanUrl(dirty, email);
   } else {
     console.log('An unknown error has occurred.')
     return false;
   }
 }
 
-cleanUrl();
+function cleanUrl(dirty, email) {
+  let stateObj = { do: "nothing"};  //c034
+  let title = null;  //c035
+  let url = "/" + dirty.replace(email, null);
+  window.history.pushState(stateObj, title, url);
+  console.log(`The email address ${email} has been scrubbed from the URL.`);
+}
+
+extractEmail();

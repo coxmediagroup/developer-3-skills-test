@@ -119,10 +119,10 @@ Example: *sally@myemail.com*
 ### c033
 This assumes that *email=* is written with lowercase letters.
 
-### c031
+### c034
+Providing an object is not necessary for this exercise.
 
+### c035
+As per the [documentation](https://developer.mozilla.org/en-US/docs/Web/API/History_API) at MDN, this parameter is currently ignored by Firefox (and probably other browsers).
 
-### c032
-
-
-### c033
+### c036
