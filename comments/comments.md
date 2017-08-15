@@ -131,4 +131,4 @@ This type of functionality is new for me but I really enjoyed learning about it.
 
 ### c037
 #### Summary Commentary for *jstl-challenge*
-This challenge is unfinished. I am simply out of time to spend on these challenges. I greatly appreciate the opportunity to be considered and apologize for leaving this incomplete.
+This challenge is unfinished as I am simply unable to dedicate any more time on it. I greatly appreciate the opportunity to be considered and apologize for leaving this incomplete.
