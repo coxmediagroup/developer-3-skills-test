@@ -1,9 +1,8 @@
 <%@ include file="/WEB-INF/tags/eom/PortalConfig/np-free/taglibs.jpt" %>
-
 <p:currentObject content="data" metadata="meta" />
 <c:set var="extraClasses" value="${cacheScope.extraClasses}" />
 
-<%-- Set indicator that determines if we have at lease one related photo item.  --%>
+<%-- Set indicator that determines if we have at least one related photo item.  --%>
 
 <c:set var="relatedItemsExist" value="false" />
 <c:set var="queryItemsExist" value="false" />

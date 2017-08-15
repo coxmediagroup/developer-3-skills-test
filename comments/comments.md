@@ -128,3 +128,7 @@ As per the [documentation](https://developer.mozilla.org/en-US/docs/Web/API/Hist
 ### c036
 #### Summary Commentary for *js-challenge*
 This type of functionality is new for me but I really enjoyed learning about it. I was not able to test it with an an email address contained within a live URL but I did test with ` console.log ` and it appears to work as expected. The functions that I have written do not take into account every possible scenario (see c031) but cover most use cases in the United States.
+
+### c037
+#### Summary Commentary for *jstl-challenge*
+This challenge is unfinished. I am simply out of time to spend on these challenges. I greatly appreciate the opportunity to be considered and apologize for leaving this incomplete.
