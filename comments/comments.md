@@ -95,3 +95,34 @@ This is for the POC only.
 + You may notice a small box in the lower right of the viewport which indicates the current size of the viewport. I always use this when I develop responsively and have left it intact as you review my code.
 + To compare the provided *.jpg* to my code, the viewport should be set to 1200px wide.
 + The *we* you will see throughout the comments in the [royal we](https://en.wikipedia.org/wiki/Royal_we) and is used only to be consistent with conventions often found in code used to teach others. I am the sole author of this code.
+
+### c028
+To begin our extraction of the email from a URL, we first need the index of the *@* sign.
+Example: *38*
+
+### c029
+Once we have the *@* sign (see c028), we get everything in front of it that pertains to an email address and store this in a variable. Because we know that the URL in question does not store the email as a parameter, we can use ` .split("/") ` and ` pop() ` to zero in on the index where the email begins.
+Example: *sally*
+
+### c030
+Here we collect all of the text that follows the *@* sign, including text that does not pertain to the email address.
+Example: *@myemail.com/dhlskjljhdf/something*
+
+### c031
+With ` secondHalfPrep ` now storing the *@* sign and everything after it, we can now calculate the distance between the *@* sign and the end of the email by finding the index of the the dot in the email address. We then add 3 to ` count ` in order to get the complete domain name. One advantage of searching this way is we do not have to worry if the domain name ends in *.net*, *.com*, *edu*, etc. One very glaring disadvantage is that domain names with more than one period or ones with more than 3 letters after the dot will not be calculated properly.
+Example: *12*
+
+### c032
+This stores only the characters that pertain to the email address after the *@* sign (and includes the *@* sign, as well).
+Example: *sally@myemail.com*
+
+### c030
+
+
+### c031
+
+
+### c032
+
+
+### c033
