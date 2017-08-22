@@ -1,0 +1,147 @@
+//----------------------------------------------------------------------------
+//  Anchor
+//----------------------------------------------------------------------------
+a {
+  color: #0466b6;
+  li & {
+    display: block;
+  }
+  .modifyc1 & {
+    color: inherit;
+  }
+  .modifyc2 & {
+    color: #302a2d;
+  }
+}
+
+
+//----------------------------------------------------------------------------
+//  Body
+//----------------------------------------------------------------------------
+body {
+  font-family: $font1;
+  position: relative;
+  &:after {
+    background: $brown50;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -50;
+  }
+}
+
+
+//----------------------------------------------------------------------------
+//  Headings
+//----------------------------------------------------------------------------
+h1 {
+  font-size: $biggest;
+  margin-bottom: 12px;
+  @include responsive(nixon) {
+    font-size: 3.2rem;
+  }
+}
+
+h2 {
+  font-size: $bigger;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  @include responsive(nixon) {
+    font-size: 1.6rem;
+  }
+  @include responsive(reagan) {
+    font-size: 2.0rem;
+  }
+}
+
+h3 {
+  background: #0466b6;
+  color: white;
+  display: inline-block;
+  font-size: $bigger;
+  margin-bottom: 0;
+  padding: 8px 12px;
+  text-align: center;
+  text-transform: uppercase;
+  @include responsive(nixon) {
+    margin-top: 20px;
+  }
+}
+
+h6 {
+  background: #376a46;
+  color: white;
+  padding: 8px 6px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+}
+
+
+//----------------------------------------------------------------------------
+//  HTML
+//----------------------------------------------------------------------------
+html {
+  color: $black80;
+  font-size: 14px;  //c017
+}
+
+
+//----------------------------------------------------------------------------
+//  Images
+//----------------------------------------------------------------------------
+img {
+  height: auto;
+  width: 100%;
+}
+
+
+//----------------------------------------------------------------------------
+//  Paragraph
+//----------------------------------------------------------------------------
+p {
+  line-height: 1.4rem;
+}
+
+p + p {
+  margin-top: 12px;
+}
+
+
+//----------------------------------------------------------------------------
+//  Section Elements
+//----------------------------------------------------------------------------
+aside {
+  padding: 20px 0 30px;
+}
+
+footer {
+  background: white;
+  border-top: 1px solid $gray50;
+}
+
+header {
+  overflow: hidden;
+  padding-top: 12px;
+  position: relative;
+}
+
+main {
+  border-top: 1px solid $gray50;
+  padding-top: 30px;
+  @include responsive(nixon) {
+    border: none;
+    padding-top: 14px;
+  }
+}
+
+
+//----------------------------------------------------------------------------
+//  Span
+//----------------------------------------------------------------------------
+span {
+  h2 & {
+    font-weight: 400;
+  }
+}

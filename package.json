@@ -1,0 +1,33 @@
+{
+  "name": "cmg-test",
+  "version": "1.0.0",
+  "description": "Cox Media Group (CMG) Challenges.",
+  "main": "config.js",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.7.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "jquery": "^3.2.1"
+  },
+  "scripts": {
+    "start": "server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuraijane/developer-3-skills-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samuraijane/developer-3-skills-test/issues"
+  },
+  "homepage": "https://github.com/samuraijane/developer-3-skills-test#readme"
+}
