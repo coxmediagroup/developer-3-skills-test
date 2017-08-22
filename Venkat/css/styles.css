@@ -1,0 +1,148 @@
+body{
+	background: #d5cab6;
+	padding-bottom: 70px;
+}
+.container{
+	background: #ededed;
+	padding: 0px;
+}
+.footer{
+	background: #fff;
+}
+.heading{
+	padding: 5px 10px;
+}
+.heading h1{
+	margin: 0px;
+}
+.subscribe{
+	    padding: 5px 15px !important;
+    text-align: center;
+    color: red !important;
+}
+.subscribe span{
+	color: #999;
+}
+
+/* Top right header Styles */
+.top-header-nav ul li{
+	display: inline-block;
+	list-style-type: none;
+	padding: 9px 15px;
+}
+.bubble{
+	    background: red;
+    border-radius: 50%;
+    padding: 4px 5px;
+    position: absolute;
+    top: 2px;
+    margin-left: 8px;
+    font-size: 8px;
+    color: #fff;
+}
+.borders{
+	border: 1px solid #d2d2d2;
+	border-width: 0px 1px;
+	margin-left: -1px;
+}
+.navbar {
+	border: 1px solid #d2d2d2;
+    border-radius: 0px;
+}
+img{
+	max-width: 100%;
+}
+.left, .right{
+	padding: 10px;
+}
+.middle{
+	padding: 10px 0px;
+}
+.middle h3{
+	margin: 0px;
+	font-size: 36px;
+}
+.sub-heading{
+	font-weight: bold;
+	font-size: 30px;
+	padding: 0px;
+	margin: 0px;
+	padding-bottom: 10px;
+}
+ul.right-list{
+	padding: 0px;
+}
+.right-list li{
+	list-style-type: none;
+	background: #fff;
+	border: 1px solid #d2d2d2;
+	padding: 10px;
+	height: 80px;
+	margin-top: -1px;
+}
+.socila-icons li{
+	display: inline-block;
+	list-style-type: none;
+	font-size: 24px;
+	padding: 0px 0px 0px 20px;
+}
+.no-padding{
+	padding: 0px !important;
+}
+.author-share, .content-holder{
+	padding: 10px 0px;
+}
+.footer .container{
+	background: #fff;
+}
+.footer .container a{
+	color: #000;
+    font-weight: 400;
+    padding: 5px;
+}
+.footer p{
+	padding: 0px;
+	margin: 0px;
+}
+.footer{
+	padding: 5px 0px;
+}
+.left-nav{
+	margin: 20px 0px;
+}
+.left-nav h3{
+	background: #0566b5;
+	color: #fff;
+	margin-bottom: 0px;
+	display: initial;
+	padding: 0px 10px;
+}
+.left-nav ul{
+	background: #332f30;
+	padding: 0px 20px;
+}
+.left-nav ul li{
+	border-bottom: 2px solid #1e1a1b;
+	list-style-type: none;
+	color: #fff;
+	line-height: 45px;
+}
+.left-nav ul li i{
+	padding-right: 10px;
+}
+.see-more{
+	background: #0066bb;
+    color: #fff;
+    padding: 0px 10px;
+    position: absolute;
+    line-height: 30px;
+    margin-top: 7px;
+    margin-left: 23px;
+}
+.right-list li:last-child{
+	height: 50px;
+}
+.see-more-right{
+	right: 3px !important;
+    margin-top: 0px !important;
+}
