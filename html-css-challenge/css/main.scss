@@ -1,0 +1,54 @@
+/* PAGE LAYOUT
+------------------------header-------------------------
+-------------------------nav---------------------------
+----------------------banner ad-------------------------
+-----secondary ads-----article------latest news-------
+------------------------footer------------------------
+*/
+
+$container-padding: 15px;
+$thin-border-ccc: 1px solid #ccc;
+$white: #fff;
+$gray: #ededed;
+
+body {
+    background-color: #d4c9b5;
+}
+
+.container-bleed {
+    margin-left: -($container-padding);
+    margin-right: -($container-padding);
+}
+
+.bg-white {
+    background-color: $white;
+}
+
+.bg-gray {
+    background-color: $gray;
+}
+
+#primary-navigation {
+    margin-bottom: 0;
+}
+
+#secondary-ads article {
+    margin-top: $container-padding;
+}
+
+#latest-news section {
+    border: $thin-border-ccc;
+}
+
+#latest-news article {
+    /*margin-left: -($container-padding);
+    margin-right: -($container-padding);*/
+    border: $thin-border-ccc;
+    border-bottom: 0;
+    padding: $container-padding;
+    background-color: $white;
+}
+
+#latest-news article:last-of-type {
+    border-bottom: $thin-border-ccc;
+}
