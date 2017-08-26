@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Below is a example of url string I used for testing.
+        // index.html?curtisaallen@gmail.com
+        function removePII() {
+           // Get current URL
+           let currentUrl = window.location.href;
+           // Extract characters from url
+           let afterQuestion = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
+           // Split current URL
+           let splitString = afterQuestion.split("?")[0];
+           // Use html5 push state to update url
+           window.history.pushState(null, null, splitString );
+        }
+        removePII();
+    </script>
+</body>
+</html>
