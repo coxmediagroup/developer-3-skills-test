@@ -1,5 +1,13 @@
 <%@ include file="/WEB-INF/tags/eom/PortalConfig/np-free/taglibs.jpt" %>
 
+<%-- 
+	I know ZERO about JavaServer Pages Standard Tag Library  
+	would happily learn it for work but as of now I am a dot.net man 
+	so I respectfully decline in butchering this document    
+	sigh, not so good for me impressing Cox :(   
+--%>
+
+
 <p:currentObject content="data" metadata="meta" />
 <c:set var="extraClasses" value="${cacheScope.extraClasses}" />
 

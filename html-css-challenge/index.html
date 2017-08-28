@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!--
+	Test for Neal Lowrey 2017-08-25
+-->
+<head>
+
+	<title>This is fun</title>
+	
+	<!--Yes I admit it, weak on SEO -->
+	<meta name="description" content="Texan Sports Article">
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+		
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
+	<script>
+		$(function() {
+			//pretend I made some backend call to get this data
+			var articles = [
+								{"link":"#","title":"Survey:Most white millennials now disapprove of Trump,too"},
+								{"link":"#","title":"North Austin apartment residents demand building repair"},
+								{"link":"#","title":"PHOTOS:Tenants rally for improvements at the Cross Creek Apartments on..."},
+								{"link":"#","title":"GOING UP:44-story apartment tower set for Warehouse District"},
+								{"link":"#","title":"Florida man, 73, banned from beaches for 'seeking his sugarbaby', officials..."},
+								{"link":"#","title":"WARRANTS ISSUED:Austin police looking for 2 in string of pawn shop thefts..."},
+								{"link":"#","title":"Chester Bennington funeral items appear in ghoulish online auction"},
+								{"link":"#","title":"LAWSUIT: Couples sue Airbnb, guest after home catches fire in South Austin..."},
+								{"link":"#","title":"WATCH: 10 things to do to complete your Austin summer bucket list"}
+							];
+
+			var outVal = '';				
+
+			for (var i = 0;i < articles.length;i++){
+				//if (i == 4) break;// max number of articles to display
+				outVal += "<div><a href='" + articles[i].link + "'>" + articles[i].title + "</a></div>";
+			}
+			
+			$('#rightArticles').html(outVal);
+
+			
+			$('#comments').html('33'); //another pretend ajax call to get comment count
+			
+			$('#circle-car').html('3'); //get whatever the number by the car means, alerts maybe?
+
+			var temp=94;
+			$('#temperature').html(temp + '&deg;');  
+				
+			$( "#btnLogin" ).click(function() {
+				$('#Login').show();	
+			});
+
+			$( "#btnLoginDo" ).click(function() {
+				// really should do something here but oh well just a demo
+				$('#Login').hide();	
+			});
+			$( "#btnLoginCancel" ).click(function() {
+				$('#Login').hide();	
+			});
+
+			/*
+				need event handlers for MoreLeft and MoreRight, think all else are anchors
+				could also do pop up dialogs for search but it would be same techniques
+				used with my login demo. Second verse, same as the first.
+			*/	
+			
+		});
+		
+
+
+	</script>
+
+	<style>
+	
+	/*
+	
+		I know, I know, I used style directly on elements which is a big taboo to some.
+		Normally I will only do that when styling is strictly to one element
+		if two or more I will use a class
+
+		Since this is to be a tour of force of my technical foo I totally resisted the
+		temptation of looking at the AJC page to get font data and other sneak cheat info.
+		If this was real work I'd be cutting and pasting like crazy to get get it just so.
+		
+		I like to draw borders around div when developing
+		so have a clearer idea of layout and nesting
+		
+		div{
+			border-style:solid;
+			border-color:black;
+			border-width:1px;
+		}
+	*/
+		div .blackboxes{
+			color:white;
+			background-color:#332F30;
+			height:50px;
+			padding-top:15px;
+			padding-left:20px;
+
+			border-bottom:solid black 5px;
+		}
+		div .blackboxes a{
+			color:white;
+			text-decoration:none;
+			margin-left:5px;
+		}
+		
+		#rightArticles div{
+			background-color:white;
+			height:60px;
+			padding-top:15px;
+			padding-left:20px;
+			margin-bottom:2px;
+		}
+		#rightArticles div a{
+			color:black;
+			text-decoration:none;
+		}
+		
+		.iBig{
+			font-size:35px;
+			margin-right:20px;
+		}
+		
+		.btn-no-border{
+			border:0;
+			padding:0;
+			background:transparent;
+		}
+		.btn-no-border :hover,
+		.btn-no-border .focus {
+			text-decoration: none;
+			background:transparent;
+		
+		}
+		
+		#topLinks div{
+			display:inline-block;
+			float:left;
+			padding-left:10px;
+			padding-right:10px
+		}
+
+		#topLinks div a{
+			color:black;
+			font-weight:bold;
+			text-decoration:none;
+		}
+		#circle {
+			width: 40px;
+			height: 40px;
+			background: green;
+			color:white;
+			font-size:30px;
+			vertical-align;text-bottom;
+			-moz-border-radius: 50px;
+			-webkit-border-radius: 50px;
+			border-radius: 50px;
+			padding-left:8px;
+		}
+		#circle-car {
+			width:20px;
+			height: 20px;
+			background: red;
+			color:white;
+			font-weight:bold;
+			font-size:12px;
+			vertical-align;text-bottom;
+			-moz-border-radius: 20px;
+			-webkit-border-radius: 20px;
+			border-radius: 20px;
+			padding-left:6px;
+			padding-top:3px;
+		}
+		#footerLinks a{
+		display:inline-block;
+			width:150px;
+			border-right:1px solid black;
+		}
+		
+	
+	</style>
+	
+	<style type="text/css" media="screen">
+	@media screen and  (max-width:992px){
+			
+			
+			#header,#sideLeft,#sideRight,#byline , #footer{
+				visibility:hidden;
+			}
+			main,#content,#article{
+				position:absolute;
+				width:100%;
+				padding:0;
+				margin:0;
+				top:0px;
+				left:0px;
+			}
+			
+			#title{
+				height:30px;
+				width:100%;
+				padding:0;
+				margin:0;
+			}
+		
+		}
+	</style>
+
+</head>
+
+<body style="background-color:#D4C9B3;">
+
+<main style="padding-left:30px;padding-right:30px;">
+
+	<header id="header" style="background-color:white;width:100%;border-top:5px solid #D4C9B3;position:relative; ">
+	
+		<div id="banner" style="background-color:white;width:100%;float:left;border-bottom:1px solid black;">
+		
+			<div style="float:left;padding-left:10px;">
+				<h1>The <b>Texas</b> Journal</h1>
+			</div>
+			<div style="inline-block;float:right;padding-top:20px;">
+				<div style="width:100px;display:inline-block;float:left">
+					<label id="temperature">77&deg;</label>
+					<span id="weather" class="fa fa-cloud" ></span> 
+				</div>
+				
+				<div style="width:100px;display:inline-block;float:left;position:relative">
+					<button  class="btn btn-no-border  btn-default btn-lg">
+						<span class="fa fa-car" ></span> 
+					</button>
+					<div id="circle-car" style="position:relative;z-index:999;top:-30px;left:20px"></div>	
+				</div>
+				
+				
+				<div style="width:100px;display:inline-block;float:left">
+					<button id="btnSearch"  class="btn btn-no-border  btn-default btn-lg">
+						<span class="glyphicon glyphicon-search" ></span>
+					</button>
+				</div>
+			
+			</div>
+		</div>
+		
+		<div  style="background-color:white;width:100%;float:left;border-bottom:1px solid black;">
+
+			<div id ="topLinks" style="background-color:white;display:inline-block;float:left;width:75%;padding-top:10px;">
+				
+					<div><a href="#">News</a></div>
+					<div><a href="#">Sports</a></div>
+					<div><a href="#">Austin360</a></div>
+					<div><a href="#">IAHORA SII</a></div>
+					<div><a href="#">NEIGHBORHOOD</a></div>
+					<div><a href="#">THINGS TO DO</a></div>
+					<div><a href="#">MORE</a></div>
+		
+			</div>
+			
+			<div style="background-color:white;display:inline-block;position:relative;">
+
+				<div style="background-color:#EDEDED;display:inline-block;text-align:center;width:180px;padding:0;margin:0;float:left;">
+					<a href="#">
+						<div style="display:block;color:red;font-weight:bold">Subscribe Now!</div>
+						<div style="display:block;font-size:smaller;color:black">As Low As 99&cent;</div>
+					</a>
+				</div>
+		
+				<div style="background-color:white;display:inline-block;float:left;padding-left:20px;padding-top:10px;">
+					<label  id="btnLogin"  class="btn  btn-no-border ">
+						<span class="glyphicon glyphicon-user" ></span>
+						<span style="font-weight:bold;margin-left:10px">LOG IN</span> 
+					</label>
+				</div>
+							
+				<div id="Login" style="display:none;position:absolute;z-index:999;left:-140;border:1px solid black;background:white;padding:5px;">
+				
+					<label style="text-align:right;width:100px;margin-right:10px">ID</label>
+					<input id="txtID" type="text" style="width:200px"/>
+					<br/>
+					<label style="text-align:right;width:100px;margin-right:10px">Password</label>
+					<input id="txtPW" type="text" style="width:200px"/>
+					<br/>
+					<div style="display:inline-block;float:right;margin-top:5px;margin-right:5px">
+					<button  id="btnLoginDo"  class="btn  btn-default btn-sm">
+						LOG IN 
+					</button>
+					<button  id="btnLoginCancel"  class="btn  btn-cancel btn-sm">
+						Cancel 
+					</button>
+					</div>
+				</div>			
+				
+				
+			</div>
+	
+		</div>
+		
+	
+		<div  style="background-color:#EDEDED;width:100%;float:left;height:30px"></div>
+
+		<div  style="background-color:#D4C9B3;;width:100%;float:left;height:80px">
+			<a href="#"><img src="#" alt="Really pro looking Lexus ad"></a>
+		</div>
+
+	</header>
+	
+	<div id="content" style="height:auto;width:100%;display:inline-block;float:top;background-color:#EDEDED;">
+
+		<div id="sideLeft" style="width:20%;display:inline-block;float:left;padding:10px;position:relative">
+			<div style="width;100%;height:110px; background-color:blue;text-align:center;color:white;padding:5px;">
+				<span class="fa fa-slack" style="font-size:30px;"><label style="font-weight:bold">slack</label></span>
+				<br>
+				Where Work Happens
+				<br/>
+				<div style="height:10px"></div>
+				<a href="#"  class="btn  btn-default btn-sm" style="color:white;font-weight:bold;background:green;">
+					Learn More 
+				</a>
+				
+			</div>
+			<div style="display:block;margin-top:10px;"> 
+				<div style="width:60%;height:50px;color:white;font-weight:bold;background-color:blue;padding:10px;margin-bottom:1px;"><h4>TAKE A  BREAK</h4></div>
+				<div class="blackboxes">
+					<span  class="fa fa-book" ></span> 
+					<a href="#" id="booking">BOOKING MUGSHOTS</a>
+				</div>
+				<div class="blackboxes">
+					<span class="fa fa-trophy" ></span>
+					<a href="#">GAMES AND PUZZLES</a>
+				</div>
+				<div class="blackboxes" >
+					<span class="fa fa-cutlery" ></span>
+					<a href="#">DINING GUIDE</a>
+					<div style="position:absolute;z-index:999;top:290px;left:212px;border:1px solid black;background:blue;color:white;padding-left:5px;padding-top:5px;padding-right:3px">
+						<label id="MoreLeft" >See More <span class="glyphicon glyphicon-arrow-right" ></span></label>
+					</div>
+				</div>
+			
+			</div>
+			
+			<div style="border:2px solid black;margin-top:10px;height:125px;">	
+				<div style="background-color:green;color:white;height:50px;padding-top:15px;font-size;smaller;text-align:center">
+					Search the Austin City Council's Votes
+				</div>
+				<div >
+					<div id="circle" style="display:inline-block;float:left;margin-left:45px;margin-top:20px">&#10004;</div>
+					<div style="display:block;float:left;margin-left:5px;margin-top:18px;">
+						<div style="font-weight:bold;font-size:20px;display:block;clear:both">VoteTracker</div>
+						<div style="font-weight:bold;font-size:10px;;margin:0;padding:0">Auto American Systems</div>
+					</div>
+				</div>
+			</div>
+				
+		</div>
+
+		<div id="article" style="width:55%;display:inline-block;float:left;padding-left:20px;padding-right:20px">
+		<div style="display:block;float:left;">
+			<div id="title">
+				<h1>Pruit, Rays bullpen<br>combine to top Keuchel<br>Astros 3-0</h1>
+			</div>
+			<div id="byline">
+				<a href="#">John Doe</a>
+				<br>
+				August 3, 2017 filed in <a href="#">Football</a>
+				<div style="inline-block;float:right;position:relative"> 
+					<button id="btnTwitter"  class="btn btn-no-border  btn-default btn-lg">
+						<span class="fa fa-twitter iBig" ></span> 
+					</button>
+					<button id="btnFacebook"  class="btn btn-no-border  btn-default btn-lg">
+						<span class="fa fa-facebook iBig"></span> 
+					</button>
+					<button id="btnShare"  class="btn btn-no-border  btn-default btn-lg" >
+						<span class="glyphicon glyphicon-share iBig" ></span> 
+					</button>
+					<button id="btnComments"  class="btn btn-no-border  btn-default btn-lg">
+						<span class="glyphicon glyphicon-comment iBig"  ></span>
+					</button>
+					<div id="comments" style="position:relative;z-index:999;font-size:18px;top:-33px;left:162;color:white"></div> 
+		
+				</div>
+			</div>
+			<div>
+			<img src="peanut-football.jpg"  alt="Jocks huddled picture">
+			</div>
+			<article style="height:70%;padding-top:20px;padding-bottom:20px">
+			
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at rutrum tortor. Proin fringilla purus sit amet risus consectetur finibus. Etiam ultricies aliquam lectus, sit amet fringilla eros. Donec lobortis consectetur libero ut luctus. Sed ultricies, diam sit amet rutrum viverra, risus massa dictum ex, quis rutrum nibh tellus vel nisl. Nunc vestibulum diam odio, sed gravida libero fermentum a. Praesent pharetra ut ex sed feugiat. Phasellus fringilla iaculis diam, in porta orci. Proin leo est, blandit in risus in, aliquam luctus odio.
+			<p>
+			Mauris eleifend cursus enim vitae condimentum. Curabitur ac bibendum nunc. Cras efficitur nisi purus, ac ullamcorper est egestas vel. Maecenas cursus magna a tincidunt fermentum. Vestibulum id consequat ante. In dignissim metus mollis nisi pulvinar hendrerit. Phasellus et massa at tellus cursus sodales. Donec mauris risus, interdum eu lectus sed, porttitor bibendum tellus. Ut ut lacus sollicitudin, posuere felis sit amet, posuere purus. Quisque laoreet faucibus nisi, ac convallis erat. Etiam accumsan, augue nec fringilla condimentum, erat nisl sodales nulla, sed vehicula ligula nunc ut quam. Duis consectetur, enim in euismod faucibus, lectus nibh fringilla arcu, id fermentum sapien ex varius dui. Praesent mollis ipsum quis fringilla hendrerit. Suspendisse condimentum, sapien efficitur accumsan tristique, risus erat ultrices eros, sagittis commodo sapien elit consectetur augue. Aenean leo ante, mollis ut tincidunt id, pretium at risus. Sed pharetra ac nibh sit amet posuere.
+			<p>
+			Praesent ultrices porttitor risus id interdum. Nam sed dictum ante, at interdum mauris. Quisque tincidunt, erat sit amet auctor tincidunt, lectus odio feugiat augue, ut maximus ex dolor a nisl. Vestibulum vel volutpat nisi. Fusce volutpat a massa non consectetur. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque in dolor sit amet sem rutrum vehicula non vel felis. Curabitur id volutpat quam. Proin eu augue vitae urna scelerisque efficitur. In quis sem et enim gravida dictum. Phasellus turpis magna, maximus eget pulvinar ac, dapibus nec enim. Praesent nec mollis ipsum. In sed sapien non risus convallis sodales. Nulla quis varius turpis, sit amet varius turpis. Praesent facilisis elit in suscipit rhoncus. Fusce mollis sed ante sed aliquet.
+			<p>
+			</article>
+		</div>
+		</div>
+		
+		<section id="sideRight" style="width:20%;display:inline-block;float:left;position:relative;">
+			<h2 style="font-weight:bold">NEW RIGHT NOW</h2>
+			<div id="rightArticles"></div>
+			<div style="height:50px;background:white;">
+				<div style="position:relative;width:92px;z-index:999;border:1px solid black;background:blue;color:white;padding-left:5px;padding-top:5px;padding-right:3px;top:10px;left:230px;">
+					<label id="MoreRight">See More <span class="glyphicon glyphicon-arrow-right" ></span></label>
+				</div>
+			</div>
+		</section>
+
+	
+	</main>
+	<footer id="footer" style="background-color:white;width:100%;height:150px;display:inline-block;float:left;padding:0">
+		
+		<div id="footerLinks" style="background-color:white;display:inline-block;float:left;margin-left:50px;">
+			<a href="#">FULL SITE INDEX</a>
+			<a href="#">VISITOR AGREEMENT</a>
+			<a href="#">PRIVACY POLICY</a>
+			<a href="#">CONTACT US</a>
+		</div>
+		
+		<div id="footerIcons" style="background-color:white;display:inline-block;float:right;margin-right:50px;">
+			
+			<span style="font-weight:bold;margin-right:5px;">FOLLOW US:</span>
+	
+			<button  class="btn btn-no-border  btn-default btn-lg">
+				<span class="fa fa-twitter" ></span> 
+			</button>
+			
+			<button  class="btn btn-no-border  btn-default btn-lg">
+				<span class="fa fa-facebook" ></span> 
+			</button>
+			<button  class="btn btn-no-border  btn-default btn-lg">
+				<span class="fa fa-arrow-circle-o-up" style="margin-right:10px;margin-left:20px;">TOP</span> 
+			</button>
+			
+		</div>
+	</footer>
+</body>
+
+</html>
