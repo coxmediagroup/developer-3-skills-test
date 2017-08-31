@@ -1,0 +1,54 @@
+/* Scss Document */
+
+
+/********** GLOBAL STYLES **********/	
+	
+
+
+/* COLOR VARIBLES */
+
+$white: #ffffff;
+$tan: #d4c9b3;
+$gray: #ededed;
+	
+
+/********** LAYOUT STRUCTURE **********/
+ 
+body{
+	background-color: $tan;
+}
+
+header, nav{
+	background-color: $white;
+}
+
+
+
+main{
+	background-color: $gray;
+}
+/***** HEADER *****/
+
+
+
+/***** NAVIGATION *****/
+nav {
+    background-color: #ffffff;  
+    border-top: 1px solid #dcdcdc;  
+	
+	
+}
+
+
+
+
+/***** BANNER *****/
+
+.banner-ad{
+	
+	padding: 0px;
+}
+
+.content {
+	background-color: $gray;
+}

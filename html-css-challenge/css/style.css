@@ -1,0 +1,25 @@
+/* Scss Document */
+/********** GLOBAL STYLES **********/
+/* COLOR VARIBLES */
+/********** LAYOUT STRUCTURE **********/
+body {
+  background-color: #d4c9b3; }
+
+header, nav {
+  background-color: #ffffff; }
+
+main {
+  background-color: #ededed; }
+
+/***** HEADER *****/
+/***** NAVIGATION *****/
+nav {
+  background-color: #ffffff;
+  border-top: 1px solid #dcdcdc; }
+
+/***** BANNER *****/
+.banner-ad {
+  padding: 0px; }
+
+.content {
+  background-color: #ededed; }
