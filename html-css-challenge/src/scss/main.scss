@@ -2,56 +2,116 @@
 
 @media (min-width: 992px) {
 
-  body {
-    width: 992px;
-    margin: 0 auto;
-    background-color: $c-primary;
-    header {
-      height: 150px;
-      .home.brand {
-        font-size: 2.5em;
-        span {
-          font-weight: 800;
+    //color variables
+  $c-primary: rgb(255, 255, 255);
+  $c-secondary: rgb(237, 237, 237);
+  //brand sections
+  $c-nav-news: rgb(44, 109, 161);
+  $c-nav-sports: rgb(255, 114, 43);
+  $c-nav-austin: rgb(240, 37, 30);
+  $c-nav-spanish: rgb(99, 174, 69);
+  $c-nav-hoods: rgb(183, 7, 170);
+  $c-nav-things: rgb(152, 0, 42);
+  $c-nav-more: rgb(24, 110, 185);
+
+  @media (min-width: 992px) {
+    body {
+      width: 992px;
+      margin: 0 auto;
+      background-color: $c-primary;
+      header.header {
+        height: 150px;
+        border-bottom: 1px solid $c-secondary;
+        .home.brand {
+          font-size: 2.5rem;
+          span {
+            font-weight: 800;
+          }
         }
-      }
-      nav {
-        background-color: limegreen;
-        width: 100%;
-        height: 60px;
-        .main-nav {
-          background-color: hotpink;
-          width: 85%;
+        nav.main-nav {
+          ul.nav-items {
+            list-style: none;
+            li {
+              display: inline;
+              text-transform: uppercase;
+              letter-spacing: -.125rem;
+              font-weight: 600;
+              cursor: pointer;
+              margin: 10px;
+              &::before {
+                display: inline-block;
+                content: '';
+                -webkit-border-radius: 0.375rem;
+                border-radius: 0.375rem;
+                height: 0.45rem;
+                width: 0.45rem;
+                margin-right: 0.25rem;
+                margin-bottom: 0.20rem;
+              }
+              &.news::before {
+                background-color: $c-nav-news;
+              }
+              &.sports::before {
+                background-color: $c-nav-sports;
+              }
+              &.austin::before {
+                background-color: $c-nav-austin;
+              }
+              &.spanish::before {
+                background-color: $c-nav-spanish;
+              }
+              &.hoods::before {
+                background-color: $c-nav-hoods;
+              }
+              &.things::before {
+                background-color: $c-nav-things;
+              }
+              &.more::before {
+                background-color: $c-nav-more;
+              }
+              span {
+                text-transform: lowercase;
+              }
+            }
+          }
+
+          width: 100%;
           height: 60px;
-          display: inline-block;
-          float: left;
-        }
-        .features {
-          background-color: purple;
-          width: 15%;
-          height: 100%;
-          display: inline-block;
-          float: right;
+          .main-nav {
+            width: 85%;
+            height: 60px;
+            display: inline-block;
+            float: left;
+          }
+          .features {
+            background-color: purple;
+            width: 15%;
+            height: 100%;
+            display: inline-block;
+            float: right;
+          }
         }
       }
-    }
-    section.main {
-    }
-    footer {
-      max-width: 992px;
-      .footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        /* Set the fixed height of the footer here */
-        height: 60px;
-        line-height: 60px; /* Vertically center the text there */
-        background-color: #f5f5f5;
+      section.main {
       }
-      .container {
+      footer {
         max-width: 992px;
-        height: 60px;
-        background-color: red;
+        .footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          /* Set the fixed height of the footer here */
+          height: 60px;
+          line-height: 60px; /* Vertically center the text there */
+          background-color: #f5f5f5;
+        }
+        .container {
+          max-width: 992px;
+          height: 60px;
+          background-color: red;
+        }
       }
     }
   }
+
 }
