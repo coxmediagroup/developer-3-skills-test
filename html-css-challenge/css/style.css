@@ -12,7 +12,7 @@
   padding: 5px;
   position: absolute;
   right: -5px;
-  bottom: 10px; }
+  bottom: 5px; }
   .more a {
     text-decoration: none;
     text-transform: uppercase;
@@ -28,20 +28,49 @@ header, nav {
   background-color: #ffffff; }
 
 /********** HEADER **********/
+.top-nav {
+  float: left;
+  display: inline;
+  height: 70px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1.5rem; }
+
+#account-login {
+  text-transform: uppercase; }
+
+.sign-up {
+  padding: 0.5rem 1rem 0.5rem 1.5rem;
+  float: left;
+  display: inline; }
+
+.login {
+  padding: 0.5rem 1rem 0.5rem 1.5rem;
+  float: left;
+  display: inline; }
+
 /*** MAIN NAVIGATION ***/
 nav {
   background-color: #ffffff;
   font-family: arial;
   border-top: 1px solid #dddddd; }
-  nav a {
+  nav ul {
+    border-top: none; }
+    nav ul li a::before {
+      content: "\2022";
+      color: red;
+      display: inline-block;
+      width: .5em; }
+
+#main-nav {
+  color: #373a3c;
+  font-family: 'Oswald', sans-serif; }
+  #main-nav a {
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     color: #373a3c; }
-  nav #main-nav .nav ul li {
-    list-style: disc;
-    list-style-type: disc; }
-
-.navbar-default {
-  background-color: #ffffff; }
+  #main-nav .navbar-default {
+    background-color: #ffffff;
+    position: relative; }
 
 /*** BANNER ***/
 .banner-ad {
@@ -99,6 +128,8 @@ main {
     .social-share ul li {
       display: inline;
       color: #ffffff; }
+      .social-share ul li .share {
+        content: "\e066"; }
 
 .article-title h1 {
   padding: 0 15px; }
