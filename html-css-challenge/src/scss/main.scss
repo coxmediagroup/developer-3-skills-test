@@ -1,0 +1,57 @@
+@import 'variables';
+
+@media (min-width: 992px) {
+
+  body {
+    width: 992px;
+    margin: 0 auto;
+    background-color: $c-primary;
+    header {
+      height: 150px;
+      .home.brand {
+        font-size: 2.5em;
+        span {
+          font-weight: 800;
+        }
+      }
+      nav {
+        background-color: limegreen;
+        width: 100%;
+        height: 60px;
+        .main-nav {
+          background-color: hotpink;
+          width: 85%;
+          height: 60px;
+          display: inline-block;
+          float: left;
+        }
+        .features {
+          background-color: purple;
+          width: 15%;
+          height: 100%;
+          display: inline-block;
+          float: right;
+        }
+      }
+    }
+    section.main {
+    }
+    footer {
+      max-width: 992px;
+      .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 60px;
+        line-height: 60px; /* Vertically center the text there */
+        background-color: #f5f5f5;
+      }
+      .container {
+        max-width: 992px;
+        height: 60px;
+        background-color: red;
+      }
+    }
+  }
+}
