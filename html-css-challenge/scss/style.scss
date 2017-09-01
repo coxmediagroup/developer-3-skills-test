@@ -3,19 +3,52 @@
 
 /********** GLOBAL STYLES **********/	
 	
-
+/* MIXINS */
 
 /* COLOR VARIBLES */
-
-$white: #ffffff;
-$tan: #d4c9b3;
+$blue: #00579c;
+$dark-brown: #332f2f;
 $gray: #ededed;
-	
+$medium-gray: #dddddd ;
+$medium-black: #373a3c;
+$red: #333333;
+$tan: #d4c9b3;
+$white: #ffffff;	
 
+
+
+/* TEXT */
+
+
+
+/* ELEMENTS */
+    
+.no-bottom-border {
+	border-bottom: none !important;
+	
+}
+
+.more{
+	background-color: $blue;
+	padding: 5px;
+	position: absolute;
+	right: -5px;
+	bottom: 10px;
+	
+	a{
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $white;
+		
+	}
+	
+}
 /********** LAYOUT STRUCTURE **********/
  
 body{
 	background-color: $tan;
+	color: $medium-black;
+	font-family: Arial;
 }
 
 header, nav{
@@ -24,31 +57,182 @@ header, nav{
 
 
 
-main{
-	background-color: $gray;
-}
-/***** HEADER *****/
+
+
+/********** HEADER **********/
 
 
 
-/***** NAVIGATION *****/
+/*** MAIN NAVIGATION ***/
 nav {
-    background-color: #ffffff;  
-    border-top: 1px solid #dcdcdc;  
+    background-color: $white;  
+	font-family: arial;
+	border-top: 1px solid $medium-gray; 
+	a{
+		text-transform: uppercase;
+		color: $medium-black;
+	}
+	#main-nav .nav{ 
+		ul li{
+			list-style: disc;
+		list-style-type: disc;}
+
+		
 	
-	
+	}
 }
+.navbar-default{
+			background-color: $white;  
+		}
 
-
-
-
-/***** BANNER *****/
+/*** BANNER ***/
 
 .banner-ad{
-	
+
 	padding: 0px;
 }
 
-.content {
+/********** MAIN CONTENT **********/
+main{
 	background-color: $gray;
 }
+.content {
+	background-color: $gray;
+	padding: 20px 10px;
+}
+/*** LEFT SIDEBAR ***/
+
+/* Take a Break Module*/
+.take-a-break{
+	margin: 10px 0;
+	
+	.tab-title{
+		
+		display: inline-block;
+		
+		h2{
+		background-color: $blue;
+		font-size: 25px;
+		font-weight: bold;
+		text-transform: uppercase;
+		padding: 15px 10px;
+		margin: 0;
+		color: #fff;
+		
+			}
+		
+	}
+	
+	.tab-list{
+		background-color: $dark-brown;
+		color: #fff;
+		position: relative;
+		padding-bottom: 5px;
+		ul{
+			list-style: none;
+			padding: 0 20px;
+			
+			li{
+				border-bottom: solid 2px #000;
+				text-transform: uppercase;
+				padding: 20px 0 ;
+			
+				
+			}
+		}
+	}
+	
+}
+
+/***  CENTER CONTENT  ***/
+.author{
+	display: block;
+	padding: 0 15px;
+}
+.date-filed{
+	display: block;
+	
+	padding: 0 15px;
+}
+
+.social-share{
+	display: block;
+	
+	padding: 0 15px;
+	ul{
+		
+		list-style: none;
+		
+		li{
+			display: inline;
+			color: $white;
+			.facebook{}
+			.twitter{}
+			.share{}
+			.comment{}
+		}
+	}
+	
+	
+}
+
+.article-title{
+	h1{
+	padding: 0 15px;
+	}
+	
+}
+
+/*** RIGHT SIDEBAR  ***/
+
+#new-stories{
+	background-color: $white;
+	border: solid 1px $medium-gray;
+	
+	
+}
+.new-story{
+	height: 70px;
+	max-height: 70px;
+	overflow: hidden;
+	border-bottom: solid 1px $medium-gray;
+	padding: 5px 5px;
+	display: block;
+	
+	a{
+		padding: 0 10px;
+		position: relative;
+		display: block;
+		
+	}
+	
+	
+}
+.new-story-more{
+		padding: 20px ;
+	position: relative;
+		.more{
+			color: $white;
+			bottom: 5px;
+		
+			text-transform: uppercase;
+			a{
+				text-decoration: none!important;
+				
+			}
+			
+	}
+}
+.related{
+	h2{
+		font-size: 32px;
+		text-transform: uppercase;
+		display: inline-block;
+		font-weight: bold;
+	}
+}
+/***  FOOTER  ***/
+
+
+
+/********** RESPONSIVE **********/

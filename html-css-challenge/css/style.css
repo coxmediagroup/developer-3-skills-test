@@ -1,25 +1,140 @@
 /* Scss Document */
 /********** GLOBAL STYLES **********/
+/* MIXINS */
 /* COLOR VARIBLES */
+/* TEXT */
+/* ELEMENTS */
+.no-bottom-border {
+  border-bottom: none !important; }
+
+.more {
+  background-color: #00579c;
+  padding: 5px;
+  position: absolute;
+  right: -5px;
+  bottom: 10px; }
+  .more a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff; }
+
 /********** LAYOUT STRUCTURE **********/
 body {
-  background-color: #d4c9b3; }
+  background-color: #d4c9b3;
+  color: #373a3c;
+  font-family: Arial; }
 
 header, nav {
   background-color: #ffffff; }
 
-main {
-  background-color: #ededed; }
-
-/***** HEADER *****/
-/***** NAVIGATION *****/
+/********** HEADER **********/
+/*** MAIN NAVIGATION ***/
 nav {
   background-color: #ffffff;
-  border-top: 1px solid #dcdcdc; }
+  font-family: arial;
+  border-top: 1px solid #dddddd; }
+  nav a {
+    text-transform: uppercase;
+    color: #373a3c; }
+  nav #main-nav .nav ul li {
+    list-style: disc;
+    list-style-type: disc; }
 
-/***** BANNER *****/
+.navbar-default {
+  background-color: #ffffff; }
+
+/*** BANNER ***/
 .banner-ad {
   padding: 0px; }
 
-.content {
+/********** MAIN CONTENT **********/
+main {
   background-color: #ededed; }
+
+.content {
+  background-color: #ededed;
+  padding: 20px 10px; }
+
+/*** LEFT SIDEBAR ***/
+/* Take a Break Module*/
+.take-a-break {
+  margin: 10px 0; }
+  .take-a-break .tab-title {
+    display: inline-block; }
+    .take-a-break .tab-title h2 {
+      background-color: #00579c;
+      font-size: 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 15px 10px;
+      margin: 0;
+      color: #fff; }
+  .take-a-break .tab-list {
+    background-color: #332f2f;
+    color: #fff;
+    position: relative;
+    padding-bottom: 5px; }
+    .take-a-break .tab-list ul {
+      list-style: none;
+      padding: 0 20px; }
+      .take-a-break .tab-list ul li {
+        border-bottom: solid 2px #000;
+        text-transform: uppercase;
+        padding: 20px 0; }
+
+/***  CENTER CONTENT  ***/
+.author {
+  display: block;
+  padding: 0 15px; }
+
+.date-filed {
+  display: block;
+  padding: 0 15px; }
+
+.social-share {
+  display: block;
+  padding: 0 15px; }
+  .social-share ul {
+    list-style: none; }
+    .social-share ul li {
+      display: inline;
+      color: #ffffff; }
+
+.article-title h1 {
+  padding: 0 15px; }
+
+/*** RIGHT SIDEBAR  ***/
+#new-stories {
+  background-color: #ffffff;
+  border: solid 1px #dddddd; }
+
+.new-story {
+  height: 70px;
+  max-height: 70px;
+  overflow: hidden;
+  border-bottom: solid 1px #dddddd;
+  padding: 5px 5px;
+  display: block; }
+  .new-story a {
+    padding: 0 10px;
+    position: relative;
+    display: block; }
+
+.new-story-more {
+  padding: 20px;
+  position: relative; }
+  .new-story-more .more {
+    color: #ffffff;
+    bottom: 5px;
+    text-transform: uppercase; }
+    .new-story-more .more a {
+      text-decoration: none !important; }
+
+.related h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: bold; }
+
+/***  FOOTER  ***/
+/********** RESPONSIVE **********/
