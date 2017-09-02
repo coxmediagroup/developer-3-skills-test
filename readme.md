@@ -9,11 +9,17 @@ Please complete all challenges. Each challenge contains its own readme with inst
 We use Git as our primary vcs. Fork this repository, complete the test, then create a pull request against master.
 
 ## Anything else?
-* Quality counts! A good submission that takes a while is better than a poor submission quickly. 
+* Quality counts! A good submission that takes a while is better than a poor submission quickly.
 * Make sure your submission accurately reflects your development style.
 * Commit early and often, with good messages.
 
 We are expecting senior-level code to be coherently blocked with informative comments and a general sense that you are a master of your craft. We also love to see code that is self-documented, well organized, and gives the distinct impression that this would be easy to maintain for years to come. Show us your best and good luck!
+
+## CodePen Link
+[TheTexasJournal](//https://codepen.io/mcgraw/full/acb1273861a3bdd16417810eff0408eb/)
+
+## SASS Assumption
+Since you mentioned the use of Bootstrap I jumped on board and assumed the use of Sass CSS preprocessor was okay
 
 -----------------
 <img src="http://i.imgur.com/Bn288A4.png" width="200" />
