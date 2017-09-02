@@ -6,9 +6,13 @@
     <meta charset="utf-8">
 
     <title>The Texas Journal</title>
+    <!-- font awesome icons cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- bs4 css + js cdn -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <!-- custom styles would be served from the dist folder post scss compile -->
+    <link rel="stylesheet" href="./dist/css/styles.css?v=1.0">
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -16,31 +20,41 @@
 </head>
 
 <body>
-  <header class="header col-md-12">
-    <div class="home brand col-md-9">The<span>Texas</span>Journal</div>
-    <div class="home-features col-md-3"></div>
-    <nav class="main-nav col-md-12">
-    <div class="home col-md">
-      <div class="main-nav">
-        <ul class="nav-items">
-          <li class="news">news</li>
-          <li class="sports">sports</li>
-          <li class="austin">austin</li>
-          <li class="spanish"><span>i</span>ahora si!</li>
-          <li class="hoods">neighborhoods</li>
-          <li class="things">things to do</li>
-          <li class="more">more</li>
-        </ul>
-      </div>
-      <div class="features"></div>
-    </nav>
-      <section class="ad">
-        <img src="https://dummyimage.com/992x90/24292e/26ff00.png&text=ad+placeholder" alt="" />
-      </section>
-  </header>
-<footer class="footer">
-  <div class="container"></div>
-</footer>
+    <header class="header">
+        <div class="container brand">
+            <div class="home-brand col-md-9">The<span>Texas</span>Journal</div>
+            <div class="home-features col-md-3"></div>
+        </div>
+        <div class="container nav">
+            <nav class="main-nav col-md-9">
+                <ul class="nav-items">
+                    <!-- todo: navigation event handlers -->
+                    <li class="news">news</li>
+                    <li class="sports">sports</li>
+                    <li class="austin">austin</li>
+                    <li class="spanish"><span>i</span>ahora si!</li>
+                    <li class="hoods">neighborhoods</li>
+                    <li class="things">things to do</li>
+                    <li class="more">more</li>
+                </ul>
+            </nav>
+            <div class="nav-features col-md-3">
+                <a href="#">
+                    <div class="subscribe">
+                        <span class="red-txt">subscribe now</span><br>
+                        <span class="deal-txt">As low as 99&cent;</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="container ad">
+            <img src="http://via.placeholder.com/992x90" alt="" />
+        </div>
+    </header>
+    <footer class="footer">
+        <div class="container"></div>
+    </footer>
 </body>
 
 </html>

@@ -1,187 +1,172 @@
 @import 'variables';
 @media (min-width: 992px) {
-    //color variables
-    $c-primary: rgb(255, 255, 255);
-    $c-secondary: rgb(237, 237, 237);
-    $c-bg: rgb(212, 201, 179);
-    $c-border: darken($c-secondary, 20);
-    $c-subscribe: rgb(189, 87, 82);
-    $c-blk: rgb(34, 34, 34); //brand sections
-    $c-nav-news: rgb(44, 109, 161);
-    $c-nav-sports: rgb(255, 114, 43);
-    $c-nav-austin: rgb(240, 37, 30);
-    $c-nav-spanish: rgb(99, 174, 69);
-    $c-nav-hoods: rgb(183, 7, 170);
-    $c-nav-things: rgb(152, 0, 42);
-    $c-nav-more: rgb(24, 110, 185);
-    @media (min-width: 992px) {
-        html {
-            background-color: $c-bg;
+    html {
+        background-color: $c-bg;
+    }
+
+    body {
+        width: 992px;
+        min-height: 100%;
+        margin: 0 auto;
+        background-color: $c-primary;
+        postion: relative;
+
+        header.header {
+            height: 220px;
+
+            .container {
+                overflow: hidden;
+
+                &.brand {
+                    border-bottom: 1px solid $c-border;
+
+                    .home-brand {
+                        font-size: 2.5rem;
+                        height: 60px;
+                        padding-left: 0;
+
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+
+                &.nav {
+                    height: 35px;
+                    border-bottom: 1px solid $c-border;
+                    padding: 0;
+
+                    text-align &::after {
+                        content: '';
+                        height: 20px;
+                        width: 100%;
+                        background-color: $c-secondary;
+                        border-top: 1px solid $c-border;
+                    }
+
+                    nav.main-nav {
+                        width: 100%;
+                        height: 35px;
+                        padding-left: 0;
+                        padding-top: 3px;
+
+                        ul.nav-items {
+                            list-style: none;
+                            padding-left: 30px;
+                            margin-bottom: 0;
+
+                            li {
+                                display: inline;
+                                text-transform: uppercase;
+                                letter-spacing: -.10rem;
+                                font-weight: 500;
+                                cursor: pointer;
+                                margin: 10px;
+                                font-size: 13px;
+
+                                &::before {
+                                    display: inline-block;
+                                    content: '';
+                                    -webkit-border-radius: 0.375rem;
+                                    border-radius: 0.375rem;
+                                    height: 0.40rem;
+                                    width: 0.40rem;
+                                    margin-right: 0.25rem;
+                                    margin-bottom: 0.10rem;
+                                }
+
+                                &.news::before {
+                                    background-color: $c-nav-news;
+                                }
+
+                                &.sports::before {
+                                    background-color: $c-nav-sports;
+                                }
+
+                                &.austin::before {
+                                    background-color: $c-nav-austin;
+                                }
+
+                                &.spanish::before {
+                                    background-color: $c-nav-spanish;
+                                }
+
+                                &.hoods::before {
+                                    background-color: $c-nav-hoods;
+                                }
+
+                                &.things::before {
+                                    background-color: $c-nav-things;
+                                }
+
+                                &.more::before {
+                                    background-color: $c-nav-more;
+                                }
+
+                                span {
+                                    text-transform: lowercase;
+                                }
+                            }
+                        }
+                    }
+
+                    .nav-features {
+                        max-width: 250px;
+
+                        .subscribe {
+                            text-align: center;
+                            padding-top: 5px;
+                            line-height: 70%;
+                            background: $c-secondary;
+                            display: inline-block;
+                            padding: 5px 15px 0;
+                            height: 100%;
+                            cursor: pointer;
+
+                            span.red-txt {
+                                font-size: 10px;
+                                color: $c-subscribe;
+                                font-weight: bold;
+                                text-transform: uppercase;
+                                vertical-align: top;
+                            }
+
+                            span.deal-txt {
+                                font-size: 9px;
+                                vertical-align: top;
+                                color: $c-blk;
+                            }
+                        }
+
+                        .log-in {}
+                    }
+                }
+
+                &.ad {
+                    padding-left: 0;
+                }
+            }
+
+            .features {
+                background-color: purple;
+                width: 15%;
+                height: 100%;
+                display: inline-block;
+                float: right;
+            }
         }
 
-        body {
+        section.main {}
+
+        footer.footer {
             width: 992px;
-            min-height: 100%;
-            margin: 0 auto;
-            background-color: $c-primary;
-            postion: relative;
-
-            header.header {
-                height: 220px;
-
-                .container {
-                    overflow: hidden;
-
-                    &.brand {
-                        border-bottom: 1px solid $c-border;
-
-                        .home-brand {
-                            font-size: 2.5rem;
-                            height: 60px;
-                            padding-left: 0;
-
-                            span {
-                                font-weight: 700;
-                            }
-                        }
-                    }
-
-                    &.nav {
-                        height: 35px;
-                        border-bottom: 1px solid $c-border;
-                        padding: 0;
-
-                        text-align &::after {
-                            content: '';
-                            height: 20px;
-                            width: 100%;
-                            background-color: $c-secondary;
-                            border-top: 1px solid $c-border;
-                        }
-
-                        nav.main-nav {
-                            width: 100%;
-                            height: 35px;
-                            padding-left: 0;
-                            padding-top: 3px;
-
-                            ul.nav-items {
-                                list-style: none;
-                                padding-left: 30px;
-                                margin-bottom: 0;
-
-                                li {
-                                    display: inline;
-                                    text-transform: uppercase;
-                                    letter-spacing: -.10rem;
-                                    font-weight: 500;
-                                    cursor: pointer;
-                                    margin: 10px;
-                                    font-size: 13px;
-
-                                    &::before {
-                                        display: inline-block;
-                                        content: '';
-                                        -webkit-border-radius: 0.375rem;
-                                        border-radius: 0.375rem;
-                                        height: 0.40rem;
-                                        width: 0.40rem;
-                                        margin-right: 0.25rem;
-                                        margin-bottom: 0.10rem;
-                                    }
-
-                                    &.news::before {
-                                        background-color: $c-nav-news;
-                                    }
-
-                                    &.sports::before {
-                                        background-color: $c-nav-sports;
-                                    }
-
-                                    &.austin::before {
-                                        background-color: $c-nav-austin;
-                                    }
-
-                                    &.spanish::before {
-                                        background-color: $c-nav-spanish;
-                                    }
-
-                                    &.hoods::before {
-                                        background-color: $c-nav-hoods;
-                                    }
-
-                                    &.things::before {
-                                        background-color: $c-nav-things;
-                                    }
-
-                                    &.more::before {
-                                        background-color: $c-nav-more;
-                                    }
-
-                                    span {
-                                        text-transform: lowercase;
-                                    }
-                                }
-                            }
-                        }
-
-                        .nav-features {
-                            max-width: 250px;
-
-                            .subscribe {
-                                text-align: center;
-                                padding-top: 5px;
-                                line-height: 70%;
-                                background: $c-secondary;
-                                display: inline-block;
-                                padding: 5px 15px 0;
-                                height: 100%;
-                                cursor: pointer;
-
-                                span.red-txt {
-                                    font-size: 10px;
-                                    color: $c-subscribe;
-                                    font-weight: bold;
-                                    text-transform: uppercase;
-                                    vertical-align: top;
-                                }
-
-                                span.deal-txt {
-                                    font-size: 9px;
-                                    vertical-align: top;
-                                    color: $c-blk;
-                                }
-                            }
-
-                            .log-in {}
-                        }
-                    }
-
-                    &.ad {
-                        padding-left: 0;
-                    }
-                }
-
-                .features {
-                    background-color: purple;
-                    width: 15%;
-                    height: 100%;
-                    display: inline-block;
-                    float: right;
-                }
-            }
-
-            section.main {}
-
-            footer.footer {
-                width: 992px;
-                position: absolute;
-                bottom: 0;
-                /* Set the fixed height of the footer here */
-                height: 60px;
-                line-height: 60px;
-                /* Vertically center the text there */
-                background-color: #f5f5f5;
-            }
+            position: absolute;
+            bottom: 0;
+            /* Set the fixed height of the footer here */
+            height: 60px;
+            line-height: 60px;
+            /* Vertically center the text there */
+            background-color: #f5f5f5;
         }
     }
+}
