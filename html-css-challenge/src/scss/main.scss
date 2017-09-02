@@ -5,6 +5,12 @@
   }
 }
 
+@media (max-width: 991px) {
+  body {
+    display: none;
+  }
+}
+
 @media (min-width: 992px) {
   html {
     background-color: $c-bg;
@@ -15,7 +21,38 @@
     margin: 0 auto;
     background-color: $c-primary;
     postion: relative;
+    //multi-use elements
+    .see-more {
+            width: 100%;
+            height: 30px;
+            display: block;
+            background-color: $c-primary;
+            margin-top: 1px;
+            padding-top: 0;
+            position: relative;
+            a {
+              background-color: $c-blue;
+              width: 75px;
+              height: 22px;
+              margin-top: 3px;
+              padding: 3px 0 2px 3px;
+              float: right;
+              text-transform: uppercase;
+              color: white;
+              font-size: 10px;
+              vertical-align: middle;
+              position: absolute;
+              right: -5px;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+    ul {
+      list-style: none;
+    }
 
+    //page components
     header.header {
       height: 187px;
       position: relative;
@@ -182,41 +219,133 @@
       }
     }
     section.main.container {
-      padding: 0 0 20px 0;
       background-color: $c-secondary;
-      min-height: 800px;
-      img {
-        padding: 10px 0 0 0;
-      }
-      h1 {
-        max-width: 85%;
+      min-height: 1000px;
+      height: auto;
+      padding: 10px;
 
+      .content {
+        display: block;
+        width: 57%;
+        max-width: 57%;
+        float: left;
+        padding-left: 5px;
+
+
+
+        div {
+          display: block;
+          float: left;
+          width: 48%;
+          height: 50px;
+          line-height: 40%;
+          font-size: 50%;
+        }
+        .share-content {
+          li {
+            display: inline;
+            margin: 0 10px;
+          }
+          .fa {
+          font-size: 2rem;
+            &:hover {
+              cursor: pointer;
+            }
+        }
+        }
+
+
+        h1 {
+          padding-top: 5px;
+        }
+        img {
+          //padding: 10px 0 0 0;
+        }
+        span.type {
+          font-size: 10px;
+
+        }
       }
-      div {
+
+      aside {
         display: block;
         float: left;
 
         &.left-bar {
-          width: 23%;
+          width: 25%;
 
           div {
             margin: 10px 0 10px;
+            &.blue-block {
+              width: 69%;
+              margin: 0;
+              padding: 8px;
+              height: 50px;
+              background-color: $c-blue;
+              h4 {
+                color: darken($c-primary, 10);
+                text-transform: uppercase;
+                padding-top: 5px;
+                letter-spacing: -1px;
+
+              }
+            }
+          }
+
+          ul.break {
+            width: 100%;
+            background-color: lighten($c-blk, 5);
+            padding: 0;
+            li {
+              margin: 0 auto;
+              padding: 15px 20px;
+              height: 60px;
+              width: 85%;
+              display: block;
+              color: darken($c-primary, 10);
+              text-transform: uppercase;
+              cursor: pointer;
+              font-size: 80%;
+              border-bottom: 2px solid darken($c-blk, 20);
+              position: relative;
+              span {
+                vertical-align: middle;
+              }
+            }
+          }
+          .see-more {
+            background-color: transparent;
+            a {
+              right: -45px;
+              top: -20px;
+            }
           }
         }
-        &.content {
-          width: 60%;
-        }
+
         &.right-bar {
-          width: 15%;
+          width: 18%;
+          h4 {
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            font-size: 23px;
+            font-weight: bold;
+          }
+
           ul {
             list-style: none;
             padding: 0;
+            margin-bottom: 0;
 
             li {
               display: block;
               width: 100%;
-              height: 60px;
-              border: 1px solid $c-border;
+              height: 70px;
+              margin-top: 1px;
+              background-color: $c-primary;
+              font-size: 11px;
+              padding: 10px;
+              line-height: 95%;
+              cursor: pointer;
             }
           }
         }
