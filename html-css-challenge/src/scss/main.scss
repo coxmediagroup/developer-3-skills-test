@@ -1,172 +1,237 @@
 @import 'variables';
+@media (max-width: 991px) {
+  body {
+    display: none;
+  }
+}
+
 @media (min-width: 992px) {
-    html {
-        background-color: $c-bg;
-    }
+  html {
+    background-color: $c-bg;
+  }
+  body {
+    width: 992px;
+    min-height: 100%;
+    margin: 0 auto;
+    background-color: $c-primary;
+    postion: relative;
 
-    body {
-        width: 992px;
-        min-height: 100%;
-        margin: 0 auto;
-        background-color: $c-primary;
-        postion: relative;
-
-        header.header {
-            height: 220px;
-
-            .container {
-                overflow: hidden;
-
-                &.brand {
-                    border-bottom: 1px solid $c-border;
-
-                    .home-brand {
-                        font-size: 2.5rem;
-                        height: 60px;
-                        padding-left: 0;
-
-                        span {
-                            font-weight: 700;
-                        }
-                    }
-                }
-
-                &.nav {
-                    height: 35px;
-                    border-bottom: 1px solid $c-border;
-                    padding: 0;
-
-                    text-align &::after {
-                        content: '';
-                        height: 20px;
-                        width: 100%;
-                        background-color: $c-secondary;
-                        border-top: 1px solid $c-border;
-                    }
-
-                    nav.main-nav {
-                        width: 100%;
-                        height: 35px;
-                        padding-left: 0;
-                        padding-top: 3px;
-
-                        ul.nav-items {
-                            list-style: none;
-                            padding-left: 30px;
-                            margin-bottom: 0;
-
-                            li {
-                                display: inline;
-                                text-transform: uppercase;
-                                letter-spacing: -.10rem;
-                                font-weight: 500;
-                                cursor: pointer;
-                                margin: 10px;
-                                font-size: 13px;
-
-                                &::before {
-                                    display: inline-block;
-                                    content: '';
-                                    -webkit-border-radius: 0.375rem;
-                                    border-radius: 0.375rem;
-                                    height: 0.40rem;
-                                    width: 0.40rem;
-                                    margin-right: 0.25rem;
-                                    margin-bottom: 0.10rem;
-                                }
-
-                                &.news::before {
-                                    background-color: $c-nav-news;
-                                }
-
-                                &.sports::before {
-                                    background-color: $c-nav-sports;
-                                }
-
-                                &.austin::before {
-                                    background-color: $c-nav-austin;
-                                }
-
-                                &.spanish::before {
-                                    background-color: $c-nav-spanish;
-                                }
-
-                                &.hoods::before {
-                                    background-color: $c-nav-hoods;
-                                }
-
-                                &.things::before {
-                                    background-color: $c-nav-things;
-                                }
-
-                                &.more::before {
-                                    background-color: $c-nav-more;
-                                }
-
-                                span {
-                                    text-transform: lowercase;
-                                }
-                            }
-                        }
-                    }
-
-                    .nav-features {
-                        max-width: 250px;
-
-                        .subscribe {
-                            text-align: center;
-                            padding-top: 5px;
-                            line-height: 70%;
-                            background: $c-secondary;
-                            display: inline-block;
-                            padding: 5px 15px 0;
-                            height: 100%;
-                            cursor: pointer;
-
-                            span.red-txt {
-                                font-size: 10px;
-                                color: $c-subscribe;
-                                font-weight: bold;
-                                text-transform: uppercase;
-                                vertical-align: top;
-                            }
-
-                            span.deal-txt {
-                                font-size: 9px;
-                                vertical-align: top;
-                                color: $c-blk;
-                            }
-                        }
-
-                        .log-in {}
-                    }
-                }
-
-                &.ad {
-                    padding-left: 0;
-                }
-            }
-
-            .features {
-                background-color: purple;
-                width: 15%;
-                height: 100%;
-                display: inline-block;
-                float: right;
-            }
-        }
-
-        section.main {}
-
-        footer.footer {
-            width: 992px;
-            position: absolute;
-            bottom: 0;
-            /* Set the fixed height of the footer here */
+    header.header {
+      height: 187px;
+      position: relative;
+      .container {
+        overflow: hidden;
+        &.brand {
+          border-bottom: 1px solid $c-border;
+          .home-brand {
+            font-size: 2.5rem;
             height: 60px;
-            line-height: 60px;
-            /* Vertically center the text there */
-            background-color: #f5f5f5;
+            padding-left: 0;
+            span {
+              font-weight: 700;
+            }
+          }
+          .home-features {
+            //background-color: rgb(255, 0, 0);
+            float: right;
+            height: 58px;
+            padding: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            max-width: 200px;
+            div {
+              width: 30%;
+              display: inline-block;
+              padding-top: 18px;
+              height: 100%;
+              cursor: pointer;
+              span {
+                vertical-align: middle;
+                text-align: center;
+                color: $c-blk;
+              }
+            }
+          }
         }
+        &.nav {
+          height: 35px;
+          border-bottom: 1px solid $c-border;
+          padding: 0;
+          text-align
+          &::after {
+            content: '';
+            height: 20px;
+            width: 100%;
+            background-color: $c-secondary;
+            border-top: 1px solid $c-border;
+          }
+
+          nav.main-nav {
+            width: 100%;
+            height: 35px;
+            padding-left: 0;
+            padding-top: 3px;
+            ul.nav-items {
+              list-style: none;
+              padding-left: 30px;
+              margin-bottom: 0;
+              li {
+                display: inline;
+                text-transform: uppercase;
+                letter-spacing: -.10rem;
+                font-weight: 500;
+                cursor: pointer;
+                margin: 10px;
+                font-size: 13px;
+                &::before {
+                  display: inline-block;
+                  content: '';
+                  -webkit-border-radius: 0.375rem;
+                  border-radius: 0.375rem;
+                  height: 0.40rem;
+                  width: 0.40rem;
+                  margin-right: 0.25rem;
+                  margin-bottom: 0.10rem;
+                }
+                &.news::before {
+                  background-color: $c-nav-news;
+                }
+                &.sports::before {
+                  background-color: $c-nav-sports;
+                }
+                &.austin::before {
+                  background-color: $c-nav-austin;
+                }
+                &.spanish::before {
+                  background-color: $c-nav-spanish;
+                }
+                &.hoods::before {
+                  background-color: $c-nav-hoods;
+                }
+                &.things::before {
+                  background-color: $c-nav-things;
+                }
+                &.more::before {
+                  background-color: $c-nav-more;
+                }
+                span {
+                  text-transform: lowercase;
+                }
+              }
+            }
+          }
+          .nav-features {
+            max-width: 250px;
+            a {
+              display: block;
+              height: 100%;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+            .subscribe {
+              text-align: center;
+              line-height: 70%;
+              background: $c-secondary;
+              padding: 5px 15px 0 15px;
+              height: 100%;
+              max-width: 65%;
+              cursor: pointer;
+              border-right: 1px solid $c-border;
+              border-left: 1px solid $c-border;
+              span.red-txt {
+                font-size: 10px;
+                color: $c-subscribe;
+                font-weight: bold;
+                text-transform: uppercase;
+                vertical-align: top;
+              }
+              span.deal-txt {
+                font-size: 9px;
+                vertical-align: top;
+                color: $c-blk;
+              }
+            }
+            .login {
+              width: 30%;
+              float: right;
+              margin-top: -30px;
+              color: $c-blk;
+              text-align: center;
+              .login-txt {
+                font-size: 10px;
+                text-transform: uppercase;
+                letter-spacing: -.10rem;
+              }
+            }
+          }
+        }
+        &.ad {
+          padding-left: 0;
+          cursor: pointer;
+        }
+      }
+
+      .features {
+        background-color: purple;
+        width: 15%;
+        height: 100%;
+        display: inline-block;
+        float: right;
+      }
     }
+    section.main.container {
+      padding: 0 0 20px 0;
+      background-color: $c-secondary;
+      min-height: 800px;
+      img {
+        padding: 10px 0 0 0;
+      }
+      h1 {
+        max-width: 85%;
+
+      }
+      div {
+        display: block;
+        float: left;
+
+        &.left-bar {
+          width: 23%;
+
+          div {
+            margin: 10px 0 10px;
+          }
+        }
+        &.content {
+          width: 60%;
+        }
+        &.right-bar {
+          width: 15%;
+          ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+              display: block;
+              width: 100%;
+              height: 60px;
+              border: 1px solid $c-border;
+            }
+          }
+        }
+      }
+    }
+
+    footer.footer {
+      width: 992px;
+      position: fixed;
+      bottom: 0;
+
+      /* Set the fixed height of the footer here */
+      height: 60px;
+      line-height: 60px; /* Vertically center the text there */
+      background-color: #f5f5f5;
+    }
+  }
 }
