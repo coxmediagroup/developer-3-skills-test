@@ -11,9 +11,15 @@ $dark-brown: #332f2f;
 $gray: #ededed;
 $medium-gray: #dddddd ;
 $medium-black: #373a3c;
-$red: #333333;
+$red: #ec0000;
 $tan: #d4c9b3;
-$white: #ffffff;	
+$white: #ffffff;
+$yellow: #fea71b;
+$green: #009900;
+$orange: #ff7300;
+$purple: #9f1897; 
+$light-blue: #189cce;
+$maroon: #800000;
 
 
 
@@ -55,45 +61,49 @@ header, nav{
 	background-color: $white;
 }
 
-
+header{
+	padding: 10px 0 0 0;
+	height: auto;
+}
 
 
 
 /********** HEADER **********/
 
-.top-nav{
+.status-bar{
 	float: left;
-	display: inline;
-	height: 70px;
-    font-size: 1rem;
-    padding: 0.5rem 1rem 0.5rem 1.5rem;
+	display: inline-block;
+	height: 50px;
+font-size: 1.5rem;
+    padding: 1rem;
 
 }
 
 .temp{}
 
-.trafic{}
-
-.search{}
-
-#account-login{
-
-	text-transform: uppercase;
+.traffic{   
+	position: relative;
 	
+	i {
+    font-size: 2rem;
+		}
 	
+	.accidents{
+	background-color: $red;
+    color: #fff;
+    min-height: 16px;
+    min-width: 16px;
+    line-height: 16px;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: 1px;
+	right: 2px;}
 }
-.sign-up{
-	    padding: 0.5rem 1rem 0.5rem 1.5rem;
 
-	float: left;
-	display: inline;
-	}
-	.login{
-		    padding: 0.5rem 1rem 0.5rem 1.5rem;
-float: left;
-	display: inline;
-		
-	}
+
 
 /*** MAIN NAVIGATION ***/
 nav {
@@ -102,32 +112,88 @@ nav {
 	border-top: 1px solid $medium-gray;
 	ul{
 	border-top: none;
+		li a{
+			padding: 10px;
+		}
+		  /*** Navigation Bullet Colors ***/		
 		li a::before {
 			content: "\2022"; 
 			color: red;
  			display: inline-block; 
 			width: .5em;
-  			
+			font-size: 2rem;
+			vertical-align: middle;
+			
 		}
+		
+			.blue-nav a::before{
+				color: $blue;
+			}
+			
+			.orange-nav a::before{
+				color: $orange;
+			}
+		
+			.red-nav a::before{
+				color: $red;
+			}
+			.green-nav a::before{
+				color: $green;
+			}
+			
+			.purple-nav a::before{
+				color: $purple;
+			}
+			.maroon-nav a::before{
+				color: $maroon;
+			}
+			.light-blue-nav a::before{
+				color: $light-blue;
+			}
 	}
 	
 }
-#main-nav{
-	color: $medium-black;
-	font-family: 'Oswald', sans-serif;
-	
 
-	a{
-		 font-family: 'Oswald', sans-serif;
-		text-transform: uppercase;
-		color: $medium-black;
-	}
-.navbar-default{
-			background-color: $white; 
-	position: relative;
-		}
+
+
+/*** Subscribe - Login nav ***/
+#account-login{
+	
+	
 }
-/*** BANNER ***/
+.subscribe{
+	float: left;
+	display: inline-block;
+	    padding: 0.5rem 1rem 0.5rem 1.5rem;
+		text-transform: uppercase;
+	text-align: center;
+		color: $red	;
+	font-weight: bold;
+	border-left: 1px solid $medium-gray;
+		border-right: 1px solid $medium-gray;
+	.sub-descript{
+		text-transform: none;
+		color: $medium-black;
+		font-weight: normal;
+	}
+	
+	}
+	.login{
+		float: left;
+		display: inline-block;
+		vertical-align: middle;
+		font-weight: bold;
+		    padding: 1.5rem 1rem 0.5rem 1.5rem;
+		a{
+			color: $medium-black;
+			text-transform: uppercase;
+			padding: 0 5px;
+
+		}
+		
+	}
+
+/*** HEADER BANNER ***/
 
 .banner-ad{
 
@@ -187,6 +253,7 @@ main{
 }
 
 /***  CENTER CONTENT  ***/
+/* ARTICLE HEADLIND*/
 .author{
 	display: block;
 	padding: 0 15px;
@@ -197,38 +264,63 @@ main{
 	padding: 0 15px;
 }
 
+.credits{
+	margin-top: 10px;
+}
 .social-share{
 	display: block;
-	
+		font-size: 4rem;
 	padding: 0 15px;
+	   	color: $medium-black;
 	ul{
 		
 		list-style: none;
 		
 		li{
 			display: inline;
-			color: $white;
-			.facebook{}
+			margin: 5px;
+		
+			.ion-social-facebook::before{
+				   	color: $medium-black;
+			}
+				}
+		
 			.twitter{}
 			.share{
-				content:"\e066";
 			}
-			.comment{}
+			.comment{
+				
+				position: relative;
+				.comment-count{
+					color: $white;
+				    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 2.5rem;}
+		}
 		}
 	}
 	
 	
-}
+
 
 .article-title{
 	h1{
 	padding: 0 15px;
+		margin-bottom: 5px;
 	}
 	
 }
 
 /*** RIGHT SIDEBAR  ***/
 
+.related-title{
+	
+	font-weight: bold;
+
+	text-transform: uppercase;
+
+}
 #new-stories{
 	background-color: $white;
 	border: solid 1px $medium-gray;
@@ -277,6 +369,88 @@ main{
 }
 /***  FOOTER  ***/
 
+footer{
+	background-color: $white;
+	
+	.contatiner{
+		padding: 15px 0;
+		margin: 0;
+	
 
+	}
+	
+	#footer-nav{
+		color: $medium-black;
+		text-transform: uppercase;
+		display: inline-block;
+		ul{
+			list-style: none;
+			display: inline;
+			
+			li {
+				float: left;
+				padding: 20px 0 0px 0;
+			}
+			li a{
+							
+				color: $medium-black;
+				}
+			.nav-divider{
+				margin: 0 5px;
+			}
+			
+		}
+		
+	}
+	#footer-social{
+		text-transform: uppercase;
+    	font-size:1.5rem;
 
+    	float: right;
+		display: inline-block;
+			ul{
+				padding: 0;
+				list-style: none;
+				display: inline-block;
+				li{
+					float: left;
+					padding: 20px 0 15px 0;
+					
+					a{
+						color: $medium-black;
+					}
+					i{
+						color: $medium-black;
+						font-size: 2rem;
+						padding: 0 5px;
+						
+					}
+
+					
+			}
+	}
+	
+}
+}
 /********** RESPONSIVE **********/
+
+@media only screen and (max-width: 991px)  {
+	#main-nav{
+		margin-left: 5px;}
+	.nav li a {
+		text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding: 10px 5px;
+    float: left;
+}
+	}
+	#account-login
+{visibility: hidden;
+height: 0px;
+}
+
+
+@media only screen and (min-width: 992px)  {
+	
+}

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,45 +8,73 @@
 <!-- Bootstrap and Font-Awesome CSS-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/6fc9bd68ba.css">
+<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
 <!-- Custom CSS-->
 <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 <!-- HEADER-->
-
+	<a name="#top"></a>
 <header class="container"> <img src="images/logo.png" width="322" height="42" alt="The Texas Journal logo"/>
-	<section class="pull-right"><div class="top-nav temp">77</div>  <div class="top-nav traffic"> 20</div> <div class="top-nav">  search</div></section>
+  <section class="pull-right">
+    <div class="status-bar temp">77 &#176;<em class="ionicons ion-ios-cloud-outline"></em></div>
+    <div class="status-bar traffic "> <i class="ionicons ion-android-car"></i><span class="accidents">20</span></div>
+    <div class="status-bar"><span class= "glyphicon glyphicon-search"> </span></div>
+  </section>
 </header>
 
 <!--------- NAVIGATION --------->
 
 <nav class="container">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-  </div>
-  <ul id="main-nav" class="nav navbar-nav collapse navbar-collapse">
-    <li><a href="#">News</a></li>
-    <li><a href="#">Sports</a></li>
-    <li><a href="#">Ausitn360</a></li>
-    <li><a href="#">¡ahora sí! </a></li>
-    <li><a href="#">NEIGHBORHOODS</a></li>
-    <li><a href="#">THINGS TO DO</a></li>
-    <li><a href="#">MORE</a></li>
+
+  <ul id="main-nav" class="nav navbar-nav ">
+    <li class="blue-nav"><a href="#">News</a></li>
+    <li class="orange-nav"><a href="#">Sports</a></li>
+    <li class="red-nav"><a href="#">Ausitn360</a></li>
+    <li class="green-nav"><a href="#">¡ahora sí! </a></li>
+    <li class="purple-nav"><a href="#">NEIGHBORHOODS</a></li>
+    <li class="maroon-nav"><a href="#">THINGS TO DO</a></li>
+    <li class="light-blue-nav"><a href="#">MORE</a></li>
   </ul>
-  <section id="account-login" class="pull-right">
-    <div class="sign-up">sign-up</div>
-	  <div class="login"><a href="#"><span class= "glyphicon glyphicon-user"></span>Log in</a> </div>
+  <section id="account-login" class="pull-right ">
+    <div class="subscribe">suscribe now<br>
+      <span class="sub-descript">As low as 99¢</span> </div>
+    <div class="login"><a href="#"><span class= "glyphicon glyphicon-user"> </span> Log in</a> </div>
   </section>
 </nav>
 <!-- AD SECTION -->
 <section id="lexus-ad" class="banner-ad container"><img src="images/lexus-ad.jpg" class="img-responsive"  alt=""/></section>
-<!----------------------- Header End -----------Astros 3-0 ------------> 
+<!----------------------- /HEADER END -----------------------> 
 
-<!----------------------- Content Area ----------------------->
+<!----------------------- CONTENT AREA ----------------------->
 <section class="container content">
-  <div class="row ">
-    <aside class="col-md-3">
+  <div class="row"> 
+
+     <!--- MAIN CONTENT--->
+    <article class="col-md-6 col-md-push-3 ">
+      <div class="row article-title">
+        <h1>Pruitt, Rays bullpen combine to top Keuchel, Astros 3-0</h1>
+        <div class="pull-left credits"> <span class="author"> <a href="#">Kristin Banks</a> </span> <span class="date-filed"> <a href="#" class="credit-link" > September 1, 2017</a> Filed in <a href="#" class="creditlink">Football</a> </span> </div>
+        <div class="pull-right social-share">
+          <ul>
+            <li class="facebook"><a href="#"><em class="ionicons ion-social-facebook"></em></a></li>
+            <li class="twitter"> <i class="ionicons ion-social-twitter"> </i></li>
+            <li class="share"> <i class="ionicons ion-share"></i></li>
+            <li class="comment"><i class="ionicons ion-chatbox"><span class="comment-count">0</span></i></li>
+          </ul>
+        </div>
+      </div>
+      <img src="images/football-photo.jpg" class="img-responsive" alt="Football Team"/>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet purus a ligula finibus imperdiet. Nullam nec cursus ipsum. Donec ornare viverra risus, non viverra purus luctus ut. Curabitur diam urna, bibendum ac odio sit amet, varius pharetra erat. Curabitur nulla est, vestibulum nec congue vel, luctus in dui. Vivamus eu aliquam mauris. Aliquam semper metus eu posuere ullamcorper. Praesent dignissim ex leo, id sollicitudin sapien laoreet in. Aenean fringilla nibh ac mollis imperdiet. </p>
+      <p>Etiam dui elit, scelerisque tincidunt scelerisque id, pharetra eu odio. Sed nec sem eget lacus cursus suscipit in sit amet orci. Nulla urna tellus, posuere porttitor orci vel, iaculis vulputate massa. Nullam fringilla eros vitae sem aliquam vehicula. Cras sit amet nulla id quam tristique facilisis quis a turpis. Fusce id varius diam. Integer sed neque ligula. Nulla urna urna, efficitur quis tempus convallis, consectetur ac libero. Proin imperdiet est a erat euismod, sit amet lacinia sem varius. Morbi malesuada luctus pulvinar. Cras feugiat rhoncus consectetur.</p>
+      <p> Mauris id tortor rhoncus, convallis ligula et, blandit orci. In pulvinar ut est non lobortis. Nunc euismod quis urna ac posuere. Mauris aliquet arcu quis purus aliquam sagittis. Vestibulum cursus ex et libero feugiat, eu mollis neque viverra. Fusce in pretium velit. Morbi vulputate ultrices ipsum ac tempus. Aliquam nec accumsan risus, sit amet pulvinar nisi. Aliquam erat volutpat. Mauris nisi libero, suscipit ut nibh quis, tincidunt rhoncus orci. Vivamus vehicula fringilla laoreet. Mauris consectetur dictum vulputate. Morbi nec ipsum eu lectus faucibus lacinia. Donec volutpat fermentum diam. Aenean eleifend ligula urna. Pellentesque sed sagittis sem. Cras eget vulputate ante. Maecenas id massa massa. </p>
+    </article>
+    <!---/MAIN CONTENT END ---> 
+       <!---LEFT SIDE RAIL --->
+    
+    <aside class="col-md-3 col-md-pull-6">
       <div id="slack-ad"><img src="images/slack-ad.jpg" class="img-responsive" alt="Slack Article"/></div>
       <div class="take-a-break">
         <div class="tab-title">
@@ -63,19 +91,10 @@
       </div>
       <div> <img src="images/vote-tracker-ad.jpg" class="img-responsive" alt="Vote Tracker Ad"/> </div>
     </aside>
-    <article class="col-md-6">
-      <div class="row article-title">
-        <h1>Pruitt, Rays bullpen combine to top Keuchel, Astros 3-0</h1>
-        <div class="pull-left credits"> <span class="author"> <a href="#">Kristin Banks</a> </span> <span class="date-filed"> <a href="#" class="credit-link" > September 1, 2017</a> Filed in <a href="#" class="creditlink">Football</a> </span></div>
-		  <div class="pull-right social-share"><ul><li class="facebook">FB</li><li class=""twitter> Twitter</li><li class="share"> Share</li><li class="comment">0</li></ul></div>
-      </div>
-      <img src="images/football-photo.jpg" class="img-responsive" alt="Football Team"/>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed laoreet purus a ligula finibus imperdiet. Nullam nec cursus ipsum. Donec ornare viverra risus, non viverra purus luctus ut. Curabitur diam urna, bibendum ac odio sit amet, varius pharetra erat. Curabitur nulla est, vestibulum nec congue vel, luctus in dui. Vivamus eu aliquam mauris. Aliquam semper metus eu posuere ullamcorper. Praesent dignissim ex leo, id sollicitudin sapien laoreet in. Aenean fringilla nibh ac mollis imperdiet. </p>
-      <p>Etiam dui elit, scelerisque tincidunt scelerisque id, pharetra eu odio. Sed nec sem eget lacus cursus suscipit in sit amet orci. Nulla urna tellus, posuere porttitor orci vel, iaculis vulputate massa. Nullam fringilla eros vitae sem aliquam vehicula. Cras sit amet nulla id quam tristique facilisis quis a turpis. Fusce id varius diam. Integer sed neque ligula. Nulla urna urna, efficitur quis tempus convallis, consectetur ac libero. Proin imperdiet est a erat euismod, sit amet lacinia sem varius. Morbi malesuada luctus pulvinar. Cras feugiat rhoncus consectetur.</p>
-      <p> Mauris id tortor rhoncus, convallis ligula et, blandit orci. In pulvinar ut est non lobortis. Nunc euismod quis urna ac posuere. Mauris aliquet arcu quis purus aliquam sagittis. Vestibulum cursus ex et libero feugiat, eu mollis neque viverra. Fusce in pretium velit. Morbi vulputate ultrices ipsum ac tempus. Aliquam nec accumsan risus, sit amet pulvinar nisi. Aliquam erat volutpat. Mauris nisi libero, suscipit ut nibh quis, tincidunt rhoncus orci. Vivamus vehicula fringilla laoreet. Mauris consectetur dictum vulputate. Morbi nec ipsum eu lectus faucibus lacinia. Donec volutpat fermentum diam. Aenean eleifend ligula urna. Pellentesque sed sagittis sem. Cras eget vulputate ante. Maecenas id massa massa. </p>
-    </article>
-    <aside class="col-md-3">
-      <h2>New Right Now</h2>
+    <!---/LEFT SIDE RAIL END---> 
+    <!---RIGHT SIDE RAIL  --->
+    <aside class="col-md-3 ">
+      <h2 class="related-title">New Right Now</h2>
       <div id="new-stories">
         <div class="new-story"><a href="#">Mauris aliquet arcu quis purus aliquam sagittis.</a></div>
         <div class="new-story"><a href="#">Mauris aliquet arcu quis purus aliquam sagittis.</a></div>
@@ -89,12 +108,38 @@
         <div class="new-story-more"> <a href="#" class="more">See More <span class="glyphicon glyphicon-arrow-right"></span></a> </div>
       </div>
     </aside>
+    <!---/RIGHT SIDE RAIL END ---> 
+    
+    
   </div>
 </section>
-<!-- End of Content --> 
-<!----------------------- / Content Area End-----------------------> 
+<!----------------------- / CONTENT AREA END-----------------------> 
 
-<!----------------------- Footer ----------------------->
-<footer class="">Content for  FOOTER Goes Here</footer>
+<!----------------------- FOOTER ----------------------->
+<footer>
+  <div class="container">
+    <div id="footer-nav" class="pull-left">
+      <ul>
+        <li><a href="#">Fulll Site Index</a><span class="nav-divider">|</span> </li>
+        <li><a href="#">Visitor Agreement</a><span class="nav-divider">|</span> </li>
+        <li><a href="#">Private Policy</a><span class="nav-divider">|</span> </li>
+        <li><a href="#">Contact Us</a><span class="nav-divider">|</span> </li>
+      </ul>
+    </div>
+    <div id="footer-social" class="pull-right">
+      <ul>
+        <li>Follow us:</li>
+        <li class="facebook"><a href="#"><i class="ionicons ion-social-facebook"></i></a></li>
+		  <li class="twitter"><a href="#"> <i class="ionicons ion-social-twitter"></i></a></li>
+    
+      </ul>
+       <ul>
+        
+		   <li> <a href="#top"> <i class="glyphicon glyphicon-chevron-up"></i>Top</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<!----------------------- FOOTER END----------------------->
 </body>
 </html>
