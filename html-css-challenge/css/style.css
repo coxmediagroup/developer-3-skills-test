@@ -1,0 +1,285 @@
+/* Scss Document */
+/********** GLOBAL STYLES **********/
+/* MIXINS */
+/* COLOR VARIBLES */
+/* TEXT */
+/* ELEMENTS */
+.no-bottom-border {
+  border-bottom: none !important; }
+
+.more {
+  background-color: #00579c;
+  padding: 5px;
+  position: absolute;
+  right: -5px;
+  bottom: 5px; }
+  .more a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff; }
+
+/********** LAYOUT STRUCTURE **********/
+body {
+  background-color: #d4c9b3;
+  color: #373a3c;
+  font-family: Arial; }
+
+header, nav {
+  background-color: #ffffff; }
+
+header {
+  padding: 10px 0 0 0;
+  height: auto; }
+
+/********** HEADER **********/
+.status-bar {
+  float: left;
+  display: inline-block;
+  height: 50px;
+  font-size: 1.5rem;
+  padding: 1rem; }
+
+.traffic {
+  position: relative; }
+  .traffic i {
+    font-size: 2rem; }
+  .traffic .accidents {
+    background-color: #ec0000;
+    color: #fff;
+    min-height: 16px;
+    min-width: 16px;
+    line-height: 16px;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: 1px;
+    right: 2px; }
+
+/*** MAIN NAVIGATION ***/
+nav {
+  background-color: #ffffff;
+  font-family: arial;
+  border-top: 1px solid #dddddd; }
+  nav ul {
+    border-top: none;
+    /*** Navigation Bullet Colors ***/ }
+    nav ul li a {
+      padding: 10px; }
+    nav ul li a::before {
+      content: "\2022";
+      color: red;
+      display: inline-block;
+      width: .5em;
+      font-size: 2rem;
+      vertical-align: middle; }
+    nav ul .blue-nav a::before {
+      color: #00579c; }
+    nav ul .orange-nav a::before {
+      color: #ff7300; }
+    nav ul .red-nav a::before {
+      color: #ec0000; }
+    nav ul .green-nav a::before {
+      color: #009900; }
+    nav ul .purple-nav a::before {
+      color: #9f1897; }
+    nav ul .maroon-nav a::before {
+      color: #800000; }
+    nav ul .light-blue-nav a::before {
+      color: #189cce; }
+
+/*** Subscribe - Login nav ***/
+.subscribe {
+  float: left;
+  display: inline-block;
+  padding: 0.5rem 1rem 0.5rem 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ec0000;
+  font-weight: bold;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd; }
+  .subscribe .sub-descript {
+    text-transform: none;
+    color: #373a3c;
+    font-weight: normal; }
+
+.login {
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  padding: 1.5rem 1rem 0.5rem 1.5rem; }
+  .login a {
+    color: #373a3c;
+    text-transform: uppercase;
+    padding: 0 5px; }
+
+/*** HEADER BANNER ***/
+.banner-ad {
+  padding: 0px; }
+
+/********** MAIN CONTENT **********/
+main {
+  background-color: #ededed; }
+
+.content {
+  background-color: #ededed;
+  padding: 20px 10px; }
+
+/*** LEFT SIDEBAR ***/
+/* Take a Break Module*/
+.take-a-break {
+  margin: 10px 0; }
+  .take-a-break .tab-title {
+    display: inline-block; }
+    .take-a-break .tab-title h2 {
+      background-color: #00579c;
+      font-size: 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 15px 10px;
+      margin: 0;
+      color: #fff; }
+  .take-a-break .tab-list {
+    background-color: #332f2f;
+    color: #fff;
+    position: relative;
+    padding-bottom: 5px; }
+    .take-a-break .tab-list ul {
+      list-style: none;
+      padding: 0 20px; }
+      .take-a-break .tab-list ul li {
+        border-bottom: solid 2px #000;
+        text-transform: uppercase;
+        padding: 20px 0; }
+
+/***  CENTER CONTENT  ***/
+/* ARTICLE HEADLIND*/
+.author {
+  display: block;
+  padding: 0 15px; }
+
+.date-filed {
+  display: block;
+  padding: 0 15px; }
+
+.credits {
+  margin-top: 10px; }
+
+.social-share {
+  display: block;
+  font-size: 4rem;
+  padding: 0 15px;
+  color: #373a3c; }
+  .social-share ul {
+    list-style: none; }
+    .social-share ul li {
+      display: inline;
+      margin: 5px; }
+      .social-share ul li .ion-social-facebook::before {
+        color: #373a3c; }
+    .social-share ul .comment {
+      position: relative; }
+      .social-share ul .comment .comment-count {
+        color: #ffffff;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        font-size: 2.5rem; }
+
+.article-title h1 {
+  padding: 0 15px;
+  margin-bottom: 5px; }
+
+/*** RIGHT SIDEBAR  ***/
+.related-title {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+#new-stories {
+  background-color: #ffffff;
+  border: solid 1px #dddddd; }
+
+.new-story {
+  height: 70px;
+  max-height: 70px;
+  overflow: hidden;
+  border-bottom: solid 1px #dddddd;
+  padding: 5px 5px;
+  display: block; }
+  .new-story a {
+    padding: 0 10px;
+    position: relative;
+    display: block; }
+
+.new-story-more {
+  padding: 20px;
+  position: relative; }
+  .new-story-more .more {
+    color: #ffffff;
+    bottom: 5px;
+    text-transform: uppercase; }
+    .new-story-more .more a {
+      text-decoration: none !important; }
+
+.related h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: bold; }
+
+/***  FOOTER  ***/
+footer {
+  background-color: #ffffff; }
+  footer .contatiner {
+    padding: 15px 0;
+    margin: 0; }
+  footer #footer-nav {
+    color: #373a3c;
+    text-transform: uppercase;
+    display: inline-block; }
+    footer #footer-nav ul {
+      list-style: none;
+      display: inline; }
+      footer #footer-nav ul li {
+        float: left;
+        padding: 20px 0 0px 0; }
+      footer #footer-nav ul li a {
+        color: #373a3c; }
+      footer #footer-nav ul .nav-divider {
+        margin: 0 5px; }
+  footer #footer-social {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    float: right;
+    display: inline-block; }
+    footer #footer-social ul {
+      padding: 0;
+      list-style: none;
+      display: inline-block; }
+      footer #footer-social ul li {
+        float: left;
+        padding: 20px 0 15px 0; }
+        footer #footer-social ul li a {
+          color: #373a3c; }
+        footer #footer-social ul li i {
+          color: #373a3c;
+          font-size: 2rem;
+          padding: 0 5px; }
+
+/********** RESPONSIVE **********/
+@media only screen and (max-width: 991px) {
+  #main-nav {
+    margin-left: 5px; }
+
+  .nav li a {
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    padding: 10px 5px;
+    float: left; } }
+#account-login {
+  visibility: hidden;
+  height: 0px; }
