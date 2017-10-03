@@ -47,8 +47,8 @@
 		<h5 class="section-heading uppercase">Related</h5>
 		<ul class="related-headlines">
 
-
-			<c:forEach items="${relatedObjectList}" var="relatedObject" varStatus="stat" end="5">
+			<%-- Ignore if related objects are more than 9 --%>
+			<c:forEach items="${relatedObjectList}" var="relatedObject" varStatus="stat" end="9">
 
 				<p:object webObject="${relatedObject}" metadata="relatedMeta" content="relatedData" />
 				<p:out var="relatedObjectWebType" xvalue="$relatedMeta//WebType" />
@@ -103,8 +103,8 @@
                 <c:set var="relatedItemCount" value="${relatedItemCount + 1}" scope="page" />
 			</c:forEach>
 
-<c:set var="relatedItemsEnd" value="${5 - relatedItemCount}" />
-<c:set var="queryItemsEnd" value="${5 - relatedItemCount}" />
+<c:set var="relatedItemsEnd" value="${relatedItemCount}" />
+<c:set var="queryItemsEnd" value="${9 - relatedItemCount}" />
 
 <c:if test="${relatedItemsEnd < 0}">
 	<c:set var="relatedItemsEnd" value="0" />
@@ -129,7 +129,7 @@
 				but Related Queries are supposed to be *after* the rest of the content, so this
 				might be the most efficient way.	
  --%>
-<c:if test="${(relatedItemsQueryExist eq 'true' and queryItemsEnd > 0) or (queryItemsEnd == 5 and relatedItemsQueryExist eq 'true' )}">
+<c:if test="${(relatedItemsQueryExist eq 'true' and queryItemsEnd > 0) or (queryItemsEnd == 9 and relatedItemsQueryExist eq 'true' )}">
 	<c:forEach items="${relatedQuery}" var="relatedObject" end="${queryItemsEnd }" varStatus="stat">
 
 		<p:object webObject="${relatedObject}" metadata="relatedMeta" content="relatedData" />
