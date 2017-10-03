@@ -13,21 +13,24 @@
     <meta name="description" content="Texas News: your source for breaking news at your finger tips.">
 
     <!--The following version of bootstrap is the version that I'm most comfortable with since v4 is still in beta.-->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/css/styles.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
     <header class="main-nav navbar navbar-static-top" id="top">
         <div class="container">
             <div class="navbar-header">
-                
+
                 <!--Hamburger Menu-->
                 <button aria-controls="main-navbar" aria-expanded="false" class="collapsed navbar-toggle" data-target="#main-navbar" data-toggle="collapse" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                
+
                 <!--Brand logo-->
-                <a class="navbar-brand" href="/" title="Texas Journal Home Page" aria-label="Texas Journal Home Page">The<strong>Texas</strong>Journal</a>
-                
+                <a class="navbar-brand" href="/" title="Texas Journal Home Page" aria-label="Texas Journal Home Page">
+                    <img class="img-responsive" src="images/logo.png" title="Texas Journal Logo" alt="The Texas Journal">
+                </a>
+
                 <!--Top Navigation-->
                 <nav id="top-navbar">
                     <ul class="nav navbar-nav navbar-right">
@@ -39,35 +42,40 @@
                         <li class="trip-nav">
                             <a title="Trip Planner" aria-label="Trip Planner" href="/trip-planner/">
                                 <i class="fa fa-car" aria-hidden="true"></i>
+                                <span class="badge">20</span>
                             </a>
+                        </li>
+                        <li>
+                            <a title="Search" aria-label="Search" href="/search/"><i class="fa fa-search" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </nav>
+
             </div> <!-- /.navbar-header-->
 
             <!--Main Navigation controlled by hamburger nav (#main-navbar)-->
             <nav class="collapse navbar-collapse" id="main-navbar">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a title="News" aria-label="News" href="/news/">NEWS</a>
+                        <a class="blue" title="News" aria-label="News" href="/news/">NEWS</a>
                     </li>
                     <li>
-                        <a title="Sports" aria-label="Sports" href="/sports/">SPORTS</a>
+                        <a class="orange" title="Sports" aria-label="Sports" href="/sports/">SPORTS</a>
                     </li>
                     <li>
-                        <a title="Austin360" aria-label="Austin360" href="/austin360/">AUSTIN360</a>
+                        <a class="red" title="Austin360" aria-label="Austin360" href="/austin360/">AUSTIN360</a>
                     </li>
                     <li>
-                        <a title="Ahora Si" aria-label="Ahora Si" href="/ahora-si/">&#161;AHORA SI!</a>
+                        <a class="green" title="Ahora Si" aria-label="Ahora Si" href="/ahora-si/">&#161;AHORA SI!</a>
                     </li>
                     <li>
-                        <a title="Neighborhoods" aria-label="Neighborhoods" href="/neighborhoods/">NEIGHBORHOODS</a>
+                        <a class="purple" title="Neighborhoods" aria-label="Neighborhoods" href="/neighborhoods/">NEIGHBORHOODS</a>
                     </li>
                     <li>
-                        <a title="Things to Do" aria-label="Things to Do" href="/things-to-do/">THINGS TO DO</a>
+                        <a class="maroon" title="Things to Do" aria-label="Things to Do" href="/things-to-do/">THINGS TO DO</a>
                     </li>
                     <li>
-                        <a title="More" aria-label="More" href="/more/">MORE</a>
+                        <a class="blue" title="More" aria-label="More" href="/more/">MORE</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -78,10 +86,14 @@
 
         </div><!-- /.container-->
     </header>
+    <main>
+        <div class="container">
+            <article></article>
+            <aside></aside>
+            <aside></aside>
+        </div>
+    </main>
 
-    <article></article>
-    <aside></aside>
-    <aside></aside>
     <footer></footer>
 </body>
 </html>

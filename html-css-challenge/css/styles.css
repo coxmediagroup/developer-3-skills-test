@@ -1,2 +1,145 @@
 body {
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #D4C9B3;
+}
+
+body, nav a {
+    color: #000000;
+}
+
+.blue:before {
+    color: #075A9E;
+}
+
+.orange:before {
+    color: #FF6306;
+}
+
+.red:before {
+    color: #C01412;
+}
+
+.green:before {
+    color: #56B729;
+}
+
+.purple:before {
+    color: #A81C96;
+}
+
+.maroon:before {
+    color: #AA0027;
+}
+
+header .container {
+    background: #fff;
+    padding: 0;
+}
+
+.navbar-header {
+    float: none;
+    padding: 0 15px;
+}
+
+.navbar-brand {
+    height: 65px;
+    padding: 10px 15px;
+}
+
+#top-navbar li a {
+    padding: 0 20px;
+    line-height: 65px;
+    font-size: 18px;
+    position: relative;
+}
+
+    #top-navbar li a:hover {
+        background: none;
+    }
+
+.badge {
+    background: #F80300;
+    font-size: 10px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 17px;
+    height: 17px;
+    padding: 4px 0px;
+}
+
+#main-navbar {
+    border-top: 1px solid #DCDCDC;
+    border-bottom: 1px solid #DCDCDC;
+    padding: 0 15px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+}
+
+    #main-navbar a:hover {
+        background: #F9F9F9;
+        border-left: 1px solid #DCDCDC;
+        border-right: 1px solid #DCDCDC;
+        padding: 15px 14px;
+    }
+
+    #main-navbar a:before {
+        content: "\2022";
+        font-size: 24px;
+        vertical-align: bottom;
+        margin-right: 1px;
+    }
+
+
+    #main-navbar .navbar-right {
+        margin-right: 10px;
+        font-size: 13px;
+    }
+
+        #main-navbar .navbar-right i {
+            font-size: 18px;
+            padding-right: 5px;
+        }
+
+        #main-navbar .navbar-right li a {
+            padding: 15px 20px 13px;
+            border-right: 1px solid #DCDCDC;
+        }
+
+            #main-navbar .navbar-right li a:hover {
+                background: none;
+                border-left: none;
+            }
+
+            #main-navbar .navbar-right li a:before {
+                content: "";
+                font-size: 0;
+                margin-right: 0;
+            }
+
+.subscribe-btn a {
+    background: #F9F9F9 !important;
+    border-left: 1px solid #DCDCDC !important;
+    color: #A22;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1 !important;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+
+    .subscribe-btn a:hover {
+        color: #3B73A6;
+    }
+
+    .subscribe-btn a span {
+        display: block;
+        font-size: 10px;
+        color: #000;
+    }
+
+main .container {
+    background: #EDEDED;
 }
