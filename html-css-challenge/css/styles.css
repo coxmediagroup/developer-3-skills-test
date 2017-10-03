@@ -17,7 +17,7 @@ body, nav a {
 }
 
 .red:before {
-    color: #C01412;
+    color: #F0251E;
 }
 
 .green:before {
@@ -77,19 +77,23 @@ header .container {
     font-size: 15px;
 }
 
-    #main-navbar a:hover {
-        background: #F9F9F9;
-        border-left: 1px solid #DCDCDC;
-        border-right: 1px solid #DCDCDC;
-        padding: 15px 14px;
+    #main-navbar a {
+        padding: 10px 15px;
     }
 
-    #main-navbar a:before {
-        content: "\2022";
-        font-size: 24px;
-        vertical-align: bottom;
-        margin-right: 1px;
-    }
+        #main-navbar a:hover {
+            background: #F9F9F9;
+            border-left: 1px solid #DCDCDC;
+            border-right: 1px solid #DCDCDC;
+            padding: 10px 14px;
+        }
+
+        #main-navbar a:before {
+            content: "\2022";
+            font-size: 24px;
+            vertical-align: bottom;
+            margin-right: 1px;
+        }
 
 
     #main-navbar .navbar-right {
@@ -103,8 +107,9 @@ header .container {
         }
 
         #main-navbar .navbar-right li a {
-            padding: 15px 20px 13px;
+            padding: 9px 20px;
             border-right: 1px solid #DCDCDC;
+            line-height: 1.7;
         }
 
             #main-navbar .navbar-right li a:hover {
