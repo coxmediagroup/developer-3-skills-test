@@ -35,17 +35,17 @@
                 <nav id="top-navbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="weather-nav">
-                            <a title="Weather" aria-label="Weather" href="/weather/">
-                                77&deg; <i class="fa fa-cloud" aria-hidden="true"></i>
+                            <a title="Weather now: 77 degrees" aria-label="Weather now: 77 degrees" href="/weather/">
+                                77&deg;<i class="fa fa-cloud" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li class="trip-nav">
-                            <a title="Trip Planner" aria-label="Trip Planner" href="/trip-planner/">
+                            <a title="20 items in Trip Planner" aria-label="20 items in Trip Planner" href="/trip-planner/">
                                 <i class="fa fa-car" aria-hidden="true"></i>
                                 <span class="badge">20</span>
                             </a>
                         </li>
-                        <li>
+                        <li id="search-box">
                             <a title="Search" aria-label="Search" href="/search/"><i class="fa fa-search" aria-hidden="true"></i></a>
                         </li>
                     </ul>
@@ -79,13 +79,14 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="subscribe-btn"><a href="/subscribe/">SUBSCRIBE NOW<span>As low as 99&cent;</span></a></li>
-                    <li><a href="/login/"><i class="fa fa-user" aria-hidden="true"></i> LOG IN</a></li>
+                    <li class="subscribe-btn"><a title="Subscribe Now! As low as 99 cents" aria-label="Subscribe Now! As low as 99 cents" href="/subscribe/">SUBSCRIBE NOW<span>As low as 99&cent;</span></a></li>
+                    <li><a id="login" title="Log In" aria-label="Log In" href="/login/"><i class="fa fa-user" aria-hidden="true"></i> LOG IN</a></li>
                 </ul>
             </nav>
 
         </div><!-- /.container-->
     </header>
+
     <main>
         <div class="container">
             <article></article>
@@ -95,5 +96,9 @@
     </main>
 
     <footer></footer>
+
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" defer="defer"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer="defer"></script>
 </body>
 </html>

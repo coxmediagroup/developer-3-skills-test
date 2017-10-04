@@ -8,34 +8,13 @@ body, nav a {
     color: #000000;
 }
 
-.blue:before {
-    color: #075A9E;
+header {
+    border-bottom: 1px solid #DCDCDC;
 }
 
-.orange:before {
-    color: #FF6306;
-}
-
-.red:before {
-    color: #F0251E;
-}
-
-.green:before {
-    color: #56B729;
-}
-
-.purple:before {
-    color: #A81C96;
-}
-
-.maroon:before {
-    color: #AA0027;
-}
-
-header .container {
-    background: #fff;
-    padding: 0;
-}
+    header .container {
+        background: #fff;
+    }
 
 .navbar-header {
     float: none;
@@ -58,6 +37,10 @@ header .container {
         background: none;
     }
 
+.weather-nav i {
+    margin-left: 3px;
+}
+
 .badge {
     background: #F80300;
     font-size: 10px;
@@ -70,9 +53,6 @@ header .container {
 }
 
 #main-navbar {
-    border-top: 1px solid #DCDCDC;
-    border-bottom: 1px solid #DCDCDC;
-    padding: 0 15px;
     font-family: 'Oswald', sans-serif;
     font-size: 15px;
 }
@@ -83,9 +63,6 @@ header .container {
 
         #main-navbar a:hover {
             background: #F9F9F9;
-            border-left: 1px solid #DCDCDC;
-            border-right: 1px solid #DCDCDC;
-            padding: 10px 14px;
         }
 
         #main-navbar a:before {
@@ -95,6 +72,29 @@ header .container {
             margin-right: 1px;
         }
 
+        #main-navbar a.blue:before {
+            color: #075A9E;
+        }
+
+        #main-navbar a.orange:before {
+            color: #FF6306;
+        }
+
+        #main-navbar a.red:before {
+            color: #F0251E;
+        }
+
+        #main-navbar a.green:before {
+            color: #56B729;
+        }
+
+        #main-navbar a.purple:before {
+            color: #A81C96;
+        }
+
+        #main-navbar a.maroon:before {
+            color: #AA0027;
+        }
 
     #main-navbar .navbar-right {
         margin-right: 10px;
@@ -108,7 +108,6 @@ header .container {
 
         #main-navbar .navbar-right li a {
             padding: 9px 20px;
-            border-right: 1px solid #DCDCDC;
             line-height: 1.7;
         }
 
@@ -125,7 +124,6 @@ header .container {
 
 .subscribe-btn a {
     background: #F9F9F9 !important;
-    border-left: 1px solid #DCDCDC !important;
     color: #A22;
     text-align: center;
     font-weight: 600;
@@ -147,4 +145,152 @@ header .container {
 
 main .container {
     background: #EDEDED;
+}
+
+
+@media(min-width:993px) {
+    header .container {
+        padding: 0;
+    }
+
+    #main-navbar {
+        padding: 0 15px;
+        border-top: 1px solid #DCDCDC;
+    }
+
+        #main-navbar a:hover {
+            border-left: 1px solid #DCDCDC;
+            border-right: 1px solid #DCDCDC;
+            padding: 10px 14px;
+        }
+
+        #main-navbar .navbar-right li a {
+            border-right: 1px solid #DCDCDC;
+        }
+
+    .subscribe-btn a {
+        border-left: 1px solid #DCDCDC !important;
+    }
+}
+
+/* 
+    Bootstrap mobile navigation override included:
+    This will make the mobile navigation come in at the 991px breakpoint instead of the 767px breakpoint which is the default for bootstrap.
+    For the mobile navigation, I was trying to come up with a layout to where I wouldn't have to change the order and show or hide sections depending on the breakpoint. 
+*/
+@media (max-width: 992px) {
+    header .container {
+        width: 100%;
+    }
+
+    .container > .navbar-header {
+        margin-right: -15px;
+        margin-left: -15px;
+        float: none;
+        text-align: center;
+    }
+
+    .navbar-left, .navbar-right {
+        float: none !important;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+        z-index: 2;
+        float: left;
+        padding: 0;
+        margin: 15px 15px 15px 0;
+    }
+
+        .navbar-toggle .icon-bar {
+            background: #000;
+        }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav > li {
+        float: left;
+    }
+
+    #main-navbar {
+        font-size: 20px;
+    }
+
+        #main-navbar .navbar-nav {
+            float: none;
+            margin: 0 -15px;
+        }
+
+            #main-navbar .navbar-nav > li {
+                float: none;
+            }
+
+                #main-navbar .navbar-nav > li > a {
+                    padding: 18px 15px;
+                    border-bottom: 1px solid #ddd;
+                }
+
+    .collapse.in {
+        display: block !important;
+    }
+
+    .navbar-brand {
+        float: none;
+        display: inline-block;
+        height: auto;
+        padding: 7px 0 3px;
+        max-width: 230px;
+        margin-right: 32px;
+    }
+
+        .navbar-brand > img {
+            display: inline-block;
+        }
+
+    #top-navbar {
+        display: block;
+        float: none;
+        margin: 0 -15px;
+        background: #eae9e9;
+        border-top: 1px solid #dcdcdc;
+        border-bottom: 1px solid #dcdcdc;
+        max-height: 45px;
+    }
+
+        #top-navbar .navbar-right {
+            display: inline-block;
+        }
+
+        #top-navbar li a {
+            padding: 0 12px;
+            line-height: 45px;
+        }
+
+    #search-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .subscribe-btn a, #login {
+        font-size: 15px;
+    }
+
+        .subscribe-btn a span {
+            font-size: 12px;
+        }
 }
