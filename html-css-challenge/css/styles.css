@@ -273,14 +273,14 @@ h1 {
     margin: 20px auto;
 }
 
-.share a {
+.social a {
     color: #000;
     font-size: 35px;
     margin: 0 8px;
     text-decoration: none !important;
 }
 
-    .share a:hover {
+    .social a:hover {
         color: #969696;
         -webkit-transition: color 300ms linear;
         transition: color 300ms linear;
@@ -316,7 +316,7 @@ h1 {
         padding-right: 0 !important;
     }
 
-    .share {
+    .social {
         float: right;
     }
 }
