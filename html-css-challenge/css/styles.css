@@ -8,11 +8,12 @@ body, nav a {
     color: #000000;
 }
 
-header {
-    border-bottom: 1px solid #DCDCDC;
+header.navbar {
+    border-bottom: none;
+    margin-bottom: 0;
 }
 
-    header .container {
+    header.navbar .container {
         background: #fff;
     }
 
@@ -55,6 +56,7 @@ header {
 #main-navbar {
     font-family: 'Oswald', sans-serif;
     font-size: 15px;
+    border-bottom: 1px solid #DCDCDC;
 }
 
     #main-navbar a {
@@ -145,7 +147,144 @@ header {
 
 main .container {
     background: #EDEDED;
+    padding-top: 20px !important;
 }
+
+.ad-image {
+    margin: 0 auto 15px;
+}
+
+article {
+    color: #333;
+    padding-bottom: 30px;
+}
+
+aside {
+    padding-bottom: 30px;
+}
+
+.section {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.section-heading {
+    line-height: 1;
+    display: inline-block;
+    font-family: Oswald, Arial, sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.nav-stacked a {
+    line-height: 1.4;
+    background: none !important;
+    color: #000;
+}
+
+    .nav-stacked a:hover {
+        color: #00579e !important;
+    }
+
+.sn-title {
+    padding: 12px 15px;
+    color: #fff;
+    background-color: #00579e;
+    margin-bottom: 0;
+    min-width: 212px;
+}
+
+.sn-nav {
+    background: #332f2f;
+    padding: 5px 20px;
+}
+
+    .sn-nav li {
+        border-bottom: 2px solid #1e1a1a;
+    }
+
+        .sn-nav li:last-of-type {
+            border-bottom: none;
+        }
+
+    .sn-nav.nav-stacked a {
+        color: #fff;
+        font-family: Oswald, Arial, sans-serif;
+        font-size: 17px;
+        padding: 20px 0;
+    }
+
+        .sn-nav.nav-stacked a i {
+            margin-right: 5px;
+        }
+
+.see-more {
+    color: #fff !important;
+    background-color: #00579e;
+    font-family: Oswald, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1;
+    padding: 6px;
+    position: absolute;
+    right: -6px;
+    bottom: 15px;
+    border-radius: 0;
+}
+
+    .see-more:hover {
+        background-color: #1d78c3;
+        -webkit-transition: background-color 600ms linear;
+        transition: background-color 600ms linear;
+    }
+
+    .see-more i {
+        vertical-align: top;
+    }
+
+.an-title {
+    margin-top: 0;
+}
+
+.an-nav.nav-stacked > li {
+    background: #fff;
+    border: 1px solid #DCDCDC;
+    margin: 0 !important;
+    border-bottom: none;
+    padding: 10px 0;
+    min-height: 40px;
+}
+
+.an-nav.nav-stacked li:last-of-type {
+    border-bottom: 1px solid #DCDCDC;
+}
+
+#articles-nav .see-more {
+    bottom: 5px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 43px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.featured-image {
+    margin: 20px auto;
+}
+
+.share a {
+    color: #000;
+    font-size: 35px;
+    margin: 0 8px;
+    text-decoration: none !important;
+}
+
+    .share a:hover {
+        color: #969696;
+        -webkit-transition: color 300ms linear;
+        transition: color 300ms linear;
+    }
 
 
 @media(min-width:993px) {
@@ -171,11 +310,19 @@ main .container {
     .subscribe-btn a {
         border-left: 1px solid #DCDCDC !important;
     }
+
+    article {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .share {
+        float: right;
+    }
 }
 
 /* 
-    Bootstrap mobile navigation override included:
-    This will make the mobile navigation come in at the 991px breakpoint instead of the 767px breakpoint which is the default for bootstrap.
+    Bootstrap mobile navigation override included to make the mobile navigation come in at the 991px breakpoint instead of the 767px breakpoint which is the default for bootstrap.
     For the mobile navigation, I was trying to come up with a layout to where I wouldn't have to change the order and show or hide sections depending on the breakpoint. 
 */
 @media (max-width: 992px) {
@@ -213,13 +360,12 @@ main .container {
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
     }
 
-    .navbar-fixed-top {
-        top: 0;
-        border-width: 0 0 1px;
-    }
+        .navbar-collapse.collapse {
+            display: none !important;
+        }
 
-    .navbar-collapse.collapse {
-        display: none !important;
+    .collapse.in {
+        display: block !important; /* HAS to come AFTER .navbar-collapse.colllapse - display none */
     }
 
     .navbar-nav > li {
@@ -243,10 +389,6 @@ main .container {
                     padding: 18px 15px;
                     border-bottom: 1px solid #ddd;
                 }
-
-    .collapse.in {
-        display: block !important;
-    }
 
     .navbar-brand {
         float: none;
