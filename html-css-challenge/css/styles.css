@@ -286,6 +286,58 @@ h1 {
         transition: color 300ms linear;
     }
 
+footer {
+    background: #fff;
+    border-top: 1px solid #DCDCDC;
+    font-family: Oswald, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 51px;
+}
+
+    footer #footer-navbar li:after {
+        content: "|";
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-weight: 100;
+    }
+
+    footer #footer-navbar li:last-of-type:after {
+        content: "";
+    }
+
+    footer #footer-navbar li a {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    footer .footer-right {
+        font-size: 15px;
+    }
+
+    footer .social a {
+        margin: 0 1px;
+        font-size: 15px;
+    }
+
+        footer .social a i {
+            font-size: 21px;
+        }
+
+    footer a.top {
+        margin-left: 30px;
+    }
+
+        footer a.top i {
+            border: 2px solid #000;
+            border-radius: 100%;
+            text-align: center;
+            vertical-align: text-bottom;
+            padding: 0 3px 1px;
+            font-size: 17px;
+        }
+
 
 @media(min-width:993px) {
     header .container {
