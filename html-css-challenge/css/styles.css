@@ -295,18 +295,6 @@ footer {
     line-height: 51px;
 }
 
-    footer #footer-navbar li:after {
-        content: "|";
-        position: absolute;
-        right: 0;
-        top: 0;
-        font-weight: 100;
-    }
-
-    footer #footer-navbar li:last-of-type:after {
-        content: "";
-    }
-
     footer #footer-navbar li a {
         padding-left: 10px;
         padding-right: 10px;
@@ -370,6 +358,18 @@ footer {
 
     .social {
         float: right;
+    }
+
+    footer #footer-navbar li:after {
+        content: "|";
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-weight: 100;
+    }
+
+    footer #footer-navbar li:last-of-type:after {
+        content: "";
     }
 }
 
@@ -447,7 +447,7 @@ footer {
         display: inline-block;
         height: auto;
         padding: 7px 0 3px;
-        max-width: 219px;
+        max-width: 200px;
         margin-right: 32px;
     }
 
@@ -487,5 +487,17 @@ footer {
 
         .subscribe-btn a span {
             font-size: 12px;
+        }
+
+    footer {
+        padding: 10px 0;
+    }
+
+        footer .navbar-nav, footer .navbar-nav li {
+            float: none;
+        }
+
+        footer #footer-navbar li a {
+            padding: 5px 15px;
         }
 }
