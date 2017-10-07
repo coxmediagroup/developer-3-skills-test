@@ -16,10 +16,14 @@ The related-content box is a constant source of frustration for our business par
 * Keep the existing set of filetype restrictions.
 * Max of 9 items ever in the related box.
 * Do not show the box if there are no related items.
-* Queries are collections of content items. Only 1 related query is supported. Additional queries should be ignored.
+* Queries are collections of content items. Only 1 related query is supported. Additional queries should be ignored. 
+	- KS NOTE: I don't really understand what I'm supposed to do with this :(
 * Items in the query should be filtered using the same set of filetype restrictions as directly related content.
+	- KS NOTE: I *THINK* I handled this by including that section in the template file (if that's even how you do it. That was my intention anyway.)
 * Items in the query should be added to the box last and only if there is room left.
 * No individual images should ever display in the related box. Image galleries are okay.
+- KS NOTE: Again, I *THINK* I handled this by including that section in the template file, however I don't know how to tell if it's a gallery or not. 
+  I assumed by making sure there was more than 1 image before adding it?
 
 **Example:** If a story has 2 related Videos, 3 photo galleries, 3 blog posts, and a query of 10 items, then only 1 item from the query will display.
 

@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow, archive">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The Texas Journal: Breaking News for Texas</title>
+
+    <meta name="description" content="Texas News: your source for breaking news at your finger tips.">
+
+    <!--Using the following version of bootstrap since v4 is still in beta.-->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--I think it is better to use svgs for the icons, but font awesome was quicker in this situation. Normally I would say that it isn't good to pull in the whole font awesome stylesheet for just a few icons-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <!--
+        Would've used SASS, but I had a hard time getting the compiler/bundler/minifier to work on the computer I was using (which isn't mine. We're staying with family for the time being).
+        Also, for bigger sites, I would separate the code into above the fold and below the fold css and use this script https://github.com/filamentgroup/loadCSS to make the perceived performance faster.
+    -->
+    <link href="css/styles.css" rel="stylesheet">
+    <!--Would normally add google analytics and rich snippets where needed as well as social media og/meta tags-->
+</head>
+<body>
+    <a id="page-top"></a>
+    <header class="main-nav navbar navbar-static-top" id="top">
+        <div class="container">
+            <div class="navbar-header">
+
+                <!--Hamburger Menu-->
+                <button aria-controls="main-navbar" aria-expanded="false" class="collapsed navbar-toggle" data-target="#main-navbar" data-toggle="collapse" type="button"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+                <!--Brand logo-->
+                <a class="navbar-brand" href="/" title="Texas Journal Home Page" aria-label="Texas Journal Home Page">
+                    <img class="img-responsive" src="images/logo.png" title="The Texas Journal Logo" aria-label="The Texas Journal Logo with the words TheTexasJournal" alt="The Texas Journal Logo with the words TheTexasJournal">
+                </a>
+
+                <!--Top Navigation-->
+                <nav id="top-navbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="weather-nav">
+                            <a title="Weather now: 77 degrees" aria-label="Weather now: 77 degrees" href="/">
+                                77&deg;<i class="fa fa-cloud" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="trip-nav">
+                            <a title="20 items in Trip Planner" aria-label="20 items in Trip Planner" href="/">
+                                <i class="fa fa-car" aria-hidden="true"></i>
+                                <span class="badge">20</span>
+                            </a>
+                        </li>
+                        <li id="search-box">
+                            <a title="Search" aria-label="Search" href="/"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div> <!-- /.navbar-header-->
+            <!--Main Navigation controlled by hamburger nav (#main-navbar)-->
+            <nav class="collapse navbar-collapse" id="main-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="blue" title="News" aria-label="News" href="/">NEWS</a>
+                    </li>
+                    <li>
+                        <a class="orange" title="Sports" aria-label="Sports" href="/">SPORTS</a>
+                    </li>
+                    <li>
+                        <a class="red" title="Austin360" aria-label="Austin360" href="/">AUSTIN360</a>
+                    </li>
+                    <li>
+                        <a class="green" title="Ahora Si" aria-label="Ahora Si" href="/">&#161;AHORA SI!</a>
+                    </li>
+                    <li>
+                        <a class="purple" title="Neighborhoods" aria-label="Neighborhoods" href="/">NEIGHBORHOODS</a>
+                    </li>
+                    <li>
+                        <a class="maroon" title="Things to Do" aria-label="Things to Do" href="/">THINGS TO DO</a>
+                    </li>
+                    <li>
+                        <a class="blue" title="More" aria-label="More" href="/">MORE</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="subscribe-btn"><a title="Subscribe Now! As low as 99 cents" aria-label="Subscribe Now! As low as 99 cents" href="/">SUBSCRIBE NOW<span>As low as 99&cent;</span></a></li>
+                    <li><a id="login" title="Log In" aria-label="Log In" href="/"><i class="fa fa-user" aria-hidden="true"></i> LOG IN</a></li>
+                </ul>
+            </nav>
+
+        </div><!-- /.container-->
+    </header>
+
+    <main>
+
+        <div class="container">
+
+            <div class="row">
+                <img class="img-responsive hidden-sm hidden-xs ad-image" src="http://via.placeholder.com/1170x90" title="placeholder for ad" aria-label="placeholder for ad with dimensions 1170 by 90" alt="placeholder for ad with dimensions 1170 by 90" />
+                <img class="img-responsive visible-sm ad-image" src="http://via.placeholder.com/1170x180" title="placeholder for ad" aria-label="placeholder for ad with dimensions 1170 by 360" alt="placeholder for ad with dimensions 1170 by 360" />
+                <img class="img-responsive visible-xs ad-image" src="http://via.placeholder.com/1170x360" title="placeholder for ad" aria-label="placeholder for ad with dimensions 1170 by 360" alt="placeholder for ad with dimensions 1170 by 360" />
+
+                <!--First in the layout so that on mobile devices it stacks first, but push-3 so that it's moved over 3 in the grid to be in the middle on desktop-->
+                <article class="col-md-6 col-md-push-3">
+                    <h1>Pruitt, Rays bullpen combine to top Keuchel, Astros 3-0</h1>
+
+                    <div class="row article-information">
+                        <div class="col-md-6">
+                            <div class="author"><a href="/" title="John Doe" aria-label="John Doe">John Doe</a></div>
+                            <div class="date">August 3, 2017 File in <a class="category" href="/" title="Football" aria-label="Football">Football or Baseball</a>?</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="social">
+                                <a href="/" title="Share on Facebok" aria-label="Share on Facebok">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a href="/" title="Share on Twitter" aria-label="Share on Twitter">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="/" title="Share" aria-label="Share">
+                                    <i class="fa fa-share-square-o" aria-hidden="true"></i>
+                                </a>
+                                <a href="/" title="Comments" aria-label="Comments">
+                                    <i class="fa fa-comments-o" aria-hidden="true"></i>
+                                </a>
+                            </div><!-- / .social -->
+                        </div>
+                    </div><!-- / .article-information -->
+
+                    <img class="img-responsive featured-image" src="http://via.placeholder.com/615x527" title="placeholder for article image" aria-label="placeholder for article image with dimensions 615 by 527" alt="placeholder for article image with dimensions 615 by 527" />
+
+                    <p>Apparently, the good folks at MaxPreps now realize what Central Texans have known for the last decade.</p>
+                    <p>Lake Travis is the best  high school football program in the state over the past 10 years, and MaxPreps has the formula to prove it.</p>
+                    <p>
+                        MaxPreps put together a list of the <a title="15 most dominant football programs in Texas since 2006" aria-label="15 most dominant football programs in Texas since 2006" href="/">15 most dominant football programs in Texas since 2006</a>.
+                        The website awarded 20 points for a state championship, which accounted for a whopping 120 points tallied by the Cavs.
+                        Teams also received 10 for a state championship game appearance. Other points are based on where a team finished in the final
+                        <a title="MaxPreps Texas Football Computer Rankings" aria-label="MaxPreps Texas Football Computer Rankings" href="/">MaxPreps Texas Football Computer Rankings</a>.
+                        For example, if a team finished No. 1 overall, it would receive 25 points. If it finished 25th overall, the team would get one point.
+                        No points are awarded if the team did not finish in the Top 25.
+                    </p>
+                    <p>Based on that formula, Lake Travis tallied 299 points to edge Allen, which had 292 points.</p>
+                    <p>Lake Travis had some familiar company on the list. Westlake, the Cavs' District 25-6A rival, ranked 12th with a 104 points.</p>
+                    <p>Two state championships and one state runner-up finish couldn't help Cedar Park crack the list.</p>
+                </article>
+
+                <!--Second in the layout so that on mobile devices it stacks second, but pull-6 so that it's pulled to the left 6 in the grid to be in the first spot on desktop-->
+                <aside class="col-md-3 col-md-pull-6">
+                    <img class="img-responsive" src="http://via.placeholder.com/300x250" title="placeholder for ad image" aria-label="placeholder for ad image with dimensions 300 by 250" alt="placeholder for article image with dimensions 300 by 250" />
+                    <div class="section" id="side-nav">
+                        <h2 class="sn-title section-heading">TAKE A BREAK</h2>
+                        <ul class="nav nav-stacked sn-nav">
+                            <li>
+                                <a href="/" title="Booking Mugshots" aria-label="Booking Mugshots">
+                                    <!--<i class="fa fa-book" aria-hidden="true"></i>-->
+                                    <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                    BOOKING MUGSHOTS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="Games and Puzzles" aria-label="Games and Puzzles">
+                                    <i class="fa fa-hourglass-end" aria-hidden="true"></i>
+                                    GAMES AND PUZZLES
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="Dining Guide" aria-label="Dining Guide">
+                                    <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                    DINING GUIDE
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="/" title="See More" aria-label="See More" class="btn see-more">SEE MORE <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    </div><!-- / #side-nav.section -->
+                    <img class="img-responsive" src="http://via.placeholder.com/300x100" title="placeholder for ad image" aria-label="placeholder for ad image with dimensions 300 by 100" alt="placeholder for article image with dimensions 300 by 100" />
+                </aside>
+
+                <aside class="col-md-3">
+                    <div id="articles-nav" class="section">
+                        <h2 class="an-title section-heading">NEW RIGHT NOW</h2>
+                        <ul class="nav nav-stacked an-nav">
+                            <li>
+                                <a href="/" title="Chester Bennington funeral items appear in ghoulish online auction" aria-label="Chester Bennington funeral items appear in ghoulish online auction">
+                                    Chester Bennington funeral items appear in ghoulish online auction
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="Chester Bennington funeral items appear in ghoulish online auction" aria-label="Chester Bennington funeral items appear in ghoulish online auction">
+                                    Chester Bennington funeral items appear in ghoulish online auction
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="Chester Bennington funeral items appear in ghoulish online auction" aria-label="Chester Bennington funeral items appear in ghoulish online auction">
+                                    Chester Bennington funeral items appear in ghoulish online auction
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="Chester Bennington funeral items appear in ghoulish online auction" aria-label="Chester Bennington funeral items appear in ghoulish online auction">
+                                    Chester Bennington funeral items appear in ghoulish online auction
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="Chester Bennington funeral items appear in ghoulish online auction" aria-label="Chester Bennington funeral items appear in ghoulish online auction">
+                                    Chester Bennington funeral items appear in ghoulish online auction
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="Chester Bennington funeral items appear in ghoulish online auction" aria-label="Chester Bennington funeral items appear in ghoulish online auction">
+                                    Chester Bennington funeral items appear in ghoulish online auction
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="Chester Bennington funeral items appear in ghoulish online auction" aria-label="Chester Bennington funeral items appear in ghoulish online auction">
+                                    Chester Bennington funeral items appear in ghoulish online auction
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="Chester Bennington funeral items appear in ghoulish online auction" aria-label="Chester Bennington funeral items appear in ghoulish online auction">
+                                    Chester Bennington funeral items appear in ghoulish online auction
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" title="Chester Bennington funeral items appear in ghoulish online auction" aria-label="Chester Bennington funeral items appear in ghoulish online auction">
+                                    Chester Bennington funeral items appear in ghoulish online auction
+                                </a>
+                            </li>
+                            <li>
+                            </li>
+                        </ul>
+                        <a href="/" title="See More" aria-label="See More" class="btn see-more">SEE MORE <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    </div><!-- / #articles-nav.section -->
+                </aside>
+
+            </div><!-- /.row-->
+
+        </div><!-- /.container-->
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <nav id="footer-navbar">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a title="Full Site Index" aria-label="Full Site Index" href="/">
+                                    FULL SITE INDEX
+                                </a>
+                            </li>
+                            <li>
+                                <a title="Visitor Agreement" aria-label="Visitor Agreement" href="/">
+                                    VISITOR AGREEMENT
+                                </a>
+                            </li>
+                            <li>
+                                <a title="Privacy Policy" aria-label="Privacy Policy" href="/">
+                                    PRIVACY POLICY
+                                </a>
+                            </li>
+                            <li>
+                                <a title="Contact Us" aria-label="Contact Us" href="/">
+                                    CONTACT US
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-md-6 footer-right">
+                    <div class="social">
+                        FOLLOW US:&nbsp;
+                        <a href="/" title="Follow on Facebok" aria-label="Follow on Facebok">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                        <a href="/" title="Follow on Twitter" aria-label="Follow on Twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a class="top pull-right" href="#page-top" title="Back to Top" aria-label="Back to Top">
+                            <i class="fa fa-angle-up" aria-hidden="true"></i> TOP
+                        </a>
+                    </div><!-- / .social -->
+                </div>
+
+            </div><!-- /.row-->
+
+        </div><!-- /.container-->
+
+    </footer>
+
+    <!--scripts included to make the bootstrap menu work. Can be done without javascript also by using a checkbox and css transitions-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" defer="defer"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer="defer"></script>
+</body>
+</html>

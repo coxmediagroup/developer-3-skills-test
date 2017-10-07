@@ -1,0 +1,508 @@
+/*
+    For bigger sites, I would separate styles into global styles and styles specific to certain pages or parts, etc., for maintainability, and then minify and bundle them together for performance. 
+    However, I didn't think that was necessary, and a little much on the over architecturing, for just one page
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #D4C9B3;
+}
+
+body, nav a {
+    color: #000000;
+}
+
+header.navbar {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+    header.navbar .container {
+        background: #fff;
+    }
+
+.navbar-header {
+    float: none;
+    padding: 0 15px;
+}
+
+.navbar-brand {
+    height: 65px;
+    padding: 10px 15px;
+}
+
+#top-navbar li a {
+    padding: 0 20px;
+    line-height: 65px;
+    font-size: 18px;
+    position: relative;
+}
+
+    #top-navbar li a:hover {
+        background: none;
+    }
+
+.weather-nav i {
+    margin-left: 3px;
+}
+
+.badge {
+    background: #F80300;
+    font-size: 10px;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 17px;
+    height: 17px;
+    padding: 4px 0px;
+}
+
+#main-navbar {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+    #main-navbar a {
+        padding: 10px 15px;
+    }
+
+        #main-navbar a:hover {
+            background: #F9F9F9;
+        }
+
+        #main-navbar a:before {
+            content: "\2022";
+            font-size: 24px;
+            vertical-align: bottom;
+            margin-right: 1px;
+        }
+
+        #main-navbar a.blue:before {
+            color: #075A9E;
+        }
+
+        #main-navbar a.orange:before {
+            color: #FF6306;
+        }
+
+        #main-navbar a.red:before {
+            color: #F0251E;
+        }
+
+        #main-navbar a.green:before {
+            color: #56B729;
+        }
+
+        #main-navbar a.purple:before {
+            color: #A81C96;
+        }
+
+        #main-navbar a.maroon:before {
+            color: #AA0027;
+        }
+
+    #main-navbar .navbar-right {
+        margin-right: 10px;
+        font-size: 13px;
+    }
+
+        #main-navbar .navbar-right i {
+            font-size: 18px;
+            padding-right: 5px;
+        }
+
+        #main-navbar .navbar-right li a {
+            padding: 9px 20px;
+            line-height: 1.7;
+        }
+
+            #main-navbar .navbar-right li a:hover {
+                background: none;
+                border-left: none;
+            }
+
+            #main-navbar .navbar-right li a:before {
+                content: "";
+                font-size: 0;
+                margin-right: 0;
+            }
+
+.subscribe-btn a {
+    background: #F9F9F9 !important;
+    color: #A22;
+    text-align: center;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1 !important;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+}
+
+    .subscribe-btn a:hover {
+        color: #3B73A6;
+    }
+
+    .subscribe-btn a span {
+        display: block;
+        font-size: 10px;
+        color: #000;
+    }
+
+main .container {
+    background: #EDEDED;
+    padding-top: 20px !important;
+}
+
+.ad-image {
+    margin: 0 auto 15px;
+}
+
+article {
+    color: #333;
+    padding-bottom: 30px;
+}
+
+aside {
+    padding-bottom: 30px;
+}
+
+.section {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.section-heading {
+    line-height: 1;
+    display: inline-block;
+    font-family: Oswald, Arial, sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.nav-stacked a {
+    line-height: 1.4;
+    background: none !important;
+    color: #000;
+}
+
+    .nav-stacked a:hover {
+        color: #00579e !important;
+    }
+
+.sn-title {
+    padding: 12px 15px;
+    color: #fff;
+    background-color: #00579e;
+    margin-bottom: 0;
+    min-width: 212px;
+}
+
+.sn-nav {
+    background: #332f2f;
+    padding: 5px 20px;
+}
+
+    .sn-nav li {
+        border-bottom: 2px solid #1e1a1a;
+    }
+
+        .sn-nav li:last-of-type {
+            border-bottom: none;
+        }
+
+    .sn-nav.nav-stacked a {
+        color: #fff;
+        font-family: Oswald, Arial, sans-serif;
+        font-size: 17px;
+        padding: 20px 0;
+    }
+
+        .sn-nav.nav-stacked a i {
+            margin-right: 5px;
+        }
+
+.see-more {
+    color: #fff !important;
+    background-color: #00579e;
+    font-family: Oswald, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1;
+    padding: 6px;
+    position: absolute;
+    right: -6px;
+    bottom: 15px;
+    border-radius: 0;
+}
+
+    .see-more:hover {
+        background-color: #1d78c3;
+        -webkit-transition: background-color 600ms linear;
+        transition: background-color 600ms linear;
+    }
+
+    .see-more i {
+        vertical-align: top;
+    }
+
+.an-title {
+    margin-top: 0;
+}
+
+.an-nav.nav-stacked > li {
+    background: #fff;
+    border: 1px solid #DCDCDC;
+    margin: 0 !important;
+    border-bottom: none;
+    padding: 10px 0;
+    min-height: 40px;
+}
+
+.an-nav.nav-stacked li:last-of-type {
+    border-bottom: 1px solid #DCDCDC;
+}
+
+#articles-nav .see-more {
+    bottom: 5px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 43px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.featured-image {
+    margin: 20px auto;
+}
+
+.social a {
+    color: #000;
+    font-size: 35px;
+    margin: 0 8px;
+    text-decoration: none !important;
+}
+
+    .social a:hover {
+        color: #969696;
+        -webkit-transition: color 300ms linear;
+        transition: color 300ms linear;
+    }
+
+footer {
+    background: #fff;
+    border-top: 1px solid #DCDCDC;
+    font-family: Oswald, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 51px;
+}
+
+    footer #footer-navbar li a {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    footer .footer-right {
+        font-size: 15px;
+    }
+
+    footer .social a {
+        margin: 0 1px;
+        font-size: 15px;
+    }
+
+        footer .social a i {
+            font-size: 21px;
+        }
+
+    footer a.top {
+        margin-left: 30px;
+    }
+
+        footer a.top i {
+            border: 2px solid #000;
+            border-radius: 100%;
+            text-align: center;
+            vertical-align: text-bottom;
+            padding: 0 3px 1px;
+            font-size: 17px;
+        }
+
+
+@media(min-width:993px) {
+    header .container {
+        padding: 0;
+    }
+
+    #main-navbar {
+        padding: 0 15px;
+        border-top: 1px solid #DCDCDC;
+    }
+
+        #main-navbar a:hover {
+            border-left: 1px solid #DCDCDC;
+            border-right: 1px solid #DCDCDC;
+            padding: 10px 14px;
+        }
+
+        #main-navbar .navbar-right li a {
+            border-right: 1px solid #DCDCDC;
+        }
+
+    .subscribe-btn a {
+        border-left: 1px solid #DCDCDC !important;
+    }
+
+    article {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .social {
+        float: right;
+    }
+
+    footer #footer-navbar li:after {
+        content: "|";
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-weight: 100;
+    }
+
+    footer #footer-navbar li:last-of-type:after {
+        content: "";
+    }
+}
+
+/* 
+    Bootstrap mobile navigation override included to make the mobile navigation come in at the 991px breakpoint instead of the 767px breakpoint which is the default for bootstrap.
+    For the mobile navigation, I was trying to come up with a layout to where I wouldn't have to change the order and show or hide sections depending on the breakpoint. 
+*/
+@media (max-width: 992px) {
+    header .container {
+        width: 100%;
+    }
+
+    .container > .navbar-header {
+        margin-right: -15px;
+        margin-left: -15px;
+        float: none;
+        text-align: center;
+    }
+
+    .navbar-left, .navbar-right {
+        float: none !important;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+        z-index: 2;
+        float: left;
+        padding: 0;
+        margin: 15px 15px 15px 0;
+    }
+
+        .navbar-toggle .icon-bar {
+            background: #000;
+        }
+
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+
+        .navbar-collapse.collapse {
+            display: none !important;
+        }
+
+    .collapse.in {
+        display: block !important; /* HAS to come AFTER .navbar-collapse.colllapse - display none */
+    }
+
+    .navbar-nav > li {
+        float: left;
+    }
+
+    #main-navbar {
+        font-size: 20px;
+    }
+
+        #main-navbar .navbar-nav {
+            float: none;
+            margin: 0 -15px;
+        }
+
+            #main-navbar .navbar-nav > li {
+                float: none;
+            }
+
+                #main-navbar .navbar-nav > li > a {
+                    padding: 18px 15px;
+                    border-bottom: 1px solid #ddd;
+                }
+
+    .navbar-brand {
+        float: none;
+        display: inline-block;
+        height: auto;
+        padding: 7px 0 3px;
+        max-width: 200px;
+        margin-right: 32px;
+    }
+
+        .navbar-brand > img {
+            display: inline-block;
+        }
+
+    #top-navbar {
+        display: block;
+        float: none;
+        margin: 0 -15px;
+        background: #eae9e9;
+        border-top: 1px solid #dcdcdc;
+        border-bottom: 1px solid #dcdcdc;
+        max-height: 45px;
+        clear: both;
+    }
+
+        #top-navbar .navbar-right {
+            display: inline-block;
+        }
+
+        #top-navbar li a {
+            padding: 0 12px;
+            line-height: 45px;
+        }
+
+    #search-box {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .subscribe-btn a, #login {
+        font-size: 15px;
+    }
+
+        .subscribe-btn a span {
+            font-size: 12px;
+        }
+
+    footer {
+        padding: 10px 0;
+    }
+
+        footer .navbar-nav, footer .navbar-nav li {
+            float: none;
+        }
+
+        footer #footer-navbar li a {
+            padding: 5px 15px;
+        }
+}
