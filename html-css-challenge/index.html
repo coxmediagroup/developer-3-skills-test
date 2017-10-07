@@ -14,10 +14,15 @@
 
     <!--Using the following version of bootstrap since v4 is still in beta.-->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!--I think it is better to use svgs for the icons, but font awesome was quicker in this situation. Normally I would say that it isn't good to pull in the whole font awesome stylesheet for just a few icons-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <!--
+        Would've used SASS, but I had a hard time getting the compiler/bundler/minifier to work on the computer I was using (which isn't mine. We're staying with family for the time being).
+        Also, for bigger sites, I would separate the code into above the fold and below the fold css and use this script https://github.com/filamentgroup/loadCSS to make the perceived performance faster.
+    -->
     <link href="css/styles.css" rel="stylesheet">
-    <!--Would normally add google analytics and rich snippets where needed-->
+    <!--Would normally add google analytics and rich snippets where needed as well as social media og/meta tags-->
 </head>
 <body>
     <a id="page-top"></a>

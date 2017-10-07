@@ -1,3 +1,8 @@
+/*
+    For bigger sites, I would separate styles into global styles and styles specific to certain pages or parts, etc., for maintainability, and then minify and bundle them together for performance. 
+    However, I didn't think that was necessary, and a little much on the over architecturing, for just one page
+*/
+
 body {
     font-family: Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

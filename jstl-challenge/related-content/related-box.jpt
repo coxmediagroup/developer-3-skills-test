@@ -41,16 +41,17 @@
 
 <c:set var="relatedItemCount" value="0" scope="page" />
 
+<%-- Doesn't the following code already satisfy the third acceptance criteria since this is checking whether any related items or query items exist before writing out the html? --%>
 <c:if test="${relatedItemsExist or relatedItemsQueryExist}">
 	<%-- Related Content: ${fn:length(relatedObjectList)} items --%>
 
 	<div class="related-content-container margin-bottom clearfix ${extraClasses}">
 		<h5 class="section-heading uppercase">Related</h5>
 		<ul class="related-headlines">
-
+			<%-- Should this end at 8 or 9? wasn't sure how it works?? --%>
 			<c:forEach items="${relatedObjectList}" var="relatedObject" varStatus="stat" end="9">
 
-				
+				<%-- No idea if this is how this should be used. Was just trying to simplify code. --%>
 				<p:include webObject="${relatedQuery}" styleName="template.jpt">
 					<p:param name="relatedObject" value="${relatedObject}" />
 				</p:include>
@@ -59,6 +60,12 @@
 			</c:forEach>
 
 <c:set var="relatedItemsEnd" value="${9 - relatedItemCount}" />
+
+<%-- 
+	The following code should satisfy the ac for 'Items in the query should be added to the box last and only if there is room left.'
+	the html will be written after the related items html and the value="<c:set var="queryItemsEnd" value="${9 - relatedItemCount}" />" line
+	should make sure that the relatedQuery items are only added if the related items count was less than 9. Right?
+--%>
 <c:set var="queryItemsEnd" value="${9 - relatedItemCount}" />
 
 <c:if test="${relatedItemsEnd < 0}">

@@ -35,7 +35,8 @@
     <p:out var="objTarget" xvalue="$relatedMeta//ExternalTarget" />
 </c:if>
 
-<p:out var="hasImage" value="${not empty relatedImgUrl}" />
+<%-- making sure it's a gallery and not a single image?? lololol idk? --%>
+<p:out var="hasImage" value="${relatedImgUrl.count > 1}" />
 
 <li data-index="${stat.index}" class="${(stat.last and !showMoreLink and queryItemsExist ) ? 'last-item' : ''} ${hasImage ? '' : ' no-image'}">
     <a href="${objUrl}" class="related-object-link" target="${isLink?objTarget:'_self'}">
