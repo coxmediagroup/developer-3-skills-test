@@ -9,15 +9,22 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <style>
-      @media (min-width: 992px) {
-        .header-logo {
-
-        }
+      /* General styles */
+      body{
+        background-color: beige;
       }
+      .container{
+        background-color: #eee;
+      }
+      .strong {
+        font-weight:bolder;
+      }
+
+      /* Header styles */
       header{
         margin-bottom: 20px;
       }
-      section.header-logo {
+      header h1 {
           min-height: 100px;
           font-size: 4em;
       }
@@ -25,116 +32,173 @@
         vertical-align: middle;
       }
       .header-ad{
+        background-image: url(https://dummyimage.com/1140x60);
+        height:60px;
+        width:1140px;
         margin-bottom:10px;
       }
+      @media only screen and (max-width : 992px) {
+        .header-ad{
+          background-image: url(https://dummyimage.com/720x60);
+          height:60px;
+          width:720px;
+          margin-bottom:10px;
+        }
+      }
+
+      /* Nav styles */
       nav.menu>ul{
-        /*list-style-type: none;*/
+        list-style-type: none;
+
       }
       nav.menu>ul>li{
         float:left;
-        margin:0 20px;
+        margin:0 5px;
+        text-transform: uppercase;
+      }
+      nav.menu>ul>li::before {
+        content: "\2022";
+        color: red;
+        display: inline-block;
+        width: 1em;
+        /*margin-left: -0.5em*/
+      }
+      nav a {
+        color:black;
       }
       #menu-ext{
         font-size: 0.75em;
       }
-      footer nav.menu>ul{
+
+      /* Footer styles */
+      footer nav>ul{
         list-style-type: none;
+      }
+      footer nav>ul>li{
+        float:left;
+        font-size:0.75em;
+        margin:0 5px;
+      }
+      footer nav>ul>li:nth-child(n+2)::before {
+        content: "|";
+        color: blue;
+        display: inline-block;
+        width: 1em;
+        /*margin-left: -0.5em*/
+      }
+      
+      /* Article styles */
+      .byline, article figcaption{
+        font-size: 0.75em;
+        font-style: italic;
+      }
+      address.author{
+        margin-bottom: 0.2em;
       }
       article>header{
         font-size: 3em;
       }
-      #right-rail>article>header{
-        font-size:2em;
-      }
-      .strong {
-        font-weight:bolder;
+      aside>header{
+        font-size:1.5em;
       }
     </style>
   </head>
   <body>
-    <!--
-      header
-    -->
-    <header class="container">
-      <div class="row">
+    <div class="container">
+
+      <!--
+        header
+      -->
+      <header>
         <!--
         Logo
         -->
-        <section class="col header-logo">
-          The<span class="strong">Texas</span>Journal
-        </section>
-        <section class="col-2 header-personalization">
-          <div class="row">
-            <div class="col">
-              77&deg;
+        <div class="row">
+          <section class="col-md-10 header-logo">
+            <hgroup>
+                <h1>The<span class="strong">Texas</span>Journal</h1>
+            </hgroup>
+          </section>
+          <section class="col-md-2 header-personalization">
+            <div class="row">
+              <div class="col">
+                77&deg;
+              </div>
+              <div class="col">
+                <i class="fa fa-inbox"></i>
+              </div>
+              <div class="col">
+                <i class="fa fa-search"></i>
+              </div>
             </div>
-            <div class="col">
-              <i class="fa fa-inbox"></i>
-            </div>
-            <div class="col">
-              <i class="fa fa-search"></i>
-            </div>
-          </div>
-        </section>
-      </div>
-      <div class="row">
+          </section>
+        </div>
         <!--
           Navigation
         -->
-        <nav class="col menu">
-          <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <section class="col-3" id="menu-ext">
-            <div class="row">
-              <div class="col">
-                Subscribe now
+        <div class="row">
+          <nav class="col-md-9 menu">
+            <ul>
+                <li><a href="#">news</a></li>
+                <li><a href="#">sports</a></li>
+                <li><a href="#">austin360</a></li>
+                <li><a href="#">ahora se!</a></li>
+                <li><a href="#">neighborhoods</a></li>
+                <li><a href="#">things to do</a></li>
+                <li><a href="#">more</a></li>
+              </ul>
+          </nav>
+          <section class="col-md-3" id="menu-ext">
+              <div class="row">
+                <div class="col">
+                  Subscribe now
+                </div>
+                <div class="col">
+                  <i class="fa fa-user"></i> Log In
+                </div>
               </div>
-              <div class="col">
-                <i class="fa fa-user"></i> Log In
-              </div>
-            </div>
-        </section>
-      </div>
-      <div class="row header-ad">
-        <img src="https://dummyimage.com/992x60" >
-      </div>
-    </header>
-    <!--
-      Content
-    -->
-    <div class="container">
-      <div class="row">
+          </section>
+        </div>
         <!--
-          Left Rail
+          Header Ad
         -->
-        <section class="col order-2 order-lg-1" id="left-rail">
-          <article class="advertisement">
-            <img src="https://dummyimage.com/mediumrectangle" >
-          </article>
-        </section>
+        <div class="row header-ad">
+          <!-- <img src="" > -->
+        </div>
+      </header>
+      <!--
+        Content
+      -->
+      <div class="row content">
         <!--
           Main Content
         -->
-        <section class="col col-lg-6  order-1 order-lg-2" id="main-content">
+        <section class="col col-md-12 col-lg-6  order-1 order-lg-2" id="main-content">
           <article>
             <header>
-              <h2>This is the Article Headerf</h2>
+              <h2>This is the Article Header</h2>
             </header>
-            <p class="byline">
-                <address class="author">By <a rel="author" href="/author/john-doe">John Doe</a></address>
-
+            <div class="byline row">
+                <div class="col-sm-10">
+                  <address class="author">By <a rel="author" href="/author/john-doe">John Doe</a></address>
+                  <time pubdate datetime="2017-10-13" title="October 13th, 2017">October 13th, 2017</time>
+                </div>
+                <div class="col-sm-2">
+                  <i class="fa fa-facebook" aria-hidden="true"></i> <i class="fa fa-twitter" aria-hidden="true"> <i class="fa fa-share-square-o" aria-hidden="true"></i></i>
+                </div>
+            </div>
+            <figure>
+              <img src="https://dummyimage.com/500x400" alt="Random placeholder image">
+              <figcaption>This is the image caption</figcaption>
+            </figure>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Minime vero, inquit ille, consentit. Aut, Pylades cum sis, dices te esse Orestem, ut moriare pro amico? Quam nemo umquam voluptatem appellavit, appellat; Item de contrariis, a quibus ad genera formasque generum venerunt.
             </p>
             <p>
-              <img src="https://dummyimage.com/500x400" >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Minime vero, inquit ille, consentit. Aut, Pylades cum sis, dices te esse Orestem, ut moriare pro amico? Quam nemo umquam voluptatem appellavit, appellat; Item de contrariis, a quibus ad genera formasque generum venerunt.
-
-At hoc in eo M. Zenonis est, inquam, hoc Stoici. Quibus ego vehementer assentior. Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Quid iudicant sensus? Non autem hoc: igitur ne illud quidem. Nos paucis ad haec additis finem faciamus aliquando;
-
-Quo invento omnis ab eo quasi capite de summo bono et malo disputatio ducitur. Duo Reges: constructio interrete. Nondum autem explanatum satis, erat, quid maxime natura vellet. Indicant pueri, in quibus ut in speculis natura cernitur. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Traditur, inquit, ab Epicuro ratio neglegendi doloris.
+              At hoc in eo M. Zenonis est, inquam, hoc Stoici. Quibus ego vehementer assentior. Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Quid iudicant sensus? Non autem hoc: igitur ne illud quidem. Nos paucis ad haec additis finem faciamus aliquando;
+            </p>
+            <p>
+              Quo invento omnis ab eo quasi capite de summo bono et malo disputatio ducitur. Duo Reges: constructio interrete. Nondum autem explanatum satis, erat, quid maxime natura vellet. Indicant pueri, in quibus ut in speculis natura cernitur. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Traditur, inquit, ab Epicuro ratio neglegendi doloris.
             </p>
             <footer>
 
@@ -142,12 +206,31 @@ Quo invento omnis ab eo quasi capite de summo bono et malo disputatio ducitur. D
           </article>
         </section>
         <!--
+          Left Rail
+        -->
+        <section class="col-sm-12 col-md-6 col-lg-3 order-2 order-lg-1" id="left-rail">
+          <div class="col-12">
+            <img src="https://dummyimage.com/240x240" >
+          </div>
+          <aside>
+            <header>
+              Take a break
+            </header>
+            <ul class="list-group">
+              <li class="list-group-item">booking mugshots</li>
+              <li class="list-group-item">games and puzzles</li>
+              <li class="list-group-item">dining guide</li>
+            </ul>
+          </aside>
+
+        </section>
+        <!--
           Right rail
         -->
-        <section class="col order-3" id="right-rail">
-          <article>
+        <section class="col-sm-12 col-md-6 col-lg-3 order-3" id="right-rail">
+          <aside>
             <header>
-              Right Rail
+              New Right Now
             </header>
             <ul class="list-group">
               <li class="list-group-item">Cras justo odio</li>
@@ -156,24 +239,29 @@ Quo invento omnis ab eo quasi capite de summo bono et malo disputatio ducitur. D
               <li class="list-group-item">Porta ac consectetur ac</li>
               <li class="list-group-item">Vestibulum at eros</li>
             </ul>
-          </article>
+          </aside>
         </section>
       </div>
+      <!--
+        Footer
+      -->
+      <footer>
+        <div class="row">
+          <nav class="col footer">
+            <ul>
+                <li><a href="#">full site index</a></li>
+                <li><a href="#">visitor agreement</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li><a href="#">Contact us</a></li>
+              </ul>
+          </nav>
+          <div class="col-1">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </div>
+        </div>
+      </footer>
     </div>
-    <!--
-      Footer
-    -->
-    <footer class="container">
-      <div class="row">
-        <nav class="col menu">
-          <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-      </div>
-    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
