@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>coxmediagroup/developer-3-skills-test</title>
+    <meta name="description" content="This is a coding challenge for Cox Media Group.">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,37 +13,49 @@
     <style>
       /* General styles */
       body{
-        background-color: beige;
+        background-color: #FFF8DC;
       }
       .container{
-        background-color: #eee;
+        background-color: #F8F8FF;
       }
       .strong {
         font-weight:bolder;
       }
+      figure img{
+        margin: 0 50%;
+        transform: translateX(-50%);
+      }
+      figcaption{
+        text-align: center;
+      }
 
       /* Header styles */
       header{
-        margin-bottom: 20px;
+        /*margin-bottom: 20px;*/
       }
       header h1 {
           min-height: 100px;
-          font-size: 4em;
+          font-size: 3em;
       }
       section.header-personalization{
         vertical-align: middle;
       }
       .header-ad{
-        background-image: url(https://dummyimage.com/1140x60);
+        background-image: url(https://dummyimage.com/720x60);
         height:60px;
-        width:1140px;
+        width:720px;
         margin-bottom:10px;
       }
-      @media only screen and (max-width : 992px) {
+      /* swap out the full-width banner ad at the breakpoint */
+      @media only screen and (min-width : 992px) {
+        header h1 {
+            min-height: 100px;
+            font-size: 4em;
+        }
         .header-ad{
-          background-image: url(https://dummyimage.com/720x60);
+          background-image: url(https://dummyimage.com/1140x60);
           height:60px;
-          width:720px;
+          width:1140px;
           margin-bottom:10px;
         }
       }
@@ -49,7 +63,6 @@
       /* Nav styles */
       nav.menu>ul{
         list-style-type: none;
-
       }
       nav.menu>ul>li{
         float:left;
@@ -61,7 +74,6 @@
         color: red;
         display: inline-block;
         width: 1em;
-        /*margin-left: -0.5em*/
       }
       nav a {
         color:black;
@@ -71,6 +83,9 @@
       }
 
       /* Footer styles */
+      footer.main{
+        background-color: white;
+      }
       footer nav>ul{
         list-style-type: none;
       }
@@ -84,9 +99,8 @@
         color: blue;
         display: inline-block;
         width: 1em;
-        /*margin-left: -0.5em*/
       }
-      
+
       /* Article styles */
       .byline, article figcaption{
         font-size: 0.75em;
@@ -97,6 +111,9 @@
       }
       article>header{
         font-size: 3em;
+      }
+      aside{
+        margin:10px 0 5px 0;
       }
       aside>header{
         font-size:1.5em;
@@ -109,17 +126,21 @@
       <!--
         header
       -->
-      <header>
+      <header class="main">
         <!--
         Logo
         -->
         <div class="row">
-          <section class="col-md-10 header-logo">
+          <!-- push a little closer together on small devices -->
+          <section class="col-sm-9 col-lg-10 header-logo">
             <hgroup>
                 <h1>The<span class="strong">Texas</span>Journal</h1>
             </hgroup>
           </section>
-          <section class="col-md-2 header-personalization">
+          <!--
+            Social
+          -->
+          <section class="col-sm-3 col-lg-2 header-personalization">
             <div class="row">
               <div class="col">
                 77&deg;
@@ -137,7 +158,8 @@
           Navigation
         -->
         <div class="row">
-          <nav class="col-md-9 menu">
+          <!-- wrap more narrowly on small devices to leave room for the user menu -->
+          <nav class="col-sm-9 col-lg-10 menu">
             <ul>
                 <li><a href="#">news</a></li>
                 <li><a href="#">sports</a></li>
@@ -148,7 +170,10 @@
                 <li><a href="#">more</a></li>
               </ul>
           </nav>
-          <section class="col-md-3" id="menu-ext">
+          <!--
+            User menu
+          -->
+          <section class="col-sm-3 col-lg-2" id="menu-ext">
               <div class="row">
                 <div class="col">
                   Subscribe now
@@ -160,11 +185,9 @@
           </section>
         </div>
         <!--
-          Header Ad
+          Header banner Ad
         -->
-        <div class="row header-ad">
-          <!-- <img src="" > -->
-        </div>
+        <div class="row header-ad advertisement"></div>
       </header>
       <!--
         Content
@@ -173,48 +196,53 @@
         <!--
           Main Content
         -->
-        <section class="col col-md-12 col-lg-6  order-1 order-lg-2" id="main-content">
+        <section class="col col-lg-6 order-1 order-lg-2" id="main-content">
           <article>
             <header>
               <h2>This is the Article Header</h2>
             </header>
             <div class="byline row">
-                <div class="col-sm-10">
+                <div class="col-9">
                   <address class="author">By <a rel="author" href="/author/john-doe">John Doe</a></address>
                   <time pubdate datetime="2017-10-13" title="October 13th, 2017">October 13th, 2017</time>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-3">
                   <i class="fa fa-facebook" aria-hidden="true"></i> <i class="fa fa-twitter" aria-hidden="true"> <i class="fa fa-share-square-o" aria-hidden="true"></i></i>
                 </div>
             </div>
-            <figure>
+            <figure class="col-12">
               <img src="https://dummyimage.com/500x400" alt="Random placeholder image">
               <figcaption>This is the image caption</figcaption>
             </figure>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Minime vero, inquit ille, consentit. Aut, Pylades cum sis, dices te esse Orestem, ut moriare pro amico? Quam nemo umquam voluptatem appellavit, appellat; Item de contrariis, a quibus ad genera formasque generum venerunt.
-            </p>
-            <p>
-              At hoc in eo M. Zenonis est, inquam, hoc Stoici. Quibus ego vehementer assentior. Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Quid iudicant sensus? Non autem hoc: igitur ne illud quidem. Nos paucis ad haec additis finem faciamus aliquando;
-            </p>
-            <p>
-              Quo invento omnis ab eo quasi capite de summo bono et malo disputatio ducitur. Duo Reges: constructio interrete. Nondum autem explanatum satis, erat, quid maxime natura vellet. Indicant pueri, in quibus ut in speculis natura cernitur. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Traditur, inquit, ab Epicuro ratio neglegendi doloris.
-            </p>
-            <footer>
-
-            </footer>
+            <div class="col-12">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Minime vero, inquit ille, consentit. Aut, Pylades cum sis, dices te esse Orestem, ut moriare pro amico? Quam nemo umquam voluptatem appellavit, appellat; Item de contrariis, a quibus ad genera formasque generum venerunt.
+              </p>
+              <p>
+                At hoc in eo M. Zenonis est, inquam, hoc Stoici. Quibus ego vehementer assentior. Quacumque enim ingredimur, in aliqua historia vestigium ponimus. Quos quidem tibi studiose et diligenter tractandos magnopere censeo. Quid iudicant sensus? Non autem hoc: igitur ne illud quidem. Nos paucis ad haec additis finem faciamus aliquando;
+              </p>
+              <p>
+                Quo invento omnis ab eo quasi capite de summo bono et malo disputatio ducitur. Duo Reges: constructio interrete. Nondum autem explanatum satis, erat, quid maxime natura vellet. Indicant pueri, in quibus ut in speculis natura cernitur. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Traditur, inquit, ab Epicuro ratio neglegendi doloris.
+              </p>
+            </div>
+            <footer></footer>
           </article>
         </section>
         <!--
           Left Rail
         -->
-        <section class="col-sm-12 col-md-6 col-lg-3 order-2 order-lg-1" id="left-rail">
+        <section class="col-lg-3 order-2 order-lg-1" id="left-rail">
           <div class="col-12">
-            <img src="https://dummyimage.com/240x240" >
+            <figure class="advertisement">
+              <img src="https://dummyimage.com/200x200" alt="This is an image placeholder" >
+              <figcaption>
+                This is an advertisement
+              </figcaption>
+            </figure>
           </div>
-          <aside>
+          <aside class="col-12">
             <header>
-              Take a break
+              <h4>Take a break</h4>
             </header>
             <ul class="list-group">
               <li class="list-group-item">booking mugshots</li>
@@ -222,15 +250,14 @@
               <li class="list-group-item">dining guide</li>
             </ul>
           </aside>
-
         </section>
         <!--
           Right rail
         -->
-        <section class="col-sm-12 col-md-6 col-lg-3 order-3" id="right-rail">
-          <aside>
+        <section class="col-lg-3 order-3" id="right-rail">
+          <aside class="col-12">
             <header>
-              New Right Now
+              <h4>New Right Now</h4>
             </header>
             <ul class="list-group">
               <li class="list-group-item">Cras justo odio</li>
@@ -245,23 +272,23 @@
       <!--
         Footer
       -->
-      <footer>
-        <div class="row">
-          <nav class="col footer">
-            <ul>
-                <li><a href="#">full site index</a></li>
-                <li><a href="#">visitor agreement</a></li>
-                <li><a href="#">privacy policy</a></li>
-                <li><a href="#">Contact us</a></li>
-              </ul>
-          </nav>
-          <div class="col-1">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-          </div>
-        </div>
-      </footer>
     </div>
+    <footer class="main">
+      <div class="row">
+        <nav class="col footer">
+          <ul>
+              <li><a href="#">full site index</a></li>
+              <li><a href="#">visitor agreement</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="col-1">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </div>
+      </div>
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
