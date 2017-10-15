@@ -529,7 +529,9 @@ footer li{
         order: 2;
     }
 
-
+ footer nav{
+     height: 20px;
+ }
 }
 
 
