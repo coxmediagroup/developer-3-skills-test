@@ -1,24 +1,15 @@
 (function () {
     'use strict';
     window.onload = function() {
-        console.log("WE made it");
-
         var urlList;
         var resetURL = function() {
             let originalUrl = window.location.href;
             let newUrl;
             let key = "email";
 
-
             setOriginal(originalUrl);
             newUrl =  cleanUrl(key, originalUrl);
             setNew(newUrl);
-
-        /*    urlList = {
-                'originalVal': originalUrl,
-                'newVal': newUrl
-            };*/
-
 
         };
 
@@ -46,10 +37,7 @@
         };
 
         var setNew = function(newUrl){
-            console.log("The set New url: ",newUrl);
-
             window.history.replaceState({}, document.title, "/" + newUrl);
-
             document.getElementById('newVal').innerHTML = newUrl;
         };
 
